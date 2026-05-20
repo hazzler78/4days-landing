@@ -7,8 +7,8 @@
   - LINKEDIN_URL, PRIVACY_POLICY_URL, COOKIES_URL: Footer-länkar
   - OG_IMAGE_URL: Open Graph-bild (1200×630)
   - FAVICON: Lägg favicon.ico eller uppdatera link rel="icon"
-  - ANALYTICS: Lägg ev. Plausible/GA-script före </body>
-  - FORM_SUCCESS_REDIRECT: Valfri redirect efter lyckad submit (lämna tom för modal)
+  - ANALYTICS: js/cookie-consent.js – sätt provider till 'plausible' eller 'ga4'
+  - Integritetspolicy: /integritetspolicy | Cookies: /cookies
 -->
 <!DOCTYPE html>
 <html lang="sv" class="scroll-smooth">
@@ -92,7 +92,7 @@
   <!-- Header -->
   <header class="fixed top-0 inset-x-0 z-50 bg-white/90 dark:bg-brand-dark/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-700/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-18">
-      <a href="#" class="flex items-center gap-2 shrink-0" aria-label="4days.ai – startsida">
+      <a href="/" class="flex items-center gap-2 shrink-0" aria-label="4days.ai – startsida">
         <!-- LOGO_SRC: byt src till er logotyp -->
         <div id="site-logo" class="flex items-center gap-2">
           <div class="w-9 h-9 rounded-lg bg-brand dark:bg-brand-light flex items-center justify-center border border-accent/30" aria-hidden="true">
@@ -320,7 +320,7 @@
                 <input type="checkbox" id="consent" name="consent" value="yes" required class="mt-1 w-4 h-4 rounded border-slate-300 text-accent focus:ring-accent">
                 <label for="consent" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Jag vill ha tips om 4-dagarsvecka och AI-automatisering <span class="text-red-500">*</span>
-                  <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">Genom att skicka godkänner du att vi kontaktar dig och skickar en bekräftelse via e-post (dubbel opt-in).</span>
+                  <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">Genom att skicka godkänner du att vi kontaktar dig och skickar en bekräftelse via e-post (dubbel opt-in). Läs vår <a href="/integritetspolicy" class="text-accent hover:underline">integritetspolicy</a>.</span>
                 </label>
               </div>
             </div>
@@ -383,29 +383,6 @@
       const FORM_API_URL = '/api/subscribe';
 
       // Tema
-      const themeToggle = document.getElementById('theme-toggle');
-      const html = document.documentElement;
-
-      function getPreferredTheme() {
-        const stored = localStorage.getItem('theme');
-        if (stored) return stored;
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-
-      function setTheme(theme) {
-        if (theme === 'dark') {
-          html.classList.add('dark');
-        } else {
-          html.classList.remove('dark');
-        }
-        localStorage.setItem('theme', theme);
-      }
-
-      setTheme(getPreferredTheme());
-      themeToggle.addEventListener('click', () => {
-        setTheme(html.classList.contains('dark') ? 'light' : 'dark');
-      });
-
       // Mobilmeny
       const mobileBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -420,8 +397,6 @@
           mobileBtn.setAttribute('aria-expanded', 'false');
         });
       });
-
-      document.getElementById('year').textContent = new Date().getFullYear();
 
       // Formulär
       const form = document.getElementById('lead-form');
@@ -511,5 +486,7 @@
       });
     })();
   </script>
+  <script src="/js/site-theme.js"></script>
+  <script src="/js/cookie-consent.js"></script>
 </body>
 </html>
