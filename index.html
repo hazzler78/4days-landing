@@ -1,0 +1,534 @@
+<!--
+  UPPDATERA INNAN PUBLICERING:
+  - WEBHOOK_URL: Ersätt FORM_WEBHOOK_URL med er webhook (Make/Zapier) eller Mailchimp/ConvertKit endpoint
+  - HERO_BG_URL: Ersätt hero-bakgrundsbild (rekommenderat: WebP, ~1920×1080, <200 KB)
+  - LOGO_SRC: Lägg in logotyp (SVG/PNG) i img#site-logo
+  - CALENDLY_URL: https://calendly.com/hello-4days/30min (uppdaterad)
+  - LINKEDIN_URL, PRIVACY_POLICY_URL, COOKIES_URL: Footer-länkar
+  - OG_IMAGE_URL: Open Graph-bild (1200×630)
+  - FAVICON: Lägg favicon.ico eller uppdatera link rel="icon"
+  - ANALYTICS: Lägg ev. Plausible/GA-script före </body>
+  - FORM_SUCCESS_REDIRECT: Valfri redirect efter lyckad submit (lämna tom för modal)
+-->
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4days.ai – 4-dagarsvecka med full lön för kunskapsintensiva bolag</title>
+  <meta name="description" content="Vi hjälper IT-, konsult- och kreativa bolag (10–200 anställda) att införa 4-dagarsvecka med full lön genom AI-automatisering och processoptimering.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://4days.ai/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://4days.ai/">
+  <meta property="og:title" content="4-dagarsvecka med full lön – redan inom 6–12 månader | 4days.ai">
+  <meta property="og:description" content="Automatisera och optimera så ni kan införa 4-dagarsvecka utan att sänka lönerna. Guiden + webinar för svenska kunskapsintensiva SMEs.">
+  <meta property="og:image" content="https://4days.ai/og-image.jpg">
+  <meta property="og:locale" content="sv_SE">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="4-dagarsvecka med full lön | 4days.ai">
+  <meta name="twitter:description" content="4-dagarsvecka för IT-, konsult- och kreativa bolag – utan lägre löner.">
+  <meta name="twitter:image" content="https://4days.ai/og-image.jpg">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0A2540',
+              light: '#0f3354',
+              dark: '#061a2b',
+            },
+            accent: {
+              DEFAULT: '#00D4FF',
+              dim: '#00b8e0',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "4days.ai",
+    "url": "https://4days.ai",
+    "description": "Hjälper kunskapsintensiva svenska bolag att införa 4-dagarsvecka med full lön genom AI-automatisering.",
+    "foundingDate": "2026-05"
+  }
+  </script>
+</head>
+<body class="font-sans bg-white text-slate-800 dark:bg-brand-dark dark:text-slate-100 antialiased">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 dark:bg-brand-dark/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-700/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-18">
+      <a href="#" class="flex items-center gap-2 shrink-0" aria-label="4days.ai – startsida">
+        <!-- LOGO_SRC: byt src till er logotyp -->
+        <div id="site-logo" class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-brand dark:bg-brand-light flex items-center justify-center border border-accent/30" aria-hidden="true">
+            <span class="text-accent font-bold text-sm">4d</span>
+          </div>
+          <span class="font-semibold text-brand dark:text-white text-lg tracking-tight">4days<span class="text-accent">.ai</span></span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#fordelar" class="hover:text-accent transition-colors">Fördelar</a>
+        <a href="#hur-det-fungerar" class="hover:text-accent transition-colors">Så fungerar det</a>
+        <a href="#om-oss" class="hover:text-accent transition-colors">Om oss</a>
+        <a href="#guide" class="text-accent hover:text-accent-dim transition-colors">Få guiden</a>
+      </nav>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button type="button" id="theme-toggle" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-brand-light dark:text-slate-300 transition-colors" aria-label="Byt mellan ljust och mörkt läge">
+          <svg id="icon-sun" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="icon-moon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="#guide" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-accent text-brand hover:bg-accent-dim transition-colors">
+          Få guiden
+        </a>
+        <button type="button" id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-brand-light" aria-label="Öppna meny" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-brand-dark px-4 py-4 space-y-3">
+      <a href="#fordelar" class="block text-sm font-medium text-slate-600 dark:text-slate-300">Fördelar</a>
+      <a href="#hur-det-fungerar" class="block text-sm font-medium text-slate-600 dark:text-slate-300">Så fungerar det</a>
+      <a href="#om-oss" class="block text-sm font-medium text-slate-600 dark:text-slate-300">Om oss</a>
+      <a href="#guide" class="block text-sm font-semibold text-accent">Få guiden</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center hero-bg" aria-labelledby="hero-heading">
+      <div class="absolute inset-0 bg-brand/85 dark:bg-brand-dark/90" aria-hidden="true"></div>
+      <div class="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-20">
+        <div class="max-w-3xl">
+          <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-accent/15 text-accent border border-accent/25 mb-6">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse" aria-hidden="true"></span>
+            För svenska kunskapsintensiva bolag · 10–200 anställda
+          </p>
+          <h1 id="hero-heading" class="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-tight tracking-tight">
+            4-dagarsvecka med full lön – redan inom 6–12 månader
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl">
+            Vi hjälper IT-, konsult- och kreativa bolag (10–200 anställda) att automatisera och optimera så ni kan införa 4-dagarsvecka utan att sänka lönerna.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#guide" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-lg bg-accent text-brand hover:bg-accent-dim transition-colors shadow-lg shadow-accent/20">
+              Få guiden + inbjudan till nästa webinar
+            </a>
+            <a href="https://calendly.com/hello-4days/30min" target="_blank" rel="noopener noreferrer" id="calendly-link" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-lg border-2 border-white/40 text-white hover:bg-white/10 transition-colors">
+              Boka 30 min strategi-call
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#fordelar" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-accent transition-colors" aria-label="Scrolla till fördelar">
+        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+    </section>
+
+    <!-- Fördelar -->
+    <section id="fordelar" class="py-20 sm:py-28 bg-slate-50 dark:bg-brand">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Varför 4-dagarsvecka – och varför nu?</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">Tre tydliga vinster när automatisering och struktur kommer före kortsiktiga kompromisser.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+          <article class="p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-6" aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand dark:text-white">Mer tid &amp; bättre välmående</h3>
+            <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Medarbetare får en extra dag för återhämtning och fokus. Lägre stress och högre engagemang – utan att produktiviteten faller när arbetet struktureras rätt.</p>
+          </article>
+          <article class="p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-6" aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand dark:text-white">Ökad lönsamhet genom AI-automatisering</h3>
+            <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Vi identifierar repetitiva flöden och automatiserar dem med beprövade verktyg. Samma output på färre timmar – eller mer output på samma tid.</p>
+          </article>
+          <article class="p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-6" aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand dark:text-white">Konkurrenskraft som attraktiv arbetsgivare</h3>
+            <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">4-dagarsvecka med full lön är ett starkt rekryteringsargument. Ni behåller och attraherar talang i en marknad där flexibilitet väger tungt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hur det fungerar -->
+    <section id="hur-det-fungerar" class="py-20 sm:py-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Hur det fungerar</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">En strukturerad väg från nuläge till 4-dagarsvecka – vanligtvis inom 6–12 månader.</p>
+        </div>
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <li class="relative">
+            <div class="flex flex-col h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-600/40 bg-white dark:bg-brand-light">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-brand text-accent font-bold text-lg mb-4" aria-hidden="true">1</span>
+              <h3 class="text-lg font-semibold text-brand dark:text-white">Kartläggning &amp; mål</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Vi analyserar er verksamhet, teamstorlek och arbetsflöden. Tillsammans sätter vi mätbara mål för produktivitet och välmående.</p>
+            </div>
+          </li>
+          <li class="relative">
+            <div class="flex flex-col h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-600/40 bg-white dark:bg-brand-light">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-brand text-accent font-bold text-lg mb-4" aria-hidden="true">2</span>
+              <h3 class="text-lg font-semibold text-brand dark:text-white">AI &amp; automatisering</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Prioriterade processer automatiseras – rapportering, kundkommunikation, intern administration. Fokus flyttas till värdeskapande arbete.</p>
+            </div>
+          </li>
+          <li class="relative">
+            <div class="flex flex-col h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-600/40 bg-white dark:bg-brand-light">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-brand text-accent font-bold text-lg mb-4" aria-hidden="true">3</span>
+              <h3 class="text-lg font-semibold text-brand dark:text-white">Pilot &amp; justering</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Ett team eller avdelning testar 4-dagarsvecka. Vi följer KPI:er vecka för vecka och finjusterar rutiner tills modellen håller.</p>
+            </div>
+          </li>
+          <li class="relative">
+            <div class="flex flex-col h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-600/40 bg-white dark:bg-brand-light">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-brand text-accent font-bold text-lg mb-4" aria-hidden="true">4</span>
+              <h3 class="text-lg font-semibold text-brand dark:text-white">Utrullning &amp; stöd</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">När piloten visar resultat skalas modellen ut. Ni får playbook, policyunderlag och löpande stöd så övergången blir hållbar.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Om oss -->
+    <section id="om-oss" class="py-20 sm:py-28 bg-slate-50 dark:bg-brand">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Om oss</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">Erfarenhet från försäljning, marknadsföring och teknik – med fokus på svenska kunskapsbolag.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <article class="flex gap-5 p-6 sm:p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30">
+            <div class="shrink-0 w-16 h-16 rounded-full bg-brand flex items-center justify-center text-accent font-bold text-xl" aria-hidden="true">JT</div>
+            <div>
+              <h3 class="text-lg font-semibold text-brand dark:text-white">Joseph Tran</h3>
+              <p class="text-sm text-accent font-medium mt-0.5">Affär &amp; tillväxt</p>
+              <p class="mt-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">25 års erfarenhet inom försäljning och marknadsföring. Hjälper bolag att paketera erbjudande och nå rätt beslutsfattare inför förändringen.</p>
+            </div>
+          </article>
+          <article class="flex gap-5 p-6 sm:p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30">
+            <div class="shrink-0 w-16 h-16 rounded-full bg-brand flex items-center justify-center text-accent font-bold text-xl" aria-hidden="true">MS</div>
+            <div>
+              <h3 class="text-lg font-semibold text-brand dark:text-white">Mikael Söderberg</h3>
+              <p class="text-sm text-accent font-medium mt-0.5">Teknisk grundare &amp; entreprenör</p>
+              <p class="mt-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Teknisk grundare med bakgrund i automation och produktutveckling. Driver implementering av AI-flöden och mätbara effektivitetsvinster.</p>
+            </div>
+          </article>
+        </div>
+        <p class="mt-10 text-center text-sm text-slate-500 dark:text-slate-400 italic">Aktiebolag under registrering maj 2026</p>
+      </div>
+    </section>
+
+    <!-- E-postformulär -->
+    <section id="guide" class="py-20 sm:py-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Få guiden + inbjudan till nästa webinar</h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+              Praktisk guide till 4-dagarsvecka för ledningsgrupper – plus inbjudan till vårt kommande webinar. Vi skickar bekräftelse via e-post (dubbel opt-in).
+            </p>
+            <ul class="mt-8 space-y-3 text-slate-600 dark:text-slate-300">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Checklista för beslut i styrelse/ledning
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Exempel på KPI:er under pilotfas
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Ingen spam – avregistrera när som helst
+              </li>
+            </ul>
+          </div>
+
+          <form id="lead-form" class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200 dark:border-slate-600/40 shadow-lg" novalidate>
+            <!-- Dubbel opt-in: webhook bör trigga bekräftelsemail. hidden fields för ESP-integration -->
+            <input type="hidden" name="source" value="landing-4days-ai">
+            <input type="hidden" name="tags" value="4-dagarsvecka,guide,webinar">
+            <input type="hidden" name="double_opt_in" value="true">
+
+            <div class="space-y-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-brand dark:text-slate-200 mb-1.5">Namn <span class="text-red-500">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-brand text-slate-800 dark:text-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="För- och efternamn">
+              </div>
+              <div>
+                <label for="company" class="block text-sm font-medium text-brand dark:text-slate-200 mb-1.5">Företag <span class="text-red-500">*</span></label>
+                <input type="text" id="company" name="company" required autocomplete="organization" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-brand text-slate-800 dark:text-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Bolagsnamn AB">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-brand dark:text-slate-200 mb-1.5">E-post <span class="text-red-500">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-brand text-slate-800 dark:text-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="du@foretag.se">
+              </div>
+              <div>
+                <label for="employees" class="block text-sm font-medium text-brand dark:text-slate-200 mb-1.5">Antal anställda <span class="text-red-500">*</span></label>
+                <select id="employees" name="employees" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-brand text-slate-800 dark:text-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
+                  <option value="" disabled selected>Välj intervall</option>
+                  <option value="10-25">10–25</option>
+                  <option value="26-50">26–50</option>
+                  <option value="51-100">51–100</option>
+                  <option value="101-200">101–200</option>
+                  <option value="200+">200+</option>
+                </select>
+              </div>
+              <div class="flex items-start gap-3">
+                <input type="checkbox" id="consent" name="consent" value="yes" required class="mt-1 w-4 h-4 rounded border-slate-300 text-accent focus:ring-accent">
+                <label for="consent" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Jag vill ha tips om 4-dagarsvecka och AI-automatisering <span class="text-red-500">*</span>
+                  <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">Genom att skicka godkänner du att vi kontaktar dig och skickar en bekräftelse via e-post (dubbel opt-in).</span>
+                </label>
+              </div>
+            </div>
+
+            <p id="form-error" class="mt-4 text-sm text-red-600 dark:text-red-400 hidden" role="alert"></p>
+
+            <button type="submit" id="submit-btn" class="mt-6 w-full inline-flex justify-center items-center gap-2 px-6 py-3.5 text-base font-semibold rounded-lg bg-accent text-brand hover:bg-accent-dim disabled:opacity-60 disabled:cursor-not-allowed transition-colors">
+              <span id="submit-text">Skicka – få guiden</span>
+              <svg id="submit-spinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-700 bg-brand text-slate-300 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div>
+          <p class="font-semibold text-white text-lg">4days<span class="text-accent">.ai</span></p>
+          <p class="mt-2 text-sm text-slate-400 max-w-xs">4-dagarsvecka med full lön för kunskapsintensiva svenska bolag.</p>
+        </div>
+        <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Sidfot">
+          <a href="https://www.linkedin.com/company/4days-ai" target="_blank" rel="noopener noreferrer" id="linkedin-link" class="hover:text-accent transition-colors">LinkedIn</a>
+          <a href="/integritetspolicy" id="privacy-link" class="hover:text-accent transition-colors">Integritetspolicy</a>
+          <a href="/cookies" id="cookies-link" class="hover:text-accent transition-colors">Cookies</a>
+          <a href="mailto:hello@4days.ai" class="hover:text-accent transition-colors">hello@4days.ai</a>
+        </nav>
+      </div>
+      <p class="mt-10 pt-8 border-t border-slate-700 text-xs text-slate-500 text-center md:text-left">
+        &copy; <span id="year"></span> 4days.ai. Aktiebolag under registrering maj 2026. Alla rättigheter förbehållna.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Success modal -->
+  <div id="success-modal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="absolute inset-0 bg-brand/70 backdrop-blur-sm" id="modal-backdrop"></div>
+    <div class="relative flex min-h-full items-center justify-center p-4">
+      <div class="w-full max-w-md rounded-2xl bg-white dark:bg-brand-light p-8 shadow-2xl text-center">
+        <div class="mx-auto w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center text-accent mb-5" aria-hidden="true">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h2 id="modal-title" class="text-xl font-bold text-brand dark:text-white">Tack – kolla din inkorg!</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Vi har tagit emot din anmälan. Bekräfta din e-postadress via länken vi skickar (dubbel opt-in) – då får du guiden och inbjudan till webinaret.
+        </p>
+        <button type="button" id="modal-close" class="mt-6 px-6 py-2.5 rounded-lg bg-accent text-brand font-semibold hover:bg-accent-dim transition-colors">
+          Stäng
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // === KONFIGURATION – uppdatera dessa ===
+      const FORM_WEBHOOK_URL = ''; // t.ex. 'https://hook.eu1.make.com/xxxxx' eller ConvertKit/Mailchimp endpoint
+      const USE_JSON_PAYLOAD = true; // sätt false om webhook förväntar sig FormData/application/x-www-form-urlencoded
+
+      // Tema
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+
+      function getPreferredTheme() {
+        const stored = localStorage.getItem('theme');
+        if (stored) return stored;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      setTheme(getPreferredTheme());
+      themeToggle.addEventListener('click', () => {
+        setTheme(html.classList.contains('dark') ? 'light' : 'dark');
+      });
+
+      // Mobilmeny
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileBtn.addEventListener('click', () => {
+        const open = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileBtn.setAttribute('aria-expanded', String(!open));
+      });
+      mobileMenu.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Formulär
+      const form = document.getElementById('lead-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const submitText = document.getElementById('submit-text');
+      const submitSpinner = document.getElementById('submit-spinner');
+      const formError = document.getElementById('form-error');
+      const successModal = document.getElementById('success-modal');
+      const modalClose = document.getElementById('modal-close');
+      const modalBackdrop = document.getElementById('modal-backdrop');
+
+      function showModal() {
+        successModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        modalClose.focus();
+      }
+
+      function hideModal() {
+        successModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      modalClose.addEventListener('click', hideModal);
+      modalBackdrop.addEventListener('click', hideModal);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !successModal.classList.contains('hidden')) hideModal();
+      });
+
+      function setLoading(loading) {
+        submitBtn.disabled = loading;
+        submitText.textContent = loading ? 'Skickar…' : 'Skicka – få guiden';
+        submitSpinner.classList.toggle('hidden', !loading);
+      }
+
+      function showError(msg) {
+        formError.textContent = msg;
+        formError.classList.remove('hidden');
+      }
+
+      function hideError() {
+        formError.classList.add('hidden');
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        hideError();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const data = {
+          name: form.name.value.trim(),
+          company: form.company.value.trim(),
+          email: form.email.value.trim(),
+          employees: form.employees.value,
+          consent: form.consent.checked ? 'yes' : 'no',
+          source: form.source.value,
+          tags: form.tags.value,
+          double_opt_in: form.double_opt_in.value,
+          submitted_at: new Date().toISOString(),
+        };
+
+        setLoading(true);
+
+        try {
+          if (!FORM_WEBHOOK_URL) {
+            // Demo-läge utan webhook – ta bort eller sätt URL i produktion
+            console.info('Form data (webhook ej konfigurerad):', data);
+            await new Promise((r) => setTimeout(r, 800));
+            form.reset();
+            showModal();
+            return;
+          }
+
+          const options = {
+            method: 'POST',
+            headers: {},
+            body: null,
+          };
+
+          if (USE_JSON_PAYLOAD) {
+            options.headers['Content-Type'] = 'application/json';
+            options.body = JSON.stringify(data);
+          } else {
+            const fd = new FormData();
+            Object.entries(data).forEach(([k, v]) => fd.append(k, v));
+            options.body = fd;
+          }
+
+          const res = await fetch(FORM_WEBHOOK_URL, options);
+
+          if (!res.ok) {
+            throw new Error('Servern svarade med fel. Försök igen om en stund.');
+          }
+
+          form.reset();
+          showModal();
+        } catch (err) {
+          showError(err.message || 'Något gick fel. Kontrollera uppkopplingen och försök igen.');
+        } finally {
+          setLoading(false);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

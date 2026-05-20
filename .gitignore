@@ -1,0 +1,13 @@
+# Secrets – commit aldrig
+passwords.env
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
