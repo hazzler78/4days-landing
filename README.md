@@ -12,7 +12,28 @@ npx serve .
 
 ## Deploy
 
-Hostas på [Vercel](https://vercel.com). Vid push till `main` deployas automatiskt om GitHub är kopplat.
+Hostas på [Vercel](https://vercel.com). Vid push till `main` deployas automatiskt när GitHub är kopplat (se nedan).
+
+## GitHub (engångs-setup)
+
+```powershell
+cd "d:\Cursor\HEMSIDOR\4days"
+gh auth login
+# Välj: GitHub.com → HTTPS → Login with a web browser
+
+gh repo create 4days-landing --public --description "4days.ai Coming Soon landningssida" --source=. --remote=origin --push
+
+# Koppla Vercel till repot (auto-deploy vid push)
+vercel git connect
+```
+
+Om repot redan finns på GitHub:
+
+```powershell
+git remote add origin https://github.com/DITT-ANVÄNDARNAMN/4days-landing.git
+git push -u origin main
+vercel git connect
+```
 
 ## MailerLite (Vercel serverless)
 
