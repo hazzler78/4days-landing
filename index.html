@@ -1,6 +1,6 @@
 <!--
   UPPDATERA INNAN PUBLICERING:
-  - WEBHOOK_URL: Ersätt FORM_WEBHOOK_URL med er webhook (Make/Zapier) eller Mailchimp/ConvertKit endpoint
+  - MAILERLITE: API via /api/subscribe – sätt MAILERLITE_API_TOKEN (+ ev. MAILERLITE_GROUP_ID) i Vercel Environment Variables
   - HERO_BG_URL: Ersätt hero-bakgrundsbild (rekommenderat: WebP, ~1920×1080, <200 KB)
   - LOGO_SRC: Lägg in logotyp (SVG/PNG) i img#site-logo
   - CALENDLY_URL: https://calendly.com/hello-4days/30min (uppdaterad)
@@ -379,9 +379,8 @@
 
   <script>
     (function () {
-      // === KONFIGURATION – uppdatera dessa ===
-      const FORM_WEBHOOK_URL = ''; // t.ex. 'https://hook.eu1.make.com/xxxxx' eller ConvertKit/Mailchimp endpoint
-      const USE_JSON_PAYLOAD = true; // sätt false om webhook förväntar sig FormData/application/x-www-form-urlencoded
+      // Formulär → Vercel serverless → MailerLite API
+      const FORM_API_URL = '/api/subscribe';
 
       // Tema
       const themeToggle = document.getElementById('theme-toggle');
@@ -490,34 +489,16 @@
         setLoading(true);
 
         try {
-          if (!FORM_WEBHOOK_URL) {
-            // Demo-läge utan webhook – ta bort eller sätt URL i produktion
-            console.info('Form data (webhook ej konfigurerad):', data);
-            await new Promise((r) => setTimeout(r, 800));
-            form.reset();
-            showModal();
-            return;
-          }
-
-          const options = {
+          const res = await fetch(FORM_API_URL, {
             method: 'POST',
-            headers: {},
-            body: null,
-          };
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
 
-          if (USE_JSON_PAYLOAD) {
-            options.headers['Content-Type'] = 'application/json';
-            options.body = JSON.stringify(data);
-          } else {
-            const fd = new FormData();
-            Object.entries(data).forEach(([k, v]) => fd.append(k, v));
-            options.body = fd;
-          }
-
-          const res = await fetch(FORM_WEBHOOK_URL, options);
+          const result = await res.json().catch(() => ({}));
 
           if (!res.ok) {
-            throw new Error('Servern svarade med fel. Försök igen om en stund.');
+            throw new Error(result.error || 'Servern svarade med fel. Försök igen om en stund.');
           }
 
           form.reset();
