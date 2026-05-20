@@ -2,7 +2,7 @@
   UPPDATERA:
   - HERO_BG: bilder/Hero.jpg
   - LOGO: Ersätt #site-logo SVG med er logotyp
-  - LINKEDIN_JOSEPH / LINKEDIN_MIKAEL: Footer-länkar
+  - LINKEDIN: js/site-config.js (Joseph, Mikael, Company)
   - OG_IMAGE, favicon
   - ANALYTICS: js/cookie-consent.js → provider 'plausible' | 'ga4'
 -->
@@ -57,15 +57,28 @@
       background-color: #061a2b;
       background-image:
         linear-gradient(105deg,
-          rgba(6, 26, 43, 0.92) 0%,
-          rgba(10, 37, 64, 0.78) 45%,
-          rgba(10, 37, 64, 0.5) 100%),
+          rgba(6, 26, 43, 0.93) 0%,
+          rgba(10, 37, 64, 0.82) 42%,
+          rgba(10, 37, 64, 0.45) 68%,
+          rgba(255, 160, 80, 0.18) 88%,
+          rgba(0, 196, 140, 0.14) 100%),
         url('/bilder/Hero.jpg');
       background-size: cover;
       background-position: center;
     }
+    .reveal {
+      opacity: 0;
+      transform: translateY(1.25rem);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #guide { scroll-margin-top: 5rem; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
   </style>
@@ -87,14 +100,16 @@
   <header class="fixed top-0 inset-x-0 z-50 bg-white/90 dark:bg-brand-dark/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-700/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="4days.ai – startsida">
-        <div id="site-logo" class="w-10 h-10 rounded-xl bg-brand flex items-center justify-center border border-accent/25 shadow-sm" aria-hidden="true">
-          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="8" width="22" height="20" rx="3" stroke="#00D4FF" stroke-width="1.5" fill="none"/>
-            <path d="M6 14h22" stroke="#00D4FF" stroke-width="1.5" opacity="0.6"/>
-            <circle cx="12" cy="20" r="1.5" fill="#00C48C"/>
-            <circle cx="17" cy="20" r="1.5" fill="#00D4FF"/>
-            <circle cx="22" cy="20" r="1.5" fill="#00D4FF" opacity="0.5"/>
-            <path d="M28 12l4-2 2 4-4 2-2-4z" fill="#00C48C" opacity="0.9"/>
+        <div id="site-logo" class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand to-brand-light flex items-center justify-center border border-accent/30 shadow-md shadow-accent/10" aria-hidden="true">
+          <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="4days.ai logotyp">
+            <rect x="8" y="10" width="24" height="22" rx="4" fill="#0f3354" stroke="#00D4FF" stroke-width="1.75"/>
+            <path d="M8 17h24" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
+            <text x="20" y="26" text-anchor="middle" fill="#00D4FF" font-size="11" font-weight="700" font-family="system-ui,sans-serif">4</text>
+            <circle cx="14" cy="22" r="2" fill="#00C48C"/>
+            <circle cx="30" cy="22" r="2" fill="#00D4FF" opacity="0.7"/>
+            <path d="M34 14c2-1 4 0 5 2s0 4-2 5" stroke="#00C48C" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="38" cy="12" r="3" fill="#00C48C"/>
+            <path d="M36 12h4M38 10v4" stroke="#061a2b" stroke-width="1" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="leading-tight">
@@ -113,7 +128,7 @@
           <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
-        <a href="#guide" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-accent text-brand hover:bg-accent-dim transition-colors">Få guiden</a>
+        <a href="#guide" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-accent text-brand hover:bg-accent-dim transition-colors shadow-sm">Få guiden gratis</a>
         <button type="button" id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-brand-light" aria-label="Meny" aria-expanded="false">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
@@ -132,7 +147,7 @@
     <section class="relative min-h-screen flex items-center hero-bg" aria-labelledby="hero-heading">
       <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand/80 to-brand/40" aria-hidden="true"></div>
       <div class="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 sm:pt-28">
-        <div class="max-w-3xl">
+        <div class="max-w-3xl reveal">
           <p class="text-growth font-semibold text-sm sm:text-base tracking-wide mb-2">En dag mer frihet. Med AI.</p>
           <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-slate-200 border border-white/15 mb-5">
             <span class="w-2 h-2 rounded-full bg-growth animate-pulse" aria-hidden="true"></span>
@@ -148,11 +163,11 @@
             <span class="px-3 py-1.5 rounded-lg bg-accent/15 text-accent border border-accent/25 font-medium">Från 5 till 4 – smartare, inte hårdare.</span>
             <span class="px-3 py-1.5 rounded-lg bg-growth/15 text-growth border border-growth/25 font-medium">100% lön · 80% tid · 100% output</span>
           </div>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="#guide" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-lg bg-accent text-brand hover:bg-accent-dim transition-colors shadow-lg shadow-accent/25">
-              Få guiden + inbjudan till nästa webinar
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+            <a href="#guide" class="inline-flex justify-center items-center px-8 py-4 text-base sm:text-lg font-bold rounded-xl bg-accent text-brand hover:bg-accent-dim transition-all shadow-xl shadow-accent/30 hover:scale-[1.02] active:scale-[0.98] ring-2 ring-accent/50 ring-offset-2 ring-offset-transparent">
+              Få guiden + webinar-inbjudan gratis
             </a>
-            <a href="https://calendly.com/hello-4days/30min" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-lg border-2 border-white/35 text-white hover:bg-white/10 transition-colors">
+            <a href="https://calendly.com/hello-4days/30min" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-xl border-2 border-white/40 text-white hover:bg-white/10 transition-colors">
               Boka 30 min strategi-call
             </a>
           </div>
@@ -166,29 +181,29 @@
     <!-- Fördelar -->
     <section id="fordelar" class="py-20 sm:py-28 bg-slate-50 dark:bg-brand">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
           <p class="text-growth font-semibold text-sm mb-2">Varför 4days.ai</p>
           <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Smartare, inte hårdare</h2>
           <p class="mt-4 text-slate-600 dark:text-slate-300">Tre tydliga vinster när AI tar repetitivt arbete och teamet får mer frihet.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <article class="p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-md hover:border-growth/30 transition-all">
-            <div class="w-12 h-12 rounded-xl bg-growth/15 flex items-center justify-center text-growth mb-6" aria-hidden="true">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <article class="reveal p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-lg hover:border-growth/40 transition-all">
+            <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-growth/25 to-growth/5 flex items-center justify-center text-growth mb-6 ring-1 ring-growth/20" aria-hidden="true">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
             </div>
             <h3 class="text-xl font-semibold text-brand dark:text-white">Mer tid &amp; bättre välmående för medarbetarna</h3>
             <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">En extra dag för återhämtning och fokus – lägre stress och högre engagemang när arbetet struktureras rätt.</p>
           </article>
-          <article class="p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-md hover:border-accent/30 transition-all">
-            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-6" aria-hidden="true">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <article class="reveal p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-lg hover:border-accent/40 transition-all" style="transition-delay: 80ms">
+            <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/25 to-accent/5 flex items-center justify-center text-accent mb-6 ring-1 ring-accent/20" aria-hidden="true">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/><path stroke-linecap="round" d="M12 8v4l2 2"/></svg>
             </div>
             <h3 class="text-xl font-semibold text-brand dark:text-white">Ökad lönsamhet genom AI-automatisering</h3>
             <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Typisk tidsbesparing på repetitiva uppgifter: <strong class="text-brand dark:text-white">30–50%</strong>. Samma eller högre output på färre timmar.</p>
           </article>
-          <article class="p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-md hover:border-accent/30 transition-all">
-            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center text-accent mb-6" aria-hidden="true">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <article class="reveal p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30 shadow-sm hover:shadow-lg hover:border-accent/40 transition-all" style="transition-delay: 160ms">
+            <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-brand/10 to-accent/10 flex items-center justify-center text-brand dark:text-accent mb-6 ring-1 ring-accent/15" aria-hidden="true">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l1.84 3.68 4.12.6a.562.562 0 01.314.96l-2.98 2.9.703 4.1a.562.562 0 01-.816.59L12 14.77l-3.692 1.94a.562.562 0 01-.816-.59l.703-4.1-2.98-2.9a.562.562 0 01.314-.96l4.12-.6 1.84-3.68z"/></svg>
             </div>
             <h3 class="text-xl font-semibold text-brand dark:text-white">Starkare arbetsgivarvarumärke</h3>
             <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">4-dagarsvecka med full lön gör er attraktivare för talang – särskilt i konkurrens om kunskapsintensiva roller.</p>
@@ -200,11 +215,11 @@
     <!-- Hur det fungerar -->
     <section id="hur-det-fungerar" class="py-20 sm:py-28">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
           <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Hur det fungerar</h2>
           <p class="mt-4 text-slate-600 dark:text-slate-300">Från kartläggning till mätbar effekt – vanligtvis inom 6–12 månader.</p>
         </div>
-        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
           <li>
             <div class="flex flex-col h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-600/40 bg-white dark:bg-brand-light">
               <span class="flex items-center justify-center w-10 h-10 rounded-full bg-brand text-accent font-bold mb-4">1</span>
@@ -241,11 +256,11 @@
     <!-- Om oss -->
     <section id="om-oss" class="py-20 sm:py-28 bg-slate-50 dark:bg-brand">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
           <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Om oss</h2>
           <p class="mt-4 text-slate-600 dark:text-slate-300">Erfarenhet från affär, ledarskap och AI-teknik – byggt för svenska kunskapsbolag.</p>
         </div>
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto reveal">
           <article class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200/80 dark:border-slate-600/30">
             <div class="flex gap-5">
               <div class="shrink-0 w-16 h-16 rounded-full bg-brand flex items-center justify-center text-accent font-bold text-xl" aria-hidden="true">JT</div>
@@ -267,20 +282,22 @@
             </div>
           </article>
         </div>
-        <p class="mt-10 text-center text-sm text-slate-500 dark:text-slate-400">4days.ai AB under registrering maj 2026</p>
+        <p class="mt-10 text-center text-sm text-slate-500 dark:text-slate-400">4days.ai AB – Aktiebolag under registrering – maj 2026</p>
       </div>
     </section>
 
     <!-- Lead-formulär (centrerat) -->
-    <section id="guide" class="py-20 sm:py-28 bg-gradient-to-b from-white to-slate-50 dark:from-brand-dark dark:to-brand">
+    <section id="guide" class="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-brand dark:via-brand-dark dark:to-brand border-y border-accent/10">
       <div class="max-w-xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-growth font-semibold text-sm mb-2">Kom igång</p>
-        <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Få guiden + inbjudan till nästa webinar</h2>
-        <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">
-          Praktisk guide för ledningsgrupper – plus plats på vårt kommande webinar. Bekräftelse via e-post (dubbel opt-in).
-        </p>
+        <div class="reveal">
+          <p class="text-growth font-semibold text-sm mb-2">Kom igång</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">Få guiden + inbjudan till nästa webinar</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+            Praktisk guide för ledningsgrupper – plus plats på vårt kommande webinar. Bekräftelse via e-post (dubbel opt-in).
+          </p>
+        </div>
 
-        <form id="lead-form" class="mt-10 p-6 sm:p-8 rounded-2xl bg-white dark:bg-brand-light border border-slate-200 dark:border-slate-600/40 shadow-xl text-left" novalidate>
+        <form id="lead-form" class="reveal mt-10 p-6 sm:p-8 rounded-2xl bg-white dark:bg-brand-light border-2 border-accent/20 dark:border-accent/30 shadow-2xl shadow-brand/5 text-left ring-1 ring-slate-200/50 dark:ring-slate-600/30" novalidate>
           <input type="hidden" name="source" value="landing-4days-ai-coming-soon">
           <input type="hidden" name="tags" value="4-dagarsvecka,guide,webinar,ai">
           <input type="hidden" name="double_opt_in" value="true">
@@ -325,8 +342,8 @@
 
           <p id="form-error" class="mt-4 text-sm text-red-600 dark:text-red-400 hidden" role="alert"></p>
 
-          <button type="submit" id="submit-btn" class="mt-6 w-full inline-flex justify-center items-center gap-2 px-6 py-3.5 text-base font-semibold rounded-lg bg-accent text-brand hover:bg-accent-dim disabled:opacity-60 transition-colors">
-            <span id="submit-text">Skicka – få guiden</span>
+          <button type="submit" id="submit-btn" class="mt-6 w-full inline-flex justify-center items-center gap-2 px-6 py-4 text-base sm:text-lg font-bold rounded-xl bg-accent text-brand hover:bg-accent-dim disabled:opacity-60 transition-all shadow-lg shadow-accent/25 hover:scale-[1.01] active:scale-[0.99]">
+            <span id="submit-text">Få guiden + webinar-inbjudan gratis</span>
             <svg id="submit-spinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
           </button>
         </form>
@@ -414,7 +431,7 @@
 
       function setLoading(loading) {
         submitBtn.disabled = loading;
-        submitText.textContent = loading ? 'Skickar…' : 'Skicka – få guiden';
+        submitText.textContent = loading ? 'Skickar…' : 'Få guiden + webinar-inbjudan gratis';
         submitSpinner.classList.toggle('hidden', !loading);
       }
       function showError(msg) {
@@ -465,7 +482,9 @@
       });
     })();
   </script>
+  <script src="/js/site-config.js"></script>
   <script src="/js/site-theme.js"></script>
+  <script src="/js/scroll-reveal.js"></script>
   <script src="/js/cookie-consent.js"></script>
 </body>
 </html>
