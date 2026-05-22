@@ -98,6 +98,11 @@
                   <td>Tills du rensar webbläsaren</td>
                 </tr>
                 <tr>
+                  <td>Vercel Web Analytics (om aktiverat)</td>
+                  <td>Analytics – aggregerad besöksstatistik (laddas efter samtycke)</td>
+                  <td>Ingen cookie-lagring i standardläge</td>
+                </tr>
+                <tr>
                   <td>Plausible (om aktiverat)</td>
                   <td>Analytics – aggregerad besöksstatistik utan cookies (Plausible standard)</td>
                   <td>Ingen cookie-lagring i standardläge</td>
@@ -113,9 +118,9 @@
         </section>
 
         <section>
-          <h2>Analytics-alternativ</h2>
-          <p><strong>Plausible</strong> (rekommenderat): privacy-vänligt, ofta utan cookies, EU-fokus. Aktiveras i <code class="text-xs bg-slate-100 dark:bg-brand px-1 rounded">js/cookie-consent.js</code> med <code class="text-xs bg-slate-100 dark:bg-brand px-1 rounded">provider: 'plausible'</code>.</p>
-          <p class="mt-3"><strong>Google Analytics 4</strong>: kräver tydligt samtycke i EU. Aktiveras med <code class="text-xs bg-slate-100 dark:bg-brand px-1 rounded">provider: 'ga4'</code> och ert mät-ID.</p>
+          <h2>Analytics</h2>
+          <p><strong>Vercel Web Analytics</strong> (aktivt): privacy-vänlig besöksstatistik. Laddas först efter samtycke via <code class="text-xs bg-slate-100 dark:bg-brand px-1 rounded">js/cookie-consent.js</code> (<code class="text-xs bg-slate-100 dark:bg-brand px-1 rounded">provider: 'vercel'</code>). Kräver att Web Analytics är aktiverat i Vercel-projektet.</p>
+          <p class="mt-3"><strong>Plausible / GA4</strong>: kan aktiveras istället genom att byta <code class="text-xs bg-slate-100 dark:bg-brand px-1 rounded">provider</code> i samma fil.</p>
         </section>
 
         <section>

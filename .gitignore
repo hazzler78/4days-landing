@@ -7,6 +7,9 @@ passwords.env
 
 # Vercel
 .vercel
+node_modules/
+package-lock.json
+
 
 # OS / editor
 .DS_Store

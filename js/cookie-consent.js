@@ -1,14 +1,13 @@
 /**
  * Cookie-samtycke + analytics (laddas först efter godkännande).
  *
- * Konfiguration – uppdatera innan produktion:
- *   provider: 'plausible' | 'ga4' | 'none'
- *   plausibleDomain: '4days.ai'
- *   ga4Id: 'G-XXXXXXXXXX'
+ * Konfiguration:
+ *   provider: 'vercel' | 'plausible' | 'ga4' | 'none'
+ *   Aktivera Web Analytics i Vercel → Project → Analytics
  */
 (function () {
   const CONFIG = {
-    provider: 'none', // byt till 'plausible' eller 'ga4' när ID finns
+    provider: 'vercel',
     plausibleDomain: '4days.ai',
     ga4Id: '',
     storageKey: '4days_cookie_consent',
@@ -29,6 +28,16 @@
   }
 
   function loadAnalytics() {
+    if (CONFIG.provider === 'vercel') {
+      if (document.querySelector('script[data-vercel-analytics]')) return;
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      const s = document.createElement('script');
+      s.defer = true;
+      s.dataset.vercelAnalytics = 'true';
+      s.src = '/_vercel/insights/script.js';
+      document.head.appendChild(s);
+      return;
+    }
     if (CONFIG.provider === 'plausible' && CONFIG.plausibleDomain) {
       if (document.querySelector('script[data-plausible]')) return;
       const s = document.createElement('script');
