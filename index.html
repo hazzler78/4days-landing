@@ -3,32 +3,32 @@
   - HERO_BG: bilder/Hero.jpg
   - LOGO: bilder/logo-light.png (ljus) + bilder/logo-dark.png (mörk) – källfiler logo_4days_*.png
   - LINKEDIN: js/site-config.js (Joseph, Mikael, Company)
-  - OG_IMAGE, favicon
   - ANALYTICS: Vercel Web Analytics – aktivera i Vercel Dashboard → Analytics
+  - SEO: robots.txt, sitemap.xml, og-image.jpg, favicon.png (klart)
 -->
 <!DOCTYPE html>
 <html lang="sv" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4days.ai AB – En dag mer frihet. Med AI.</title>
+  <title>4-dagarsvecka med full lön | AI-konsult för svenska SMEs | 4days.ai</title>
   <meta name="description" content="4-dagarsvecka med full lön för kunskapsintensiva svenska SMEs. Från 5 till 4 – smartare, inte hårdare. 100% lön. 80% tid. 100% output.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://4days.ai/">
+  <link rel="canonical" href="https://www.4days.ai/">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://4days.ai/">
-  <meta property="og:title" content="4-dagarsvecka med full lön | 4days.ai AB">
+  <meta property="og:url" content="https://www.4days.ai/">
+  <meta property="og:title" content="4-dagarsvecka med full lön | AI-konsult för svenska SMEs | 4days.ai">
   <meta property="og:description" content="En dag mer frihet. Med AI. Vi hjälper svenska SMEs gå från 5 till 4 dagar med bibehållen eller ökad lönsamhet.">
-  <meta property="og:image" content="https://4days.ai/og-image.jpg">
+  <meta property="og:image" content="https://www.4days.ai/og-image.jpg">
   <meta property="og:locale" content="sv_SE">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="4days.ai AB – En dag mer frihet. Med AI.">
+  <meta name="twitter:title" content="4-dagarsvecka med full lön | AI-konsult | 4days.ai">
   <meta name="twitter:description" content="Från 5 till 4 – smartare, inte hårdare. 100% lön. 80% tid. 100% output.">
-  <meta name="twitter:image" content="https://4days.ai/og-image.jpg">
+  <meta name="twitter:image" content="https://www.4days.ai/og-image.jpg">
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.png" type="image/png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -95,12 +95,55 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "4days.ai AB",
-    "url": "https://4days.ai",
-    "slogan": "En dag mer frihet. Med AI.",
-    "description": "Hjälper kunskapsintensiva svenska SMEs införa 4-dagarsvecka med AI-automatisering.",
-    "foundingDate": "2026-05"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.4days.ai/#organization",
+        "name": "4days.ai AB",
+        "url": "https://www.4days.ai/",
+        "logo": "https://www.4days.ai/bilder/logo-light.png",
+        "email": "hello@4days.ai",
+        "slogan": "En dag mer frihet. Med AI.",
+        "description": "Hjälper kunskapsintensiva svenska SMEs införa 4-dagarsvecka med AI-automatisering.",
+        "foundingDate": "2026-05",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vasavägen 29",
+          "postalCode": "177 52",
+          "addressLocality": "Järfälla",
+          "addressCountry": "SE"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/4days-ai"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.4days.ai/#service",
+        "name": "4days.ai AB",
+        "url": "https://www.4days.ai/",
+        "image": "https://www.4days.ai/og-image.jpg",
+        "description": "AI-konsultation och införande av 4-dagarsvecka med full lön för kunskapsintensiva svenska bolag.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        "provider": { "@id": "https://www.4days.ai/#organization" },
+        "serviceType": [
+          "4-dagarsvecka",
+          "AI-automatisering",
+          "AI-konsultation"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.4days.ai/#website",
+        "url": "https://www.4days.ai/",
+        "name": "4days.ai AB",
+        "inLanguage": "sv-SE",
+        "publisher": { "@id": "https://www.4days.ai/#organization" }
+      }
+    ]
   }
   </script>
 </head>
