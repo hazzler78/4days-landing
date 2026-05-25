@@ -3,7 +3,7 @@
  */
 window.SITE_CONFIG = {
   linkedinJoseph: '', // t.ex. 'https://www.linkedin.com/in/joseph-tran'
-  linkedinMikael: '', // t.ex. 'https://www.linkedin.com/in/mikael-soderberg'
+  linkedinMikael: 'https://www.linkedin.com/in/mikaelsoderberg1/',
   linkedinCompany: 'https://www.linkedin.com/company/4days-ai',
 };
 
