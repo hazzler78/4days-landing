@@ -1,12 +1,12 @@
 /**
  * Indexerar knowledge/*.txt till Supabase (documents + document_chunks + embeddings)
+ * Använder REST API direkt (ingen WebSocket – fungerar i Node 20).
  *
  * Kör: npm run seed:knowledge
  */
 
 const fs = require('fs');
 const path = require('path');
-const { createClient } = require('@supabase/supabase-js');
 const { chunkText } = require('./lib/chunk-text');
 
 const KNOWLEDGE_DIR = path.join(__dirname, '..', 'knowledge');
@@ -26,6 +26,86 @@ function loadEnv() {
     const val = trimmed.slice(idx + 1).trim();
     if (!process.env[key]) process.env[key] = val;
   }
+}
+
+function createSupabaseRest(baseUrl, serviceKey) {
+  const root = baseUrl.replace(/\/$/, '');
+
+  async function request(method, apiPath, body, prefer) {
+    const headers = {
+      apikey: serviceKey,
+      Authorization: `Bearer ${serviceKey}`,
+      'Content-Type': 'application/json',
+    };
+    if (prefer) headers.Prefer = prefer;
+
+    const res = await fetch(`${root}${apiPath}`, {
+      method,
+      headers,
+      body: body ? JSON.stringify(body) : undefined,
+    });
+
+    const text = await res.text();
+    let data = null;
+    if (text) {
+      try {
+        data = JSON.parse(text);
+      } catch {
+        data = text;
+      }
+    }
+
+    if (!res.ok) {
+      const msg =
+        typeof data === 'object' && data?.message
+          ? data.message
+          : typeof data === 'object' && data?.error
+            ? data.error
+            : text || res.statusText;
+      const err = new Error(msg);
+      err.status = res.status;
+      err.code = data?.code;
+      throw err;
+    }
+
+    return data;
+  }
+
+  return {
+    async findDocumentByFilename(filename) {
+      const rows = await request(
+        'GET',
+        `/rest/v1/documents?filename=eq.${encodeURIComponent(filename)}&select=id,filename&limit=1`
+      );
+      return Array.isArray(rows) && rows[0] ? rows[0] : null;
+    },
+
+    async resolveUserId() {
+      try {
+        const data = await request('GET', '/auth/v1/admin/users?page=1&per_page=1');
+        return data?.users?.[0]?.id ?? null;
+      } catch {
+        return null;
+      }
+    },
+
+    async deleteChunks(documentId) {
+      await request('DELETE', `/rest/v1/document_chunks?document_id=eq.${documentId}`);
+    },
+
+    async updateDocument(id, fields) {
+      await request('PATCH', `/rest/v1/documents?id=eq.${id}`, fields);
+    },
+
+    async insertDocument(row) {
+      const rows = await request('POST', '/rest/v1/documents', row, 'return=representation');
+      return Array.isArray(rows) ? rows[0] : rows;
+    },
+
+    async insertChunks(rows) {
+      await request('POST', '/rest/v1/document_chunks', rows);
+    },
+  };
 }
 
 async function generateEmbeddings(texts, openaiKey) {
@@ -52,23 +132,7 @@ async function generateEmbeddings(texts, openaiKey) {
   return data.data.sort((a, b) => a.index - b.index).map((d) => d.embedding);
 }
 
-async function findDocumentByFilename(supabase, filename) {
-  const { data } = await supabase
-    .from('documents')
-    .select('id, filename')
-    .eq('filename', filename)
-    .maybeSingle();
-  return data;
-}
-
-async function resolveUserId(supabase) {
-  const { data, error } = await supabase.auth.admin.listUsers({ perPage: 1 });
-  if (error) throw new Error(`Kunde inte hämta användare: ${error.message}`);
-  if (data.users?.[0]?.id) return data.users[0].id;
-  return null;
-}
-
-async function indexFile(supabase, openaiKey, filePath, userId) {
+async function indexFile(sb, openaiKey, filePath, userId) {
   const filename = path.basename(filePath);
   const text = fs.readFileSync(filePath, 'utf8');
 
@@ -83,39 +147,31 @@ async function indexFile(supabase, openaiKey, filePath, userId) {
     return;
   }
 
-  let doc = await findDocumentByFilename(supabase, filename);
+  let doc = await sb.findDocumentByFilename(filename);
   const fileStat = fs.statSync(filePath);
 
   if (doc) {
-    await supabase.from('document_chunks').delete().eq('document_id', doc.id);
-    await supabase
-      .from('documents')
-      .update({ status: 'processing', error_message: null })
-      .eq('id', doc.id);
+    await sb.deleteChunks(doc.id);
+    await sb.updateDocument(doc.id, { status: 'processing', error_message: null });
   } else {
-    const { data: inserted, error } = await supabase
-      .from('documents')
-      .insert({
+    try {
+      doc = await sb.insertDocument({
         user_id: userId,
         filename,
         file_path: `knowledge/${filename}`,
         file_size: fileStat.size,
         mime_type: 'text/plain',
         status: 'processing',
-      })
-      .select('id')
-      .single();
-
-    if (error) {
-      if (error.message.includes('user_id') || error.code === '23502') {
+      });
+    } catch (err) {
+      if (err.message.includes('user_id') || err.code === '23502') {
         throw new Error(
-          'Ingen Supabase-användare hittades. Logga in en gång i knowledge-agent (/login) ' +
-            'eller kör migration supabase/migrations/003_public_knowledge.sql.'
+          'Ingen Supabase-användare hittades. Kör migration 003_public_knowledge.sql ' +
+            'eller logga in en gång i knowledge-agent (/login).'
         );
       }
-      throw new Error(`Kunde inte skapa dokument ${filename}: ${error.message}`);
+      throw new Error(`Kunde inte skapa dokument ${filename}: ${err.message}`);
     }
-    doc = inserted;
   }
 
   const embeddings = await generateEmbeddings(chunks, openaiKey);
@@ -129,14 +185,18 @@ async function indexFile(supabase, openaiKey, filePath, userId) {
 
   const BATCH = 50;
   for (let i = 0; i < rows.length; i += BATCH) {
-    const { error } = await supabase.from('document_chunks').insert(rows.slice(i, i + BATCH));
-    if (error) throw new Error(`Chunk insert ${filename}: ${error.message}`);
+    try {
+      await sb.insertChunks(rows.slice(i, i + BATCH));
+    } catch (err) {
+      throw new Error(`Chunk insert ${filename}: ${err.message}`);
+    }
   }
 
-  await supabase
-    .from('documents')
-    .update({ status: 'indexed', chunk_count: chunks.length, error_message: null })
-    .eq('id', doc.id);
+  await sb.updateDocument(doc.id, {
+    status: 'indexed',
+    chunk_count: chunks.length,
+    error_message: null,
+  });
 
   console.log(`  OK ${filename} → ${chunks.length} chunks`);
 }
@@ -157,9 +217,7 @@ async function main() {
     process.exit(1);
   }
 
-  const supabase = createClient(supabaseUrl, serviceKey, {
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
+  const sb = createSupabaseRest(supabaseUrl, serviceKey);
 
   const files = fs
     .readdirSync(KNOWLEDGE_DIR)
@@ -174,13 +232,13 @@ async function main() {
 
   console.log(`Indexerar ${files.length} filer till Supabase…\n`);
 
-  const userId = await resolveUserId(supabase);
+  const userId = await sb.resolveUserId();
   if (!userId) {
-    console.warn('Varning: ingen auth-användare – försöker med user_id null (kräver migration 003).\n');
+    console.log('Ingen auth-användare – använder user_id null (migration 003).\n');
   }
 
   for (const file of files) {
-    await indexFile(supabase, openaiKey, file, userId);
+    await indexFile(sb, openaiKey, file, userId);
   }
 
   console.log('\nKlart! Testa chatten med en fråga om affärsplanen eller FAQ.');
