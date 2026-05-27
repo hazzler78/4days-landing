@@ -1,0 +1,59 @@
+# 4days.ai – Landningssida (www.4days.ai)
+
+**Bolag:** 4days.ai AB  
+**Slogan:** En dag mer frihet. Med AI.  
+**Mottos:** Från 5 till 4 – smartare, inte hårdare. | AI tar jobbet. Du tar ledigt. | 4 dagar jobb. 7 dagar liv.  
+**Adress:** Vasavägen 29, 177 52 Järfälla  
+**E-post:** hello@4days.ai  
+**Webb:** https://www.4days.ai  
+**Calendly (30 min strategi-call):** https://calendly.com/hello-4days/30min  
+**LinkedIn företag:** https://www.linkedin.com/company/4days-ai  
+
+## Erbjudande
+
+Hjälper kunskapsintensiva svenska SMEs (10–200 anställda) att gå från 5 till 4 dagarsvecka med full lön via AI-automatisering. Typisk tidsplan: 6–12 månader.
+
+**100-80-100-modellen:** 100 % lön, 80 % arbetstid, 100 % output.
+
+## Tjänster (4 steg)
+
+1. **Kartläggning** (2–3 veckor) – processer, flaskhalsar, var AI gör störst nytta
+2. **AI-automatisering** – repetitivt arbete (rapporter, admin, kundflöden)
+3. **Implementering & utbildning** – playbook, rutiner, teamet äger förändringen
+4. **Mätning & uppföljning** – KPI:er vecka för vecka
+
+## AI-konsultation (bredare ingång)
+
+Inte alla kunder börjar med full 4-dagarsvecka. Många börjar som AI- och automationskonsulter – processkartläggning och mätbar effekt. 4-dagarsveckan är slutmål och specialitet.
+
+## Priser (publikt på sidan)
+
+- Konsulttimme: 2 500 kr/tim (volymrabatter)
+- AI Kickstart 20 h: 45 000 kr
+- AI Kickstart 40 h: 90 000 kr
+- Fastpris och delbetalning möjligt
+
+## Lead-magnet
+
+Gratis guide: "Praktisk Guide för ledningsgrupper – Från 5 till 4-dagarsvecka med AI"  
++ inbjudan till webinar. Formulär på sidan med dubbel opt-in via MailerLite.
+
+## Team
+
+- **Joseph Tran** – försäljning & affärsutveckling, tidigare VD/chef ~40 anställda
+- **Mikael Söderberg** – teknisk grundare, fullstack & AI (Next.js, LangChain, OpenAI, n8n)
+
+## Fördelar (3 pelare)
+
+1. Mer tid & bättre välmående för medarbetare
+2. Ökad lönsamhet via AI-automatisering (30–50 % tidsbesparing på repetitiva uppgifter)
+3. Starkare arbetsgivarvarumärke / talent attraction
+
+## Policy-sidor
+
+- Integritetspolicy: /integritetspolicy
+- Cookiepolicy: /cookies
+
+## Chatbot
+
+Publik AI-assistent "4days.ai Agent" på sidan – svarar om 4-dagarsvecka, AI och bokar möten via Calendly.

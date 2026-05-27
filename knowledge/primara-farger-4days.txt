@@ -1,0 +1,16 @@
+# 4days.ai – Primära färger (brand)
+
+Snabbreferens för design, webb, e-post och AI-bilder:
+
+- **Primär (mörkblå):** #0A2540
+- **Accent (ljusblå/cyan):** #00D4FF
+- **Komplement (grön):** #00C48C
+- **Mörk bakgrund:** #061a2b
+
+Användning:
+- Primär: rubriker, header, footer, mörka ytor
+- Accent: CTA-knappar, länkar, highlights
+- Komplement: framgång, positiva KPI:er, sekundära accenter
+- Mörk: hero-bakgrund, dark mode
+
+Logotyp: bilder/logo-light.png (ljus bakgrund), bilder/logo-dark.png (mörk bakgrund)

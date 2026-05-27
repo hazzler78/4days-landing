@@ -1,7 +1,11 @@
 {
   "name": "4days-landing",
   "private": true,
+  "scripts": {
+    "seed:knowledge": "node scripts/seed-knowledge.js"
+  },
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.1",
     "@vercel/analytics": "^1.5.0"
   }
 }

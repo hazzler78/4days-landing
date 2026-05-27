@@ -1,0 +1,119 @@
+# 4days.ai AB  
+**Affärsplan**  
+**Datum:** 21 maj 2026  
+
+**Grundare:** Joseph Tran & Mikael Söderberg  
+**Bolagsform:** Aktiebolag (under registrering)  
+**Slogan:** "En dag mer frihet. Med AI."
+
+---
+
+## 1. Sammanfattning (Executive Summary)
+
+**4days.ai** hjälper kunskapsintensiva svenska SMEs (10–200 anställda) att övergå från 5- till **4-dagarsvecka** med AI-driven automatisering och evidensbaserad implementering enligt **4 Day Week Global**-metodiken.
+
+Vi kombinerar kraftfull AI-implementation med beprövad 100-80-100-modell (100 % lön, 80 % tid, 100 % output).
+
+**Nyckelfakta:**
+- **Affärsmodell:** Konsulttimmar 2 500 kr/tim (med volymrabatter), provision från AI-appar + framtida SaaS.
+- **Marknad:** Stark efterfrågan i Sverige stödd av positiva piloter 2024–2026.
+- **Team:** Erfarna säljare med AI-kompetens + partners Industry Rockstar (USA).
+- **Prognos (optimistisk):** Omsättning år 1 ≈ 42 Mkr, stark marginal ~75–78 %.
+- **Finansiering:** Eget kapital 50 000 kr + sökta lån/investeringar.
+- **Exit:** Försäljning eller IPO inom 5–7 år.
+
+---
+
+## 2. Bolagsbeskrivning
+
+**Vision:** En mer hållbar och mänsklig arbetsmarknad där AI frigör tid och ökar livskvalitet.
+
+**Unikt värdeerbjudande:**
+- AI-automatisering av repetitiva uppgifter
+- Evidensbaserad implementering via 4 Day Week Global
+- Mätbara resultat och uppföljning
+
+**Partners:** Industry Rockstar (USA) + europeiska/asiatiska AI-team.
+
+---
+
+## 3. Marknadsanalys
+
+**Målgrupp:** Kunskapsintensiva SMEs 10–200 anställda inom IT, konsult, kreativa branscher och offentlig sektor.
+
+**Evidens från svenska piloter (4 Day Week Global 2024–2026):**
+- 10 av 11 organisationer valde att fortsätta efter pilot.
+- Minskad stress (-19 %), bättre sömn, bibehållen eller ökad produktivitet.
+
+**TAM/SAM/SOM:**  
+SAM i Sverige uppskattas till 5–10 Mdkr/år. Vi siktar på 0,5–1 % andel år 1.
+
+---
+
+## 4. Produkter & Tjänster
+
+- **Konsulttjänster:** Processkartläggning, AI-implementation, utbildning och uppföljning.
+- **Prissättning:** 2 500 kr/timme.  
+  **Paketexempel:**  
+  - 10 timmar = 25 000 kr  
+  - 100 timmar = 10 % rabatt  
+  - 500 timmar = 20 % rabatt  
+  - 1 000 timmar = 30 % rabatt  
+  - 10 000 timmar = 50 % rabatt
+
+**Betalningsvillkor & faktureringsflöde**
+
+- **Standard:** 30 % förskott vid offertgodkännande, resterande belopp efter leverans eller per milstolpe.  
+- **Betalvillkor:** 10 dagar netto.  
+- **Faktureringsverktyg:** Fortnox (PEPPOL e-faktura) + Stripe för kort/Swish-betalning.  
+- **Rekommenderat kundutbud:** Fastpris-paket (ex. AI Kickstart 20h = 45 000 kr, AI Kickstart 40h = 90 000 kr).
+
+**Ytterligare intäkter:** Provision från AI-verktyg + framtida SaaS-plattform.
+
+---
+
+## 5. Marknadsföring & Försäljning
+
+- Digitala annonser (Facebook/Instagram): "Har ni fortfarande 5-dagarsvecka?"
+- Content marketing, webinars och case studies.
+- Partnerskap med 4 Day Week Global och branschorganisationer.
+
+---
+
+## 6. Organisation & Milestones
+
+**Team:** Joseph Tran (försäljning/marknadsföring) + Mikael Söderberg (säljbolagserfarenhet).
+
+**Viktiga Milestones:**
+- Månad 1–2: Bolagsregistrering + 4 Day Week Global Fast Track
+- Månad 3–6: Första 5–10 kunder + case studies
+- År 1: Skalning och positiv kassaflöde
+- År 2: Norden-expansion + SaaS-launch
+
+---
+
+## 7. Finansiell Prognos
+
+**Optimistisk prognos – År 1 (från maj 2026):**
+- Total omsättning år 1: **ca 42 Mkr**
+- Break-even: Månad 5
+- Årets resultat: **ca +26 Mkr**
+
+**Startkapital:** 50 000 kr eget + önskad finansiering 100–250 kkr (steg 2) och 1 Mkr (steg 3).
+
+---
+
+## 8. Risker & Mitigation
+
+- Långsam kundanskaffning → Stark marknadsföring + pilotkunder
+- Motstånd mot 4-dagarsvecka → Evidens + mätbara resultat
+- Konkurrens → Stark AI-differentiering
+
+---
+
+**Kontakt:**  
+Joseph Tran & Mikael Söderberg  
+4days.ai AB  
+hello@4days.ai  
+Vasavägen 29, 177 52 Järfälla  
+"En dag mer frihet. Med AI."

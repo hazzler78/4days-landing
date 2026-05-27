@@ -99,11 +99,23 @@ Lokal utveckling: lägg samma nycklar i `.env` i projektroten och kör `vercel d
 
 ### Kunskapsbas (Supabase)
 
-1. Använd projektet i `4days-knowledge-agent/` (intern admin) eller ladda upp PDF/txt i Supabase
-2. Kör migration `supabase/migrations/001_initial_schema.sql` om inte redan gjort
-3. Dokument måste vara **indexerade** (status `indexed`) för RAG
+**Steg 1 – SQL (engångs)** i [Supabase SQL Editor](https://supabase.com/dashboard):
 
-Chatten fungerar även utan RAG – då använder den inbyggd bolagskunskap i systemprompten.
+Kör filerna i ordning (finns i `supabase/migrations/`):
+
+1. `001_initial_schema.sql` – tabeller + pgvector
+2. `002_storage_bucket.sql` – valfritt för filuppladdning i admin
+3. `003_public_knowledge.sql` – tillåter seed utan inloggad användare
+
+**Steg 2 – Indexera textfiler:**
+
+```powershell
+npm run seed:knowledge
+```
+
+Läser alla `knowledge/*.txt` (affärsplan, färger, webb, FAQ) och skapar embeddings.
+
+**Steg 3 – Vercel:** `SUPABASE_SERVICE_ROLE_KEY` i production (redan i `.env` lokalt).
 
 ### Filer
 
