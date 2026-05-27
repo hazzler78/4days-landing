@@ -48,9 +48,20 @@
       background:linear-gradient(180deg,#f8fafc 0%,#fff 100%);
     }
     .dark #fourdays-chat-messages { background:linear-gradient(180deg,#061a2b 0%,#0f3354 100%); }
-    .fd-msg { max-width:88%; padding:.75rem .875rem; border-radius:1rem; font-size:.875rem; line-height:1.55; white-space:pre-wrap; word-break:break-word; }
-    .fd-msg.user { align-self:flex-end; background:var(--fd-accent); color:var(--fd-brand); border-bottom-right-radius:.25rem; }
+    .fd-msg { max-width:88%; padding:.75rem .875rem; border-radius:1rem; font-size:.875rem; line-height:1.55; word-break:break-word; }
+    .fd-msg.user { align-self:flex-end; background:var(--fd-accent); color:var(--fd-brand); border-bottom-right-radius:.25rem; white-space:pre-wrap; }
     .fd-msg.bot { align-self:flex-start; background:#fff; color:#1e293b; border:1px solid #e2e8f0; border-bottom-left-radius:.25rem; }
+    .fd-msg.bot .fd-md-p { margin:0 0 .5rem; }
+    .fd-msg.bot .fd-md-p:last-child { margin-bottom:0; }
+    .fd-msg.bot .fd-md-h2 { margin:0 0 .35rem; font-weight:700; font-size:.9375rem; }
+    .fd-msg.bot .fd-md-h3 { margin:0 0 .35rem; font-weight:600; font-size:.875rem; }
+    .fd-msg.bot .fd-md-ul { margin:.25rem 0 .5rem 1.1rem; padding:0; list-style:disc; }
+    .fd-msg.bot .fd-md-ul li { margin-bottom:.25rem; }
+    .fd-msg.bot .fd-md-hr { border:none; border-top:1px solid #e2e8f0; margin:.5rem 0; }
+    .dark .fd-msg.bot .fd-md-hr { border-top-color:#334155; }
+    .fd-msg.bot .fd-md-code { font-size:.8125rem; background:#f1f5f9; padding:.1rem .35rem; border-radius:.25rem; }
+    .dark .fd-msg.bot .fd-md-code { background:#061a2b; }
+    .fd-msg.bot strong { font-weight:700; }
     .dark .fd-msg.bot { background:#0A2540; color:#e2e8f0; border-color:#334155; }
     .fd-msg.bot a { color:#0284c7; text-decoration:underline; }
     .dark .fd-msg.bot a { color:var(--fd-accent); }
@@ -99,8 +110,12 @@
       .replace(/"/g, '&quot;');
   }
 
-  function formatReply(text) {
+  function inlineMarkdown(text) {
     let html = escapeHtml(text);
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+    html = html.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em>$1</em>');
+    html = html.replace(/`([^`]+)`/g, '<code class="fd-md-code">$1</code>');
     html = html.replace(
       /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
       '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
@@ -110,6 +125,64 @@
       '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
     );
     return html;
+  }
+
+  function renderMarkdown(text) {
+    const lines = text.replace(/\r\n/g, '\n').split('\n');
+    const out = [];
+    let inList = false;
+
+    function closeList() {
+      if (inList) {
+        out.push('</ul>');
+        inList = false;
+      }
+    }
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+
+      if (/^(-{3,}|─{3,}|\*{3,})$/.test(trimmed)) {
+        closeList();
+        out.push('<hr class="fd-md-hr">');
+        continue;
+      }
+
+      const bullet = trimmed.match(/^[-•*]\s+(.+)/);
+      if (bullet) {
+        if (!inList) {
+          out.push('<ul class="fd-md-ul">');
+          inList = true;
+        }
+        out.push(`<li>${inlineMarkdown(bullet[1])}</li>`);
+        continue;
+      }
+
+      closeList();
+
+      if (!trimmed) continue;
+
+      const h3 = trimmed.match(/^###\s+(.+)/);
+      if (h3) {
+        out.push(`<p class="fd-md-h3">${inlineMarkdown(h3[1])}</p>`);
+        continue;
+      }
+
+      const h2 = trimmed.match(/^##\s+(.+)/);
+      if (h2) {
+        out.push(`<p class="fd-md-h2">${inlineMarkdown(h2[1])}</p>`);
+        continue;
+      }
+
+      out.push(`<p class="fd-md-p">${inlineMarkdown(trimmed)}</p>`);
+    }
+
+    closeList();
+    return out.join('') || inlineMarkdown(text);
+  }
+
+  function formatReply(text) {
+    return renderMarkdown(text);
   }
 
   function loadMessages() {
