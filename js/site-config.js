@@ -2,7 +2,7 @@
  * Uppdatera LinkedIn-URL:er här – alla länkar på sidan uppdateras automatiskt.
  */
 window.SITE_CONFIG = {
-  linkedinJoseph: '', // t.ex. 'https://www.linkedin.com/in/joseph-tran'
+  linkedinJoseph: 'https://www.linkedin.com/in/joseph-tran-844993150/',
   linkedinMikael: 'https://www.linkedin.com/in/mikaelsoderberg1/',
   linkedinCompany: 'https://www.linkedin.com/company/4days-ai',
 };
