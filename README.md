@@ -79,3 +79,36 @@ vercel dev
 Se kommentarer högst upp i `index.html` (hero-bild, logotyp, OG-bild, footer-länkar).
 
 Calendly: `https://calendly.com/hello-4days/30min`
+
+## 4days.ai Agent (chatbot)
+
+Publik chat-widget på landningssidan → `POST /api/chat` → **Grok (xAI)** + **Supabase RAG** (kunskapsbas).
+
+### Miljövariabler (Vercel Production)
+
+```powershell
+vercel env add XAI_API_KEY production
+vercel env add OPENAI_API_KEY production
+vercel env add SUPABASE_URL production
+vercel env add SUPABASE_SERVICE_ROLE_KEY production
+# valfritt:
+vercel env add CALENDLY_URL production
+```
+
+Lokal utveckling: lägg samma nycklar i `.env` i projektroten och kör `vercel dev`.
+
+### Kunskapsbas (Supabase)
+
+1. Använd projektet i `4days-knowledge-agent/` (intern admin) eller ladda upp PDF/txt i Supabase
+2. Kör migration `supabase/migrations/001_initial_schema.sql` om inte redan gjort
+3. Dokument måste vara **indexerade** (status `indexed`) för RAG
+
+Chatten fungerar även utan RAG – då använder den inbyggd bolagskunskap i systemprompten.
+
+### Filer
+
+| Fil | Syfte |
+|-----|--------|
+| `api/chat.js` | Serverless API (Grok + embeddings + Supabase) |
+| `lib/agent-prompt.js` | Systemprompt för 4days.ai Agent |
+| `js/chat-widget.js` | Flytande chat på sidan |
