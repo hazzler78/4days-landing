@@ -5,6 +5,7 @@
   const API_URL = '/api/chat';
   const CALENDLY_URL = 'https://calendly.com/hello-4days/30min';
   const STORAGE_KEY = '4days_chat_messages_v1';
+  const VISITOR_SESSION_KEY = '4days_chat_visitor_id';
 
   const STARTER_PROMPTS = [
     'Hur fungerar 4-dagarsvecka hos er?',
@@ -185,6 +186,20 @@
     return renderMarkdown(text);
   }
 
+  function getVisitorSessionId() {
+    try {
+      let id = sessionStorage.getItem(VISITOR_SESSION_KEY);
+      if (!id) {
+        id = typeof crypto !== 'undefined' && crypto.randomUUID
+          ? crypto.randomUUID()
+          : `v-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+        sessionStorage.setItem(VISITOR_SESSION_KEY, id);
+      }
+      return id;
+    } catch {
+      return `v-${Date.now()}`;
+    }
+  }
   function loadMessages() {
     try {
       const raw = sessionStorage.getItem(STORAGE_KEY);
@@ -223,7 +238,8 @@
           <button type="submit" id="fourdays-chat-send" aria-label="Skicka">Skicka</button>
         </form>
         <div id="fourdays-chat-footer">
-          AI-assistent · <a href="/integritetspolicy">Integritetspolicy</a> ·
+          AI-assistent · Chatt sparas för att förbättra tjänsten ·
+          <a href="/integritetspolicy">Integritetspolicy</a> ·
           <a href="${CALENDLY_URL}" target="_blank" rel="noopener noreferrer">Boka möte</a>
         </div>
       </div>
@@ -340,7 +356,11 @@
         const res = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages }),
+          body: JSON.stringify({
+            messages,
+            visitorSessionId: getVisitorSessionId(),
+            pageUrl: window.location.href,
+          }),
         });
         const data = await res.json().catch(() => ({}));
         hideTyping();

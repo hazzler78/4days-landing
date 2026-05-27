@@ -88,7 +88,7 @@
             <li>Företagsnamn</li>
             <li>E-postadress</li>
             <li>Telefonnummer (valfritt – endast om du fyller i det)</li>
-            <li>Meddelanden i AI-chatten på webbplatsen (session lagras tillfälligt i webbläsaren under besöket)</li>
+            <li>Meddelanden i AI-chatten (sparas i vår databas för uppföljning och förbättring av tjänsten; tekniskt sessions-ID i webbläsaren under besöket)</li>
             <li>Antal anställda (intervall)</li>
             <li>Samtycke till att ta emot tips och information</li>
             <li>Tidpunkt för registrering (teknisk metadata)</li>
@@ -101,7 +101,7 @@
           <h2>3. Varför behandlar vi uppgifterna?</h2>
           <ul>
             <li><strong>Samtycke:</strong> skicka guide, webinar-inbjudan och tips om 4-dagarsvecka, AI-automatisering och AI-konsultation; vid angivet telefonnummer även kontakt per telefon angående samma ärenden</li>
-            <li><strong>Berättigat intresse:</strong> besvara frågor via AI-chatten, svara på förfrågningar, utveckla vårt erbjudande och förbättra webbplatsen (analytics efter samtycke)</li>
+            <li><strong>Berättigat intresse:</strong> besvara frågor via AI-chatten, förbättra och träna vår AI-assistent, utveckla vårt erbjudande och förbättra webbplatsen (analytics efter samtycke)</li>
             <li><strong>Avtal / förberedande åtgärder:</strong> boka och genomföra strategi-samtal via Calendly</li>
           </ul>
         </section>
@@ -111,6 +111,7 @@
           <p>
             Prenumerationsuppgifter sparas så länge du är prenumerant hos oss eller tills du avregistrerar dig. Därefter raderas eller anonymiseras uppgifterna inom rimlig tid, om inte längre lagring krävs enligt lag (t.ex. bokföringsregler).
           </p>
+          <p class="mt-3">Chattloggar sparas i upp till 12 månader och raderas eller anonymiseras därefter, om inte längre lagring krävs enligt lag.</p>
           <p class="mt-3">Analytics-data lagras enligt respektive leverantörs standardperiod (se <a href="/cookies" class="text-accent hover:underline">cookiepolicy</a>).</p>
         </section>
 
@@ -122,8 +123,9 @@
             <li><strong>MailerLite</strong> – e-postlista, dubbel opt-in och utskick</li>
             <li><strong>Calendly</strong> – bokning av möten</li>
             <li><strong>Analytics-leverantör</strong> – Vercel Web Analytics (endast efter samtycke)</li>
-            <li><strong>OpenAI / Anthropic (Claude)</strong> – vid AI-baserad analys i samband med konsultuppdrag eller AI Audit (endast när sådan tjänst används och enligt avtal)</li>
-            <li><strong>Supabase</strong> – databas/backend om och när vi lagrar kunddata i våra tjänster</li>
+            <li><strong>Supabase</strong> – databas för kunskapsbas och chatloggar från AI-assistenten</li>
+            <li><strong>xAI (Grok)</strong> – generering av svar i AI-chatten på webbplatsen</li>
+            <li><strong>OpenAI</strong> – embeddings för kunskapsbas och AI-analys vid behov</li>
           </ul>
           <p class="mt-3">Biträden får endast behandla uppgifter enligt våra instruktioner och gällande personuppgiftsbiträdesavtal eller motsvarande standardvillkor. Uppgifter delas aldrig med fler leverantörer än vad som krävs för respektive tjänst.</p>
         </section>

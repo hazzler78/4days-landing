@@ -106,6 +106,7 @@ Kör filerna i ordning (finns i `supabase/migrations/`):
 1. `001_initial_schema.sql` – tabeller + pgvector
 2. `002_storage_bucket.sql` – valfritt för filuppladdning i admin
 3. `003_public_knowledge.sql` – tillåter seed utan inloggad användare
+4. `004_public_chat_logs.sql` – sparar chattkonversationer från landningssidan
 
 **Steg 2 – Indexera textfiler:**
 

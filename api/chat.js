@@ -4,6 +4,7 @@
  */
 
 const { buildSystemPrompt } = require('../lib/agent-prompt');
+const { logChatExchange } = require('../lib/chat-log');
 
 const XAI_API = 'https://api.x.ai/v1/chat/completions';
 const OPENAI_EMBEDDINGS_API = 'https://api.openai.com/v1/embeddings';
@@ -189,6 +190,18 @@ module.exports = async (req, res) => {
           similarity: c.similarity,
         }))
       : [];
+
+    const visitorSessionId =
+      typeof body?.visitorSessionId === 'string' ? body.visitorSessionId.trim().slice(0, 64) : '';
+
+    await logChatExchange({
+      visitorSessionId,
+      pageUrl: typeof body?.pageUrl === 'string' ? body.pageUrl.slice(0, 500) : '',
+      userAgent: req.headers['user-agent'] || '',
+      userContent: lastUser.content,
+      assistantContent: reply,
+      sources,
+    });
 
     return res.status(200).json({ reply, sources });
   } catch (err) {
