@@ -15,6 +15,15 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+function normalizePhone(phone) {
+  return phone.replace(/[^\d+]/g, '');
+}
+
+function isValidPhone(phone) {
+  const digits = phone.replace(/\D/g, '');
+  return digits.length >= 7 && digits.length <= 15;
+}
+
 module.exports = async (req, res) => {
   setCors(res);
 
@@ -44,6 +53,8 @@ module.exports = async (req, res) => {
   const lastName = (body.last_name || '').trim();
   const company = (body.company || '').trim();
   const employees = (body.employees || '').trim();
+  const phoneRaw = (body.phone || '').trim();
+  const phone = phoneRaw ? normalizePhone(phoneRaw) : '';
   const consent = body.consent === 'yes' || body.consent === true;
 
   // Bakåtkompatibilitet om endast "name" skickas
@@ -73,10 +84,16 @@ module.exports = async (req, res) => {
   if (!consent) {
     return res.status(400).json({ error: 'Du måste godkänna att ta emot tips.' });
   }
+  if (phone && !isValidPhone(phone)) {
+    return res.status(400).json({ error: 'Ange ett giltigt telefonnummer eller lämna fältet tomt.' });
+  }
+
+  const fields = { name, last_name, company, employees };
+  if (phone) fields.phone = phone;
 
   const payload = {
     email,
-    fields: { name, last_name, company, employees },
+    fields,
     status: 'unconfirmed',
     resubscribe: true,
   };

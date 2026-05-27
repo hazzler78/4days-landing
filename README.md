@@ -44,7 +44,7 @@ Formuläret postar till `/api/subscribe`, som anropar MailerLite API. API-nyckel
 1. **Account settings → Subscribe settings**
    - Aktivera **Double opt-in**
    - Aktivera **Double opt-in for API and integrations**
-2. Skapa custom fields (om de saknas): `company`, `employees`
+2. Skapa custom fields (om de saknas): `company`, `employees` (standardfältet `phone` används för telefon)
 3. (Valfritt) Skapa grupp t.ex. "Landningssida" och notera **Group ID**
 
 ### 2. Vercel miljövariabler
