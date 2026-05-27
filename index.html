@@ -76,6 +76,23 @@
       transform: translateY(0);
     }
     #guide { scroll-margin-top: 5rem; }
+    #faq { scroll-margin-top: 5rem; }
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      float: right;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #00D4FF;
+      line-height: 1.4;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item[open] summary { color: #0A2540; }
+    .dark .faq-item[open] summary { color: #fff; }
     .site-logo-img {
       height: 2.25rem;
       width: auto;
@@ -142,6 +159,94 @@
         "name": "4days.ai AB",
         "inLanguage": "sv-SE",
         "publisher": { "@id": "https://www.4days.ai/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.4days.ai/#faq",
+        "url": "https://www.4days.ai/#faq",
+        "inLanguage": "sv-SE",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Vad är egentligen en 4-dagarsvecka?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En 4-dagarsvecka innebär oftast att man arbetar 32 timmar istället för 40, fördelat på fyra dagar – med bibehållen lön och fokus på 100 % output. Hos 4days.ai använder vi den evidensbaserade 100-80-100-modellen: 100 % lön, 80 % tid, 100 % produktivitet. Det handlar inte om att jobba hårdare, utan smartare med hjälp av AI."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Fungerar 4-dagarsvecka på riktigt i Sverige?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. I svenska piloter 2024–2026 (bland annat via 4 Day Week Sverige) valde 10 av 11 organisationer att fortsätta efter testperioden. Resultaten visar minskad stress, bättre sömn, ökad livskvalitet och bibehållen eller ökad produktivitet. För kunskapsintensiva SMEs är det fullt möjligt när man kombinerar kortare tid med AI-automatisering."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Får man samma lön med färre dagar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolut. Modellen bygger på full lön (100 %) trots 80 % arbetstid. Det är en investering i medarbetarnas välmående som ofta leder till lägre sjukfrånvaro och högre engagemang – vilket gynnar både anställda och företagets resultat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hur kan AI hjälpa oss att klara en 4-dagarsvecka?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI tar över repetitiva uppgifter som e-posthantering, rapportgenerering, mötesbokning, dataanalys och kundsupport. Genom processkartläggning och smart automatisering frigör vi tid så att teamet kan fokusera på det som skapar mest värde. Många av våra kunder ser tidsbesparingar på 15–30 % redan efter några veckor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Är 4-dagarsvecka lämpligt för alla branscher?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Det fungerar bäst för kunskapsintensiva SMEs (10–200 anställda) inom IT, konsultverksamhet, kreativa branscher och vissa delar av offentlig sektor. Inom tillverkning eller kundtjänst med strikta öppettider krävs mer anpassning, men AI kan ändå frigöra betydande tid. Vi gör alltid en skräddarsydd analys först."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vad kostar det att införa 4-dagarsvecka med 4days.ai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Våra konsulttimmar ligger på 2 500 kr/tim (med volymrabatter). Ett typiskt AI Kickstart-paket (20–40 timmar) kostar 45 000–90 000 kr och ger er en konkret plan plus första automatiseringar. Vi erbjuder också fastpris och delbetalning för trygghet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hur mäter ni att produktiviteten verkligen hålls uppe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vi använder evidensbaserad uppföljning från 4 Day Week Global-metodiken plus egna verktyg för tidsbesparingsrapporter. Före/efter-mätningar på stress, produktivitet och output säkerställer att ni når 100 % output på 80 % tid."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vad säger forskningen och andra företag?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Forskning från Karlstads universitet och internationella studier visar tydliga vinster i hälsa, rekrytering och innovation. Över 90 % av företagen som testat fortsätter. Svenska exempel som socialtjänsten i Göteborg visar att medarbetarna blir lyriska över mer återhämtning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hur kommer vi igång?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Börja med att ladda ner vår kostnadsfria guide – fyll i formuläret på sidan. Därefter kan du boka ett strategi-call så kartlägger vi era processer och tar fram en anpassad implementeringsplan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vad är riskerna med att inte göra något?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Utan AI och moderna arbetssätt riskerar ni lägre konkurrenskraft, svårare rekrytering av talanger och fortsatt hög stress bland medarbetare. De som agerar nu får en rejäl fördel – både som arbetsgivare och i lönsamhet."
+            }
+          }
+        ]
       }
     ]
   }
@@ -175,6 +280,7 @@
         <a href="#fordelar" class="hover:text-accent transition-colors">Fördelar</a>
         <a href="#hur-det-fungerar" class="hover:text-accent transition-colors">Så fungerar det</a>
         <a href="#om-oss" class="hover:text-accent transition-colors">Om oss</a>
+        <a href="#faq" class="hover:text-accent transition-colors">FAQ</a>
         <a href="#guide" class="text-accent hover:text-accent-dim transition-colors font-semibold">Få guiden</a>
       </nav>
       <div class="flex items-center gap-2">
@@ -192,6 +298,7 @@
       <a href="#fordelar" class="block text-sm font-medium">Fördelar</a>
       <a href="#hur-det-fungerar" class="block text-sm font-medium">Så fungerar det</a>
       <a href="#om-oss" class="block text-sm font-medium">Om oss</a>
+      <a href="#faq" class="block text-sm font-medium">FAQ</a>
       <a href="#guide" class="block text-sm font-semibold text-accent">Få guiden</a>
     </div>
   </header>
@@ -359,6 +466,97 @@
           </article>
         </div>
         <p class="mt-10 text-center text-sm text-slate-500 dark:text-slate-400">4days.ai AB – Aktiebolag under registrering – maj 2026</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 sm:py-28 bg-white dark:bg-brand-dark border-y border-slate-200/80 dark:border-slate-700/50" aria-labelledby="faq-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <p class="text-accent font-semibold text-sm mb-2">4-dagarsvecka Sverige · AI-automatisering SME</p>
+          <h2 id="faq-heading" class="text-2xl sm:text-3xl font-bold text-brand dark:text-white">4-dagarsvecka &amp; AI – Vanliga frågor</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">Svar på det ledningsgrupper och HR oftast undrar – med koppling till vår 100-80-100-modell och AI-konsultation.</p>
+        </div>
+
+        <div class="space-y-3 reveal">
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Vad är egentligen en 4-dagarsvecka?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              En 4-dagarsvecka innebär oftast att man arbetar 32 timmar istället för 40, fördelat på fyra dagar – med bibehållen lön och fokus på 100&nbsp;% output. Hos 4days.ai använder vi den evidensbaserade <strong class="text-brand dark:text-white">100-80-100-modellen</strong>: 100&nbsp;% lön, 80&nbsp;% tid, 100&nbsp;% produktivitet. Det handlar inte om att jobba hårdare, utan smartare med hjälp av AI.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Fungerar 4-dagarsvecka på riktigt i Sverige?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Ja! I svenska piloter 2024–2026 (bland annat via 4 Day Week Sverige) valde 10 av 11 organisationer att fortsätta efter testperioden. Resultaten visar minskad stress (−19&nbsp;%), bättre sömn, ökad livskvalitet (+25&nbsp;%) och bibehållen eller ökad produktivitet. För kunskapsintensiva SMEs är det fullt möjligt när man kombinerar kortare tid med AI-automatisering.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Får man samma lön med färre dagar?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Absolut. Modellen bygger på full lön (100&nbsp;%) trots 80&nbsp;% arbetstid. Det är en investering i medarbetarnas välmående som ofta leder till lägre sjukfrånvaro och högre engagemang – vilket gynnar både anställda och företagets resultat.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Hur kan AI hjälpa oss att klara en 4-dagarsvecka?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              AI tar över repetitiva uppgifter som e-posthantering, rapportgenerering, mötesbokning, dataanalys och kundsupport. Genom processkartläggning och smart automatisering frigör vi tid så att teamet kan fokusera på det som skapar mest värde. Många av våra kunder ser tidsbesparingar på 15–30&nbsp;% redan efter några veckor.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Är 4-dagarsvecka lämpligt för alla branscher?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Det fungerar bäst för kunskapsintensiva SMEs (10–200 anställda) inom IT, konsultverksamhet, kreativa branscher och vissa delar av offentlig sektor. Inom tillverkning eller kundtjänst med strikta öppettider krävs mer anpassning, men AI kan ändå frigöra betydande tid. Vi gör alltid en skräddarsydd analys först.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Vad kostar det att införa 4-dagarsvecka med 4days.ai?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Våra konsulttimmar ligger på 2&nbsp;500&nbsp;kr/tim (med volymrabatter). Ett typiskt AI Kickstart-paket (20–40 timmar) kostar 45&nbsp;000–90&nbsp;000&nbsp;kr och ger er en konkret plan plus första automatiseringar. Vi erbjuder också fastpris och delbetalning för trygghet.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Hur mäter ni att produktiviteten verkligen hålls uppe?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Vi använder evidensbaserad uppföljning från 4 Day Week Global-metodiken plus egna verktyg för tidsbesparingsrapporter. Före/efter-mätningar på stress, produktivitet och output säkerställer att ni når 100&nbsp;% output på 80&nbsp;% tid.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Vad säger forskningen och andra företag?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Forskning från Karlstads universitet och internationella studier visar tydliga vinster i hälsa, rekrytering och innovation. Över 90&nbsp;% av företagen som testat fortsätter. Svenska exempel som socialtjänsten i Göteborg visar att medarbetarna blir &ldquo;lyriska&rdquo; över mer återhämtning.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Hur kommer vi igång?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Börja med att ladda ner vår kostnadsfria guide – fyll i formuläret nedan. Därefter kan du boka ett strategi-call så kartlägger vi era processer och tar fram en anpassad implementeringsplan.
+            </div>
+          </details>
+
+          <details class="faq-item group rounded-xl border border-slate-200/80 dark:border-slate-600/40 bg-slate-50 dark:bg-brand-light open:bg-white dark:open:bg-brand-light open:shadow-md open:border-accent/30 transition-all">
+            <summary class="px-5 py-4 sm:px-6 sm:py-5 font-semibold text-brand dark:text-white text-left">Vad är riskerna med att inte göra något?</summary>
+            <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-200/80 dark:border-slate-600/30 pt-4">
+              Utan AI och moderna arbetssätt riskerar ni lägre konkurrenskraft, svårare rekrytering av talanger och fortsatt hög stress bland medarbetare. De som agerar nu får en rejäl fördel – både som arbetsgivare och i lönsamhet.
+            </div>
+          </details>
+        </div>
+
+        <div class="mt-12 text-center reveal">
+          <p class="text-slate-600 dark:text-slate-300 mb-6">Vill du veta hur 4-dagarsvecka kan se ut hos er?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
+            <a href="#guide" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-bold rounded-xl bg-accent text-brand hover:bg-accent-dim transition-all shadow-lg shadow-accent/20">Få guiden gratis</a>
+            <a href="https://calendly.com/hello-4days/30min" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold rounded-xl border-2 border-brand/20 dark:border-slate-500 text-brand dark:text-white hover:border-accent/50 transition-colors">Boka 30 min strategi-call</a>
+          </div>
+        </div>
       </div>
     </section>
 
