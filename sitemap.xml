@@ -31,6 +31,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.4days.ai/ai-verktyg-spara-tid</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.4days.ai/4-dagarsvecka-it-konsultbolag</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.4days.ai/ai-guide-ledningsgrupper</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.4days.ai/integritetspolicy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
