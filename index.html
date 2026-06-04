@@ -3,8 +3,11 @@
   - HERO_BG: bilder/Hero.jpg
   - LOGO: bilder/logo-light.png (ljus) + bilder/logo-dark.png (mörk) – källfiler logo_4days_*.png
   - LINKEDIN: js/site-config.js (Joseph, Mikael, Company)
-  - ANALYTICS: Vercel Web Analytics – aktivera i Vercel Dashboard → Analytics
-  - SEO: robots.txt, sitemap.xml, og-image.jpg, favicon.png (klart)
+  - ANALYTICS: Vercel Web Analytics – aktivera i Vercel Dashboard → Analytics (skript redan inlagt).
+               GA4 (valfritt) – avkommentera blocket i sidfoten och fyll i G-XXXXXXXXXX.
+  - SEO: robots.txt, sitemap.xml, og-image.jpg, favicon.png (klart).
+         GOOGLE SEARCH CONSOLE: verifiera domänen, fyll i google-site-verification nedan,
+         och skicka in sitemap.xml + "Begär indexering" på startsidan.
 -->
 <!DOCTYPE html>
 <html lang="sv" class="scroll-smooth">
@@ -15,6 +18,10 @@
   <meta name="description" content="4-dagarsvecka med full lön för kunskapsintensiva svenska företag. Från 5 till 4 – smartare, inte hårdare. 100% lön. 80% tid. 100% output.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.4days.ai/">
+
+  <!-- Google Search Console: skapa egendom på https://search.google.com/search-console,
+       välj verifiering via "HTML-tagg", och klistra in din kod i content nedan. -->
+  <meta name="google-site-verification" content="ERSATT_MED_DIN_GSC_KOD">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.4days.ai/">
@@ -637,12 +644,24 @@
           <p class="font-semibold text-white text-lg">4days<span class="text-accent">.ai</span> <span class="text-slate-400 font-normal text-sm">AB</span></p>
           <p class="mt-2 text-growth text-sm font-medium">En dag mer frihet. Med AI.</p>
         </div>
-        <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Sidfot">
-          <a href="#" id="footer-linkedin-joseph" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Joseph Tran · LinkedIn</a>
-          <a href="#" id="footer-linkedin-mikael" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Mikael Söderberg · LinkedIn</a>
-          <a href="/integritetspolicy" class="hover:text-accent transition-colors">Integritetspolicy</a>
-          <a href="/cookies" class="hover:text-accent transition-colors">Cookies</a>
-          <a href="mailto:hello@4days.ai" class="hover:text-accent transition-colors">Kontakt</a>
+        <nav class="flex flex-col gap-6 sm:flex-row sm:gap-12" aria-label="Sidfot">
+          <div class="flex flex-col gap-2 text-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Läs mer</p>
+            <a href="/4-dagarsvecka-sverige" class="hover:text-accent transition-colors">4-dagarsvecka i Sverige</a>
+            <a href="/ai-automatisering-foretag" class="hover:text-accent transition-colors">AI-automatisering för företag</a>
+            <a href="/100-80-100-modellen" class="hover:text-accent transition-colors">100-80-100-modellen</a>
+          </div>
+          <div class="flex flex-col gap-2 text-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">4days.ai</p>
+            <a href="#" id="footer-linkedin-joseph" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Joseph Tran · LinkedIn</a>
+            <a href="#" id="footer-linkedin-mikael" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Mikael Söderberg · LinkedIn</a>
+            <a href="mailto:hello@4days.ai" class="hover:text-accent transition-colors">Kontakt</a>
+          </div>
+          <div class="flex flex-col gap-2 text-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Juridik</p>
+            <a href="/integritetspolicy" class="hover:text-accent transition-colors">Integritetspolicy</a>
+            <a href="/cookies" class="hover:text-accent transition-colors">Cookies</a>
+          </div>
         </nav>
       </div>
       <p class="mt-10 pt-8 border-t border-slate-700 text-xs text-slate-500 text-center md:text-left">
@@ -769,5 +788,23 @@
   <script src="/js/site-theme.js"></script>
   <script src="/js/scroll-reveal.js"></script>
   <script src="/js/cookie-consent.js"></script>
+
+  <!-- Vercel Web Analytics: aktivera i Vercel Dashboard → ditt projekt → Analytics.
+       Inget ID behövs – skriptet serveras automatiskt av Vercel när det är på. -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Google Analytics 4 (valfritt): byt ut G-XXXXXXXXXX mot ditt mät-ID från
+       https://analytics.google.com och avkommentera blocket för att aktivera.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 </body>
 </html>
