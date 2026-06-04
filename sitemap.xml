@@ -11,6 +11,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.4days.ai/4-dagarsvecka-lonsamhet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.4days.ai/kortare-arbetsvecka-myter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.4days.ai/ai-automatisering-foretag</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
