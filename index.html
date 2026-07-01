@@ -6,8 +6,7 @@
   - ANALYTICS: Vercel Web Analytics – aktivera i Vercel Dashboard → Analytics (skript redan inlagt).
                GA4 (valfritt) – avkommentera blocket i sidfoten och fyll i G-XXXXXXXXXX.
   - SEO: robots.txt, sitemap.xml, og-image.jpg, favicon.png (klart).
-         GOOGLE SEARCH CONSOLE: verifiera domänen, fyll i google-site-verification nedan,
-         och skicka in sitemap.xml + "Begär indexering" på startsidan.
+         GOOGLE SEARCH CONSOLE: verifierad (domän-egendom via DNS). Sitemap inskickad.
 -->
 <!DOCTYPE html>
 <html lang="sv" class="scroll-smooth">
@@ -19,9 +18,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.4days.ai/">
 
-  <!-- Google Search Console: skapa egendom på https://search.google.com/search-console,
-       välj verifiering via "HTML-tagg", och klistra in din kod i content nedan. -->
-  <meta name="google-site-verification" content="ERSATT_MED_DIN_GSC_KOD">
+  <!-- Google Search Console: verifierad som domän-egendom via DNS (TXT-post). Ingen meta-tagg behövs. -->
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.4days.ai/">
