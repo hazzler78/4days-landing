@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "postinstall": "node scripts/generate-indexnow-key.js",
-    "build": "node scripts/generate-indexnow-key.js",
+    "generate:indexnow-key": "node scripts/generate-indexnow-key.js",
     "indexnow": "node scripts/submit-indexnow.js",
     "seed:knowledge": "node scripts/seed-knowledge.js"
   },
