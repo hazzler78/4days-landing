@@ -97,7 +97,7 @@ INDEXNOW_API_KEY=din_nyckel_från_bing
 | `INDEXNOW_API_KEY` | Din nyckel från Bing |
 | `INDEXNOW_SUBMIT_SECRET` | (valfritt) hemligt värde för att skydda `/api/indexnow` |
 
-Nyckeln ska **inte** committas till git. Vid deploy serveras verifieringsfilen `https://www.4days.ai/{din-nyckel}.txt` automatiskt via `middleware.js` (kräver `INDEXNOW_API_KEY` i Vercel).
+Nyckeln ska **inte** committas till git. Verifieringsfilen `https://www.4days.ai/{din-nyckel}.txt` serveras via `/api/indexnow-verify` (kräver `INDEXNOW_API_KEY` i Vercel).
 
 ### 3. Deploya om
 

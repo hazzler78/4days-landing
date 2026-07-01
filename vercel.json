@@ -1,6 +1,12 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/:filename.txt",
+      "destination": "/api/indexnow-verify?filename=:filename"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path*",
