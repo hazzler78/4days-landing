@@ -2,6 +2,8 @@
   "name": "4days-landing",
   "private": true,
   "scripts": {
+    "build": "node scripts/generate-indexnow-key.js",
+    "indexnow": "node scripts/submit-indexnow.js",
     "seed:knowledge": "node scripts/seed-knowledge.js"
   },
   "dependencies": {

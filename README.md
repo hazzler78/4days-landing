@@ -74,6 +74,50 @@ vercel dev
 
 Öppna http://localhost:3000 och testa formuläret.
 
+## IndexNow (Bing-indexering)
+
+IndexNow meddelar Bing (och andra sökmotorer) när sidor uppdaterats.
+
+### 1. Skapa API-nyckel
+
+Gå till [Bing IndexNow](https://www.bing.com/indexnow/getstarted) och generera en nyckel.
+
+### 2. Lägg nyckeln i miljövariabler
+
+**Lokalt** – i `.env.local` (kopiera från `.env.example`):
+
+```env
+INDEXNOW_API_KEY=din_nyckel_från_bing
+```
+
+**Produktion** – i [Vercel Dashboard](https://vercel.com) → Project → Settings → Environment Variables:
+
+| Variabel | Värde |
+|----------|--------|
+| `INDEXNOW_API_KEY` | Din nyckel från Bing |
+| `INDEXNOW_SUBMIT_SECRET` | (valfritt) hemligt värde för att skydda `/api/indexnow` |
+
+Nyckeln ska **inte** committas till git. Vid deploy skapas automatiskt verifieringsfilen `https://www.4days.ai/{din-nyckel}.txt`.
+
+### 3. Deploya om
+
+Efter att variabeln lagts till i Vercel: pusha till `main` eller kör `vercel deploy --prod`.
+
+Kontrollera att filen fungerar: öppna `https://www.4days.ai/DIN-NYCKEL.txt` i webbläsaren – den ska visa bara nyckeln som ren text.
+
+### 4. Skicka in sidor
+
+```bash
+npm run indexnow
+```
+
+Eller efter deploy (om `INDEXNOW_SUBMIT_SECRET` är satt):
+
+```bash
+curl -X POST "https://www.4days.ai/api/indexnow" \
+  -H "Authorization: Bearer DITT_HEMLIGA_VARDE"
+```
+
 ## Övrig konfiguration
 
 Se kommentarer högst upp i `index.html` (hero-bild, logotyp, OG-bild, footer-länkar).
