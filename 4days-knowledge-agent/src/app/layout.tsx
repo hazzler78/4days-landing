@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "4days Knowledge Agent",
-  description: "Intern AI-assistent för 4days.ai AB – chatta med din kunskapsbas",
+  description: "Intern AI-assistent för 4days AI AB – chatta med din kunskapsbas",
 };
 
 export default function RootLayout({
