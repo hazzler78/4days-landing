@@ -366,7 +366,7 @@
         hideTyping();
 
         if (!res.ok) {
-          showError(data.error || 'Kunde inte få svar just nu.');
+          showError(data.error || 'Jag kunde inte svara just nu. Prova igen om en stund, eller maila hello@4days.ai.');
           return;
         }
 

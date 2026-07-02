@@ -135,27 +135,20 @@ async function chatWithGrok(systemPrompt, messages, xaiKey) {
   return reply.trim();
 }
 
+const CHAT_BUSY_MESSAGE =
+  'Hög belastning just nu – vänta en stund och försök igen.';
+
+const CHAT_UNAVAILABLE_MESSAGE =
+  'Jag kunde inte svara just nu. Prova igen om en stund, eller maila hello@4days.ai så hjälper vi dig personligen.';
+
 function formatChatError(error) {
   const message = error instanceof Error ? error.message : String(error);
 
-  if (
-    message.includes('spending limit') ||
-    message.includes('credits') ||
-    message.includes('insufficient balance') ||
-    message.includes('Insufficient balance')
-  ) {
-    return 'AI-tjänsten har tillfälligt slut på credits. Maila hello@4days.ai så hjälper vi dig direkt.';
-  }
-  if (message.includes('Incorrect API key') || message.includes('invalid API key')) {
-    return 'Chatten är inte konfigurerad än. Kontakta hello@4days.ai under tiden.';
-  }
+  // Tekniska detaljer loggas i catch – aldrig visa credits, API-nycklar eller infra till besökare.
   if (message.includes('rate limit') || message.includes('429')) {
-    return 'För många förfrågningar – vänta en stund och försök igen.';
+    return CHAT_BUSY_MESSAGE;
   }
-  if (message.includes('ENOTFOUND') || message.includes('Supabase')) {
-    return 'Kunskapsbasen är tillfälligt otillgänglig. Chatten svarar utan dokumentkontext – prova igen om en stund.';
-  }
-  return 'Kunde inte generera svar just nu. Prova igen eller maila hello@4days.ai.';
+  return CHAT_UNAVAILABLE_MESSAGE;
 }
 
 module.exports = async (req, res) => {
@@ -167,7 +160,7 @@ module.exports = async (req, res) => {
   const xaiKey = process.env.XAI_API_KEY;
   if (!xaiKey) {
     console.error('XAI_API_KEY saknas');
-    return res.status(500).json({ error: 'Chatten är inte konfigurerad än.' });
+    return res.status(503).json({ error: CHAT_UNAVAILABLE_MESSAGE });
   }
 
   let body = req.body;
