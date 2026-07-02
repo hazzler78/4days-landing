@@ -53,29 +53,34 @@ async function retrieveRelevantChunks(query, openaiKey) {
   const supabase = getSupabaseConfig();
   if (!supabase || !openaiKey) return [];
 
-  const embedding = await generateQueryEmbedding(query, openaiKey);
-  if (!embedding) return [];
+  try {
+    const embedding = await generateQueryEmbedding(query, openaiKey);
+    if (!embedding) return [];
 
-  const res = await fetch(`${supabase.url}/rest/v1/rpc/match_document_chunks`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      apikey: supabase.key,
-      Authorization: `Bearer ${supabase.key}`,
-    },
-    body: JSON.stringify({
-      query_embedding: embedding,
-      match_count: 8,
-      match_threshold: 0.3,
-    }),
-  });
+    const res = await fetch(`${supabase.url}/rest/v1/rpc/match_document_chunks`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: supabase.key,
+        Authorization: `Bearer ${supabase.key}`,
+      },
+      body: JSON.stringify({
+        query_embedding: embedding,
+        match_count: 8,
+        match_threshold: 0.3,
+      }),
+    });
 
-  if (!res.ok) {
-    console.error('Supabase RAG error', res.status, await res.text());
+    if (!res.ok) {
+      console.error('Supabase RAG error', res.status, await res.text());
+      return [];
+    }
+
+    return res.json();
+  } catch (err) {
+    console.error('Supabase RAG unreachable:', err instanceof Error ? err.message : err);
     return [];
   }
-
-  return res.json();
 }
 
 function buildRagContext(chunks) {
@@ -133,14 +138,22 @@ async function chatWithGrok(systemPrompt, messages, xaiKey) {
 function formatChatError(error) {
   const message = error instanceof Error ? error.message : String(error);
 
-  if (message.includes('spending limit') || message.includes('credits')) {
+  if (
+    message.includes('spending limit') ||
+    message.includes('credits') ||
+    message.includes('insufficient balance') ||
+    message.includes('Insufficient balance')
+  ) {
     return 'AI-tjänsten har tillfälligt slut på credits. Maila hello@4days.ai så hjälper vi dig direkt.';
   }
-  if (message.includes('Incorrect API key') || message.includes('invalid')) {
+  if (message.includes('Incorrect API key') || message.includes('invalid API key')) {
     return 'Chatten är inte konfigurerad än. Kontakta hello@4days.ai under tiden.';
   }
-  if (message.includes('rate limit')) {
+  if (message.includes('rate limit') || message.includes('429')) {
     return 'För många förfrågningar – vänta en stund och försök igen.';
+  }
+  if (message.includes('ENOTFOUND') || message.includes('Supabase')) {
+    return 'Kunskapsbasen är tillfälligt otillgänglig. Chatten svarar utan dokumentkontext – prova igen om en stund.';
   }
   return 'Kunde inte generera svar just nu. Prova igen eller maila hello@4days.ai.';
 }
