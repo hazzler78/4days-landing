@@ -1,6 +1,6 @@
 # 4days Knowledge Agent
 
-Intern AI-assistent för **4days AI AB** – ladda upp dokument och chatta med en RAG-baserad agent som har full kunskap om allt material.
+Intern AI-assistent för **4 Days AI AB** – ladda upp dokument och chatta med en RAG-baserad agent som har full kunskap om allt material.
 
 ## Tech stack
 
@@ -97,4 +97,4 @@ supabase/migrations/  # PostgreSQL schema + RLS
 
 ## Licens
 
-Proprietär – 4days AI AB
+Proprietär – 4 Days AI AB

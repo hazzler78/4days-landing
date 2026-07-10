@@ -1,6 +1,7 @@
 # 4days.ai – Landningssida (www.4days.ai)
 
-**Bolag:** 4days AI AB  
+**Bolag:** 4 Days AI AB  
+**Org.nr:** 559587-6888  
 **Slogan:** En dag mer frihet. Med AI.  
 **Mottos:** Från 5 till 4 – smartare, inte hårdare. | AI tar jobbet. Du tar ledigt. | 4 dagar jobb. 7 dagar liv.  
 **Adress:** Vasavägen 29, 177 52 Järfälla  

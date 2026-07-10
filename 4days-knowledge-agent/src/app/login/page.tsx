@@ -9,7 +9,7 @@ export default function LoginPage() {
         </div>
         <h1 className="text-3xl font-bold">4days Knowledge Agent</h1>
         <p className="mt-2 text-brand-accent/80">
-          Intern AI-assistent för 4days AI AB
+          Intern AI-assistent för 4 Days AI AB
         </p>
       </div>
       <LoginForm />

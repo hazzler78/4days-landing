@@ -1,9 +1,9 @@
-# 4days AI AB  
+# 4 Days AI AB  
 **Affärsplan**  
 **Datum:** 21 maj 2026  
 
 **Grundare:** Joseph Tran & Mikael Söderberg  
-**Bolagsform:** Aktiebolag (under registrering)  
+**Bolagsform:** Aktiebolag (org.nr 559587-6888)  
 **Slogan:** "En dag mer frihet. Med AI."
 
 ---
@@ -113,7 +113,7 @@ SAM i Sverige uppskattas till 5–10 Mdkr/år. Vi siktar på 0,5–1 % andel år
 
 **Kontakt:**  
 Joseph Tran & Mikael Söderberg  
-4days AI AB  
+4 Days AI AB  
 hello@4days.ai  
 Vasavägen 29, 177 52 Järfälla  
 "En dag mer frihet. Med AI."

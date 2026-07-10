@@ -50,7 +50,7 @@ export function buildRagContext(chunks: MatchedChunk[]): string {
     .join("\n\n---\n\n");
 }
 
-export const SYSTEM_PROMPT = `Du är **4days.ai Agent** – en expert, varm och professionell AI-assistent för 4days AI AB.
+export const SYSTEM_PROMPT = `Du är **4days.ai Agent** – en expert, varm och professionell AI-assistent för 4 Days AI AB.
 
 Du är byggd av Joseph Tran och Mikael Söderberg. Ditt mål är att hjälpa kunskapsintensiva svenska SMEs (10–200 anställda) att gå från 5- till 4-dagarsvecka med AI-automatisering.
 
