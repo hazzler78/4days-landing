@@ -39,27 +39,10 @@
   <link rel="apple-touch-icon" href="https://www.4days.ai/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: { DEFAULT: '#0A2540', light: '#0f3354', dark: '#061a2b' },
-            accent: { DEFAULT: '#00D4FF', dim: '#00b8e0' },
-            growth: { DEFAULT: '#00C48C', dim: '#00a876' },
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>try{if(localStorage.getItem('theme')==='dark'||(!localStorage.getItem('theme')&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');}catch(e){}</script>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/bilder/hero-bg.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="/css/site.css">
 
   <style>
     .hero-bg {
@@ -71,7 +54,7 @@
           rgba(10, 37, 64, 0.45) 68%,
           rgba(255, 160, 80, 0.18) 88%,
           rgba(0, 196, 140, 0.14) 100%),
-        url('/bilder/Hero.jpg');
+        url('/bilder/hero-bg.webp');
       background-size: cover;
       background-position: center;
     }
@@ -127,7 +110,7 @@
         "@id": "https://www.4days.ai/#organization",
         "name": "4 Days AI AB",
         "url": "https://www.4days.ai/",
-        "logo": "https://www.4days.ai/bilder/logo-light.png",
+        "logo": "https://www.4days.ai/bilder/logo-light.webp",
         "email": "hello@4days.ai",
         "taxID": "559587-6888",
         "slogan": "En dag mer frihet. Med AI.",
@@ -269,7 +252,7 @@
       <a href="/" class="flex items-center shrink-0 min-w-0" aria-label="4days.ai – startsida">
         <img
           id="site-logo-light"
-          src="/bilder/logo-light.png"
+          src="/bilder/logo-light.webp"
           alt="4days.ai"
           class="site-logo-img dark:hidden"
           width="120"
@@ -278,7 +261,7 @@
         >
         <img
           id="site-logo-dark"
-          src="/bilder/logo-dark.png"
+          src="/bilder/logo-dark.webp"
           alt="4days.ai"
           class="site-logo-img hidden dark:block"
           width="120"
