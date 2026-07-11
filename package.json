@@ -4,9 +4,13 @@
   "scripts": {
     "generate:indexnow-key": "node scripts/generate-indexnow-key.js",
     "indexnow": "node scripts/submit-indexnow.js",
-    "seed:knowledge": "node scripts/seed-knowledge.js"
+    "seed:knowledge": "node scripts/seed-knowledge.js",
+    "build:css": "tailwindcss -c tailwind.config.js -i css/input.css -o css/site.css --minify"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
   }
 }
