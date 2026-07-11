@@ -27,7 +27,7 @@ Viktiga fakta:
 - [AI-verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid): Vilka AI-verktyg sparar mest tid – mejl, rapporter, möten, dataanalys, kundsupport och admin.
 - [4-dagarsvecka för IT- och konsultbolag](https://www.4days.ai/4-dagarsvecka-it-konsultbolag): Varför 4-dagarsvecka passar IT- och konsultbolag särskilt bra, och hur AI frigör fakturerbar tid.
 - [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper): Hur ledningsgrupper bör tänka kring AI-införande, steg för steg, och vanliga misstag att undvika.
-- [Bemanningsplanering med AI](https://www.4days.ai/bemanningsplanering-ai): Så prognostiserar AI behovet, automatiserar schemaläggning och frigör tid – och gör en 4-dagarsvecka möjlig även i bemanningsstyrda verksamheter.
+- [AI-schemaläggning och bemanningsplanering med AI](https://www.4days.ai/bemanningsplanering-ai): Komplett guide till automatisk schemaläggning och bemanningsplanering med AI – hur det fungerar, branschexempel, checklista och hur det gör en 4-dagarsvecka möjlig även i bemanningsstyrda verksamheter.
 
 ## Juridik
 
