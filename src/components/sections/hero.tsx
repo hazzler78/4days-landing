@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,9 +10,31 @@ export function HeroSection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden hero-grid text-white">
+    <section className="relative min-h-[100svh] overflow-hidden text-white">
+      <Image
+        src="/bilder/Hero.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+        aria-hidden="true"
+      />
       <div
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand/80 to-brand/40"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "linear-gradient(105deg, rgba(2,6,23,0.92) 0%, rgba(15,23,42,0.78) 42%, rgba(15,23,42,0.42) 68%, rgba(16,185,129,0.16) 100%)",
+        }}
+      />
+
+      <div
+        className="pointer-events-none absolute inset-0 opacity-30"
         aria-hidden="true"
         style={{
           backgroundImage:
@@ -31,16 +54,6 @@ export function HeroSection() {
             : { y: [0, 24, 0], scale: [1, 1.08, 1] }
         }
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-16 bottom-16 h-80 w-80 rounded-full bg-cyan/10 blur-3xl"
-        animate={
-          reduceMotion
-            ? undefined
-            : { y: [0, -20, 0], scale: [1, 1.05, 1] }
-        }
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-4 pb-20 pt-28 sm:px-6 lg:px-8">
