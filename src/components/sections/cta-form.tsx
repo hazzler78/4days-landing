@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,7 @@ type FormState = {
   email: string;
   company: string;
   role: string;
+  consent: boolean;
 };
 
 const initialState: FormState = {
@@ -22,24 +24,53 @@ const initialState: FormState = {
   email: "",
   company: "",
   role: "",
+  consent: false,
 };
 
 export function CtaFormSection() {
   const [form, setForm] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSubmitting(true);
+    setError(null);
 
-    // Placeholder until backend (MailerLite) is wired into the Next.js route.
-    console.log("Lead form submission:", form);
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          first_name: form.firstName,
+          last_name: form.lastName,
+          email: form.email,
+          company: form.company,
+          role: form.role,
+          employees: "10–200",
+          consent: form.consent,
+          source: "landing-4days-ai",
+          tags: "4-dagarsvecka,guide,webinar,ai",
+        }),
+      });
 
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setSubmitting(false);
-    setSubmitted(true);
-    setForm(initialState);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || "Kunde inte skicka formuläret.");
+      }
+
+      setSubmitted(true);
+      setForm(initialState);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Ett fel uppstod. Försök igen om en stund."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -55,7 +86,7 @@ export function CtaFormSection() {
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
             Praktisk guide för ledningsgrupper – plus plats på vårt kommande
-            webinar. Fyll i formuläret så hör vi av oss.
+            webinar. Bekräftelse via e-post (dubbel opt-in).
           </p>
         </Reveal>
 
@@ -66,11 +97,11 @@ export function CtaFormSection() {
                 <div className="py-8 text-center">
                   <CheckCircle2 className="mx-auto h-12 w-12 text-accent" />
                   <h3 className="mt-4 text-xl font-semibold text-brand">
-                    Tack – vi har tagit emot din förfrågan!
+                    Tack – kolla din inkorg!
                   </h3>
                   <p className="mt-2 text-sm text-slate-600">
-                    Vi återkommer snart med guiden och information om nästa
-                    webinar.
+                    Bekräfta din e-post via länken vi skickar (dubbel opt-in) –
+                    då får du guiden och inbjudan till webinaret.
                   </p>
                   <Button
                     className="mt-6"
@@ -89,7 +120,6 @@ export function CtaFormSection() {
                       </Label>
                       <Input
                         id="firstName"
-                        name="firstName"
                         required
                         autoComplete="given-name"
                         value={form.firstName}
@@ -108,7 +138,6 @@ export function CtaFormSection() {
                       </Label>
                       <Input
                         id="lastName"
-                        name="lastName"
                         required
                         autoComplete="family-name"
                         value={form.lastName}
@@ -129,7 +158,6 @@ export function CtaFormSection() {
                     </Label>
                     <Input
                       id="email"
-                      name="email"
                       type="email"
                       required
                       autoComplete="email"
@@ -147,7 +175,6 @@ export function CtaFormSection() {
                     </Label>
                     <Input
                       id="company"
-                      name="company"
                       required
                       autoComplete="organization"
                       value={form.company}
@@ -167,7 +194,6 @@ export function CtaFormSection() {
                     </Label>
                     <Input
                       id="role"
-                      name="role"
                       required
                       autoComplete="organization-title"
                       value={form.role}
@@ -178,18 +204,37 @@ export function CtaFormSection() {
                     />
                   </div>
 
-                  <p className="text-xs leading-relaxed text-slate-500">
-                    Genom att skicka formuläret godkänner du att vi kontaktar dig
-                    om guiden, webinar och relevant information om 4-dagarsvecka
-                    och AI. Läs mer i vår{" "}
-                    <a
-                      href="/integritetspolicy"
-                      className="font-medium text-accent-dim underline-offset-2 hover:underline"
-                    >
-                      integritetspolicy
-                    </a>
-                    .
-                  </p>
+                  <label className="flex items-start gap-3 text-xs leading-relaxed text-slate-600">
+                    <input
+                      type="checkbox"
+                      className="mt-0.5 h-4 w-4 rounded border-slate-300 text-accent focus:ring-accent"
+                      checked={form.consent}
+                      onChange={(e) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          consent: e.target.checked,
+                        }))
+                      }
+                      required
+                    />
+                    <span>
+                      Jag vill ha tips om 4-dagarsvecka, AI-automatisering och
+                      inbjudan till nästa webinar. Läs mer i vår{" "}
+                      <Link
+                        href="/integritetspolicy"
+                        className="font-medium text-accent-dim underline-offset-2 hover:underline"
+                      >
+                        integritetspolicy
+                      </Link>
+                      .
+                    </span>
+                  </label>
+
+                  {error && (
+                    <p className="rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+                      {error}
+                    </p>
+                  )}
 
                   <Button
                     type="submit"

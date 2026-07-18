@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import { AnalyticsGate } from "@/components/analytics-gate";
+import { CookieConsent } from "@/components/cookie-consent";
+import { ChatWidget } from "@/components/chat-widget";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -78,7 +80,9 @@ export default function RootLayout({
     <html lang="sv" className={inter.variable}>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
-        <Analytics />
+        <CookieConsent />
+        <ChatWidget />
+        <AnalyticsGate />
       </body>
     </html>
   );
