@@ -28,25 +28,9 @@
   <meta property="article:published_time" content="2026-06-04">
   <meta property="article:modified_time" content="2026-07-01">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: { DEFAULT: '#0A2540', light: '#0f3354', dark: '#061a2b' },
-            accent: { DEFAULT: '#00D4FF', dim: '#00b8e0' },
-            growth: { DEFAULT: '#00C48C', dim: '#00a876' },
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'] },
-        },
-      },
-    };
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>try{if(localStorage.getItem('theme')==='dark'||(!localStorage.getItem('theme')&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');}catch(e){}</script>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
   <style>
     .reveal { opacity: 0; transform: translateY(1.25rem); transition: opacity 0.65s ease, transform 0.65s ease; }
     .reveal-visible { opacity: 1; transform: translateY(0); }
@@ -79,7 +63,7 @@
         "image": "https://www.4days.ai/og-image.jpg",
         "mainEntityOfPage": "https://www.4days.ai/ai-guide-ledningsgrupper",
         "author": { "@type": "Organization", "name": "4 Days AI AB", "url": "https://www.4days.ai/" },
-        "publisher": { "@type": "Organization", "name": "4 Days AI AB", "logo": { "@type": "ImageObject", "url": "https://www.4days.ai/bilder/logo-light.png" } }
+        "publisher": { "@type": "Organization", "name": "4 Days AI AB", "logo": { "@type": "ImageObject", "url": "https://www.4days.ai/bilder/logo-light.webp" } }
       },
       {
         "@type": "FAQPage",
@@ -110,8 +94,8 @@
   <header class="fixed top-0 inset-x-0 z-50 bg-white/90 dark:bg-brand-dark/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-700/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="/" class="flex items-center shrink-0" aria-label="4days.ai – startsida">
-        <img src="/bilder/logo-light.png" alt="4days.ai" class="site-logo-img dark:hidden" width="120" height="120" decoding="async">
-        <img src="/bilder/logo-dark.png" alt="4days.ai" class="site-logo-img hidden dark:block" width="120" height="120" decoding="async">
+        <img src="/bilder/logo-light.webp" alt="4days.ai" class="site-logo-img dark:hidden" width="120" height="120" decoding="async">
+        <img src="/bilder/logo-dark.webp" alt="4days.ai" class="site-logo-img hidden dark:block" width="120" height="120" decoding="async">
       </a>
       <div class="flex items-center gap-2">
         <button type="button" id="theme-toggle" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-brand-light dark:text-slate-300" aria-label="Byt tema">
@@ -130,7 +114,7 @@
       </nav>
 
       <header class="reveal">
-        <p class="text-growth font-semibold text-sm mb-2">Guide för ledningsgrupper</p>
+        <p class="text-growth-deep dark:text-growth font-semibold text-sm mb-2">Guide för ledningsgrupper</p>
         <h1 class="text-3xl sm:text-4xl font-bold text-brand dark:text-white leading-tight">AI-guide för ledningsgrupper – så kommer ni igång</h1>
         <p class="mt-4 text-sm text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-x-2">
           <time datetime="2026-06-04">Publicerad 4 juni 2026</time>
@@ -154,7 +138,7 @@
           <h3>1. Kartläggning</h3>
           <p>Börja med att synliggöra var tiden faktiskt går. En kartläggning (typiskt 2–3 veckor) identifierar processer, flaskhalsar och var AI gör störst nytta. Här får ni en faktisk siffra att räkna på istället för en gissning.</p>
           <h3>2. Automatisering</h3>
-          <p>Välj prioriterade, repetitiva processer och automatisera dem med beprövade verktyg. Typisk tidsbesparing är <strong>15–30 % totalt</strong> och <strong>30–50 % på de mest repetitiva processerna</strong>. Konkreta exempel hittar ni i guiden <a href="/ai-verktyg-spara-tid" class="text-accent hover:underline">AI-verktyg som sparar tid</a>.</p>
+          <p>Välj prioriterade, repetitiva processer och automatisera dem med beprövade verktyg. Typisk tidsbesparing är <strong>15–30 % totalt</strong> och <strong>30–50 % på de mest repetitiva processerna</strong>. Konkreta exempel hittar ni i guiden <a href="/ai-verktyg-spara-tid" class="text-accent-deep dark:text-accent hover:underline">AI-verktyg som sparar tid</a>.</p>
           <h3>3. Implementering</h3>
           <p>Bygg en playbook och tydliga rutiner så att teamet äger förändringen. Utbildning och förankring är ofta skillnaden mellan en lyckad och en misslyckad satsning.</p>
           <h3>4. Mätning</h3>
@@ -174,7 +158,7 @@
 
         <section class="reveal">
           <h2>Från AI till en 4-dagarsvecka</h2>
-          <p>Många ledningsgrupper börjar bredare – som ren AI- och automationssatsning – och låter 4-dagarsveckan bli slutmålet. Det är en sund väg. När tiden väl är frigjord bygger ni vidare på <a href="/100-80-100-modellen" class="text-accent hover:underline">100-80-100-modellen</a>: 100 % lön, 80 % arbetstid, 100 % output. Vill ni förstå hur kalkylen ser ut på sista raden, läs <a href="/4-dagarsvecka-lonsamhet" class="text-accent hover:underline">4-dagarsvecka och lönsamhet</a>. En typisk tidsplan från start till fungerande 4-dagarsvecka är 6–12 månader.</p>
+          <p>Många ledningsgrupper börjar bredare – som ren AI- och automationssatsning – och låter 4-dagarsveckan bli slutmålet. Det är en sund väg. När tiden väl är frigjord bygger ni vidare på <a href="/100-80-100-modellen" class="text-accent-deep dark:text-accent hover:underline">100-80-100-modellen</a>: 100 % lön, 80 % arbetstid, 100 % output. Vill ni förstå hur kalkylen ser ut på sista raden, läs <a href="/4-dagarsvecka-lonsamhet" class="text-accent-deep dark:text-accent hover:underline">4-dagarsvecka och lönsamhet</a>. En typisk tidsplan från start till fungerande 4-dagarsvecka är 6–12 månader.</p>
         </section>
 
         <section class="reveal">
@@ -218,6 +202,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm mb-8" aria-label="Sidfot">
         <a href="/" class="hover:text-accent transition-colors">Startsida</a>
+        <a href="/guider" class="hover:text-accent transition-colors">Alla guider</a>
         <a href="/4-dagarsvecka-sverige" class="hover:text-accent transition-colors">4-dagarsvecka Sverige</a>
         <a href="/4-dagarsvecka-lonsamhet" class="hover:text-accent transition-colors">Lönsamhet</a>
         <a href="/kortare-arbetsvecka-myter" class="hover:text-accent transition-colors">Myter</a>
@@ -226,10 +211,11 @@
         <a href="/ai-verktyg-spara-tid" class="hover:text-accent transition-colors">AI-verktyg</a>
         <a href="/4-dagarsvecka-it-konsultbolag" class="hover:text-accent transition-colors">IT &amp; konsult</a>
         <a href="/ai-guide-ledningsgrupper" class="text-accent">AI-guide</a>
+        <a href="/bemanningsplanering-ai" class="hover:text-accent transition-colors">AI-schemaläggning</a>
         <a href="/integritetspolicy" class="hover:text-accent transition-colors">Integritetspolicy</a>
         <a href="/cookies" class="hover:text-accent transition-colors">Cookies</a>
       </nav>
-      <p class="text-xs text-slate-500">&copy; 2026 4 Days AI AB – En dag mer frihet. Med AI.<br>Org.nr 559587-6888 · Vasavägen 29, 177 52 Järfälla</p>
+      <p class="text-xs text-slate-400">&copy; 2026 4 Days AI AB – En dag mer frihet. Med AI.<br>Org.nr 559587-6888 · Vasavägen 29, 177 52 Järfälla</p>
     </div>
   </footer>
 

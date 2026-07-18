@@ -90,7 +90,7 @@
       <div class="max-w-3xl mx-auto rounded-2xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-brand-light shadow-2xl p-5 sm:p-6">
         <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
           Vi använder nödvändiga cookies för att sidan ska fungera. Med ditt samtycke använder vi även analytics för att förbättra webbplatsen.
-          <a href="/cookies" class="text-accent hover:underline font-medium">Läs mer</a>
+          <a href="/cookies" class="text-accent-deep dark:text-accent hover:underline font-medium">Läs mer om cookies</a>
         </p>
         <div class="mt-4 flex flex-col sm:flex-row gap-2 sm:justify-end">
           <button type="button" data-cookie-necessary class="px-4 py-2.5 text-sm font-medium rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-brand transition-colors">

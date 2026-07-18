@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden text-white">
       <Image
-        src="/bilder/Hero.jpg"
+        src="/bilder/hero-bg.webp"
         alt=""
         fill
         priority
