@@ -12,7 +12,7 @@ const founders = [
     role: "Försäljning & affärsutveckling",
     bio: "Erfaren försäljnings- och affärsutvecklare med bakgrund som VD och chef för bolag med runt 40 anställda. Driver kunddialog, partnerskap och affärsmodellen bakom 4days.ai.",
     linkedin: siteConfig.linkedin.joseph,
-    image: null as string | null,
+    image: "/bilder/profilbild_joseph.png",
   },
   {
     name: "Mikael Söderberg",
