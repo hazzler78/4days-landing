@@ -1,18 +1,3 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/:filename.txt",
-      "destination": "/api/indexnow-verify?filename=:filename"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "4days.ai" }],
-      "destination": "https://www.4days.ai/:path*",
-      "permanent": true
-    }
-  ]
+  "trailingSlash": false
 }
