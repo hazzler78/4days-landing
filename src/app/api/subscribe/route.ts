@@ -86,6 +86,9 @@ export async function POST(request: Request) {
     );
   }
 
+  const source = String(body.source || "").trim();
+  const tags = String(body.tags || "").trim();
+
   const fields: Record<string, string> = {
     name,
     last_name,
@@ -94,6 +97,8 @@ export async function POST(request: Request) {
   if (role) fields.role = role;
   if (employees) fields.employees = employees;
   if (phone) fields.phone = phone;
+  if (source) fields.source = source;
+  if (tags) fields.tags = tags;
 
   const payload: Record<string, unknown> = {
     email,
@@ -102,12 +107,28 @@ export async function POST(request: Request) {
     resubscribe: true,
   };
 
-  const groupId = process.env.MAILERLITE_GROUP_ID;
-  if (groupId) {
-    payload.groups = groupId
+  const groupIds = new Set<string>();
+  const defaultGroupId = process.env.MAILERLITE_GROUP_ID;
+  if (defaultGroupId) {
+    defaultGroupId
       .split(",")
       .map((id) => id.trim())
-      .filter(Boolean);
+      .filter(Boolean)
+      .forEach((id) => groupIds.add(id));
+  }
+
+  // Separat grupp för Hermes-guiden (valfritt – sätt i Vercel env)
+  const hermesGroupId = process.env.MAILERLITE_HERMES_GROUP_ID;
+  if (source === "hermes-guide" && hermesGroupId) {
+    hermesGroupId
+      .split(",")
+      .map((id) => id.trim())
+      .filter(Boolean)
+      .forEach((id) => groupIds.add(id));
+  }
+
+  if (groupIds.size > 0) {
+    payload.groups = Array.from(groupIds);
   }
 
   try {

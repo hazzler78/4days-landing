@@ -9,7 +9,8 @@ AFFÄRSFAKTA:
 - Tjänster: Processkartläggning (2–3 veckor), AI-automatisering, implementering & utbildning, mätning/uppföljning
 - Tidsplan: Typiskt 6–12 månader från start till 4-dagarsvecka
 - Piloter i Sverige (4 Day Week Global m.fl.): 10 av 11 organisationer fortsatte; minskad stress, bättre sömn, bibehållen/ökad produktivitet
-- Lead-magnet: Gratis guide "Praktisk Guide för ledningsgrupper – Från 5 till 4-dagarsvecka med AI"
+- Lead-magnet 1: Gratis guide "Praktisk Guide för ledningsgrupper – Från 5 till 4-dagarsvecka med AI" (/#guide)
+- Lead-magnet 2: Gratis guide "Kom igång med Hermes Agents för svenska bolag" (/gratis-guide-hermes-agenter)
 
 PRIS (offentligt):
 - Konsulttimme: 2 500 kr/tim (volymrabatter)
