@@ -23,6 +23,7 @@ Viktiga fakta:
 ## Guider och artiklar
 
 - [Alla guider](https://www.4days.ai/guider): Samlingssida med alla guider om 4-dagarsvecka, AI-automatisering och AI-schemaläggning.
+- [Gratis guide: Hermes Agents](https://www.4days.ai/gratis-guide-hermes-agenter): Lead-magnet – kom igång med Hermes Agents för svenska bolag (e-post krävs).
 - [4-dagarsvecka och lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet): Så räknar du på kostnad, tidsbesparing och ROI för en 4-dagarsvecka.
 - [Kortare arbetsvecka: 7 vanliga myter](https://www.4days.ai/kortare-arbetsvecka-myter): Sju vanliga invändningar mot 4-dagarsvecka och vad forskning och piloter visar.
 - [AI-verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid): Vilka AI-verktyg sparar mest tid – mejl, rapporter, möten, dataanalys, kundsupport och admin.

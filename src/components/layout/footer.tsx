@@ -3,6 +3,10 @@ import { siteConfig } from "@/lib/site";
 
 const articleLinks = [
   { href: "/guider", label: "Alla guider" },
+  {
+    href: "/gratis-guide-hermes-agenter",
+    label: "Gratis guide: Hermes Agents",
+  },
   { href: "/4-dagarsvecka-sverige", label: "4-dagarsvecka i Sverige" },
   { href: "/4-dagarsvecka-lonsamhet", label: "4-dagarsvecka & lönsamhet" },
   { href: "/100-80-100-modellen", label: "100-80-100-modellen" },

@@ -161,6 +161,29 @@ export default function GuiderPage() {
             </div>
           </section>
 
+          <section className="mt-14" aria-labelledby="guider-leadmagnets">
+            <h2
+              id="guider-leadmagnets"
+              className="mb-6 text-2xl font-bold text-brand"
+            >
+              Gratis guider via e-post
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <GuideCard
+                href="/gratis-guide-hermes-agenter"
+                tag="Ny · AI-agenter"
+                title="Kom igång med Hermes Agents"
+                description="Gratis mini-guide: hög-ROI-fall för svenska SMEs, GDPR och när ni bör bygga själva vs ta hjälp."
+              />
+              <GuideCard
+                href="/#guide"
+                tag="4-dagarsvecka"
+                title="Guide + webinar för ledningsgrupper"
+                description="Praktisk guide för ledningsgrupper som vill gå från 5 till 4 dagar med AI – plus webinar-inbjudan."
+              />
+            </div>
+          </section>
+
           <div className="mt-16 rounded-3xl bg-brand p-8 text-white shadow-[var(--shadow-premium)]">
             <h2 className="text-2xl font-bold">
               Vill ni veta var AI gör störst nytta hos just er?
@@ -171,7 +194,9 @@ export default function GuiderPage() {
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/#guide">Få guiden gratis</Link>
+                <Link href="/gratis-guide-hermes-agenter">
+                  Få Hermes-guiden gratis
+                </Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
                 <a
