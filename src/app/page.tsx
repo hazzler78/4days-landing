@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/sections/hero";
+import { JourneyScrollSection } from "@/components/sections/journey-scroll";
 import { WhySection } from "@/components/sections/why";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { ResultsSection } from "@/components/sections/results";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <JsonLd />
       <Header />
       <main>
+        <JourneyScrollSection />
         <HeroSection />
         <WhySection />
         <HowItWorksSection />

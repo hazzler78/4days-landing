@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
 
 const navItems = [
+  { href: "/#resa", label: "Resan" },
   { href: "/#varfor", label: "Varför vi" },
   { href: "/#hur-det-fungerar", label: "Så fungerar det" },
   { href: "/#kalkylator", label: "Kalkylator" },
