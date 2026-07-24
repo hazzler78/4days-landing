@@ -23,8 +23,8 @@ const COOKIE_KEY = "4days_journey_track";
 const SEGMENTS: Segment[] = [
   {
     id: "aerial",
-    title: "Stockholm byggs om",
-    subtitle: "AI och robotar tar det repetitiva — staden uppgraderas.",
+    title: "En stad byggs om",
+    subtitle: "AI och automation tar det repetitiva — framtiden uppgraderas i realtid.",
     build: "/videos/journey/build/01-aerial.mp4",
     future: "/videos/journey/future/01-aerial.mp4",
     posterBuild: "/videos/journey/posters/01-build.jpg",
@@ -32,8 +32,8 @@ const SEGMENTS: Segment[] = [
   },
   {
     id: "waterfront",
-    title: "Samma konturer. Ny energi.",
-    subtitle: "Känn igen staden — men allt blir smartare, snabbare, ljusare.",
+    title: "Samma riktning. Ny energi.",
+    subtitle: "Konturer som känns igen — men allt blir smartare, snabbare, ljusare.",
     build: "/videos/journey/build/02-waterfront.mp4",
     future: "/videos/journey/future/02-waterfront.mp4",
     posterBuild: "/videos/journey/posters/01-build.jpg",
@@ -42,7 +42,7 @@ const SEGMENTS: Segment[] = [
   {
     id: "street",
     title: "Människan i centrum",
-    subtitle: "Robotarna bygger. Ni fokuserar på det som skapar värde.",
+    subtitle: "Tekniken bygger och lastar. Ni fokuserar på det som skapar värde.",
     build: "/videos/journey/build/04-street.mp4",
     future: "/videos/journey/future/04-street.mp4",
     posterBuild: "/videos/journey/posters/01-build.jpg",
@@ -168,7 +168,7 @@ export function JourneyScrollSection() {
       ref={containerRef}
       className="relative bg-brand-dark"
       style={{ height: `${scrollHeightVh}vh` }}
-      aria-label="Scrollresa genom Stockholm — före och efter med AI"
+      aria-label="Scrollresa genom en framtidsstad — före och efter med AI"
     >
       <div className="sticky top-0 flex h-[100svh] w-full items-end overflow-hidden">
         {/* Video layer */}
@@ -214,8 +214,8 @@ export function JourneyScrollSection() {
               <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                 <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
                 {track === "build"
-                  ? "Första resan — staden uppgraderas"
-                  : "Välkommen tillbaka — framtiden är här"}
+                  ? "Första resan — framtiden byggs"
+                  : "Välkommen tillbaka — staden är klar"}
               </div>
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-300">
                 Stopp {segIndex + 1} / {SEGMENTS.length}
