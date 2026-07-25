@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { HermesStartPanel } from "@/components/sections/hermes-start-panel";
 import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
 import { Button } from "@/components/ui/button";
 import { hermesGuideMeta } from "@/content/hermes-guide";
@@ -18,13 +19,12 @@ export const metadata: Metadata = {
   },
 };
 
-const benefits = [
-  "PDF-guide: Quick Start för Mac (6 sidor)",
-  "Vad Hermes Agents är – utan tech-jargong",
-  "5 hög-ROI-fall för svenska SMEs (mejl, CRM, admin, rapportering)",
-  "7-dagars mini-plan för din första agent",
-  "Valfritt: visa resultat uppåt — utan att ge bort hela din edge",
-  "GDPR-checklistor innan ni kopplar Fortnox/Visma/CRM",
+const bullets = [
+  "Ett klick → Hermes Desktop (Mac/Windows)",
+  "Default: Grok/xAI (free funkar att börja)",
+  "Har ni teamkonto? Logga in med det",
+  "AI leder setup – ingen 40-sidors kurs",
+  "Första agent samma dag → mer tid, mer frihet",
 ];
 
 export default function HermesGuideLandingPage() {
@@ -40,8 +40,9 @@ export default function HermesGuideLandingPage() {
       url: siteConfig.url,
     },
     about: {
-      "@type": "Thing",
-      name: "Hermes Agents",
+      "@type": "SoftwareApplication",
+      name: "Hermes Agent",
+      applicationCategory: "BusinessApplication",
     },
   };
 
@@ -58,21 +59,22 @@ export default function HermesGuideLandingPage() {
             className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent/20 blur-3xl"
             aria-hidden="true"
           />
-          <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
+          <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
             <div>
               <p className="text-sm font-semibold text-accent">
-                Gratis start · Individ först · Audit när ni är redo
+                Gratis start · 4days.ai × Hermes
               </p>
               <h1 className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 {hermesGuideMeta.title}
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-200">
-                Börja själv med guide och första agenten. Behåll gärna försprånget —
-                eller bli den som tar in nästa steg för teamet. När det är dags:
-                AI Time-Saver Audit. Praktiskt, svenskt, utan fluff.
+                Slipp läskursen. Klicka{" "}
+                <span className="font-semibold text-white">Starta här</span>,
+                installera det du behöver, koppla <strong>Grok/xAI</strong> (eller
+                teamkonto) och låt AI:n guida dig in i första agenten.
               </p>
               <ul className="mt-8 space-y-3 text-sm text-slate-100">
-                {benefits.map((item) => (
+                {bullets.map((item) => (
                   <li key={item} className="flex gap-3">
                     <span
                       className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
@@ -83,52 +85,78 @@ export default function HermesGuideLandingPage() {
                 ))}
               </ul>
               <p className="mt-8 text-sm text-slate-300">
-                Redan läst klart?{" "}
+                Redan igång?{" "}
                 <Link
-                  href="/#guide"
+                  href={hermesGuideMeta.deliveryPath}
                   className="font-medium text-accent underline-offset-2 hover:underline"
                 >
-                  Få även vår 4-dagarsvecka-guide
+                  Kort setup-checklista
                 </Link>
-                .
+                {" · "}
+                <Link
+                  href={getBookingUrl()}
+                  target="_blank"
+                  className="font-medium text-accent underline-offset-2 hover:underline"
+                >
+                  Boka 30 min
+                </Link>
               </p>
             </div>
 
-            <div id="formular" className="scroll-mt-28">
-              <p className="mb-3 text-center text-sm font-medium text-slate-200 lg:text-left">
-                Fyll i formuläret – PDF-guiden skickas efter e-postbekräftelse.
-              </p>
-              <HermesGuideForm />
+            <div id="starta" className="scroll-mt-28">
+              <HermesStartPanel />
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-brand">
-            Varför e-post – och varför gratis ändå lönar sig
-          </h2>
-          <div className="mt-5 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              De flesta företag vill inte själva bygga och driftsätta komplexa,
-              GDPR-anpassade Hermes Agents med integrationer. Den här guiden ger
-              er koll på möjligheterna – och blir startpunkten för dem som vill
-              gå vidare med blueprints, implementation eller teamutbildning.
-            </p>
-            <p>
-              Det är samma hybridmodell som i vår idébank: gratis kunskap →
-              kvalificerade leads → betalda uppdrag. Community och mer kursmaterial
-              kommer i nästa steg.
-            </p>
-          </div>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg">
-              <a href="#formular">Hämta guiden gratis</a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href={getBookingUrl()} target="_blank">
-                Boka 30 min strategi-call
-              </Link>
-            </Button>
+        <section className="border-b border-slate-100 bg-slate-50">
+          <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:px-8">
+            <div>
+              <h2 className="text-2xl font-bold text-brand">
+                Efter klicket – vad händer?
+              </h2>
+              <ol className="mt-5 space-y-4 text-slate-600 leading-relaxed">
+                <li>
+                  <strong className="text-brand">Install:</strong> Desktop-appen
+                  sätter grunden. Mac kan be om systemverktyg en gång – godkänn.
+                </li>
+                <li>
+                  <strong className="text-brand">Login:</strong> Grok/xAI som
+                  default. Teamkonto? Använd det. ChatGPT behövs inte nu.
+                </li>
+                <li>
+                  <strong className="text-brand">Första agenten:</strong> En
+                  tidstjuv. En win. Sen bestämmer du om du delar friheten vidare.
+                </li>
+              </ol>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button asChild size="lg">
+                  <a href="#starta">Till Starta här</a>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href={hermesGuideMeta.deliveryPath}>
+                    Öppna korta guiden
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            <div id="tips" className="scroll-mt-28">
+              <h2 className="text-2xl font-bold text-brand">
+                Vill du ha tips i mejlen?
+              </h2>
+              <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                Valfritt. Lämna e-post så skickar vi korta nuds (install-stöd,
+                första agent, när audit är värt det) – inte en roman.
+              </p>
+              <div className="mt-5">
+                <HermesGuideForm />
+              </div>
+              <p className="mt-4 text-xs text-slate-500">
+                PDF finns kvar som backup för den som vill skriva ut – men
+                huvudvägen är klick + AI i appen.
+              </p>
+            </div>
           </div>
         </section>
       </main>

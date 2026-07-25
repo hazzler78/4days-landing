@@ -51,7 +51,7 @@ export function HermesGuideForm() {
           employees: "10–200",
           consent: form.consent,
           source: hermesGuideMeta.source,
-          tags: "hermes-guide,ai-agenter,gratis-guide",
+          tags: "hermes-start,ai-agenter,gratis-start,grok-default",
         }),
       });
 
@@ -83,17 +83,21 @@ export function HermesGuideForm() {
               Tack – kolla din inkorg!
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-              Bekräfta din e-post via länken vi skickar (dubbel opt-in). Därefter
-              får du mejl med länk till PDF-guiden{" "}
-              <strong>{hermesGuideMeta.pdfFileName}</strong>.
+              Bekräfta e-posten (dubbel opt-in). Sen skickar vi korta tips —
+              men du kan redan klicka <strong>Starta här</strong> ovan och
+              installera Hermes direkt.
             </p>
-            <Button
-              className="mt-6"
-              variant="outline"
-              onClick={() => setSubmitted(false)}
-            >
-              Skicka igen
-            </Button>
+            <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-center">
+              <Button asChild>
+                <Link href="/gratis-guide-hermes-agenter#starta">Till Starta här</Link>
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => setSubmitted(false)}
+              >
+                Skicka igen
+              </Button>
+            </div>
           </div>
         ) : (
           <form onSubmit={onSubmit} className="space-y-4" noValidate>

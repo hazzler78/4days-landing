@@ -1,13 +1,29 @@
 export const hermesGuideMeta = {
-  title: "Kom igång med Hermes Agents för svenska bolag",
-  shortTitle: "Gratis guide: Hermes Agents",
+  title: "Starta Hermes på några klick",
+  shortTitle: "Starta Hermes gratis",
   description:
-    "Gratis start: Hermes-guide + väg till din första agent. Individen sparar tid — bolaget kan ta audit när det är dags. En dag mer frihet. Med AI.",
+    "Klicka Starta här, installera Hermes Desktop, logga in med Grok/xAI (eller teamkonto) och kör din första agent. Inga 40-sidorsguider – AI leder dig.",
   landingPath: "/gratis-guide-hermes-agenter",
   deliveryPath: "/hermes-agenter-guide",
   pdfPath: "/guides/4Days_AI_Hermes_Quick_Start_Mac_v1.1.pdf",
   pdfFileName: "4Days_AI_Hermes_Quick_Start_Mac_v1.1.pdf",
-  source: "hermes-guide",
+  source: "hermes-start",
+  /** Official Hermes entry points */
+  install: {
+    hub: "https://hermes-agent.nousresearch.com/",
+    desktop: "https://hermes-agent.nousresearch.com/desktop",
+    docs: "https://hermes-agent.nousresearch.com/docs/getting-started/installation",
+    macHint: "Ladda ner Hermes Desktop för Mac och öppna installern.",
+    winHint: "Ladda ner Hermes Desktop för Windows och kör .exe.",
+    cli:
+      "curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash",
+  },
+  defaults: {
+    modelProvider: "Grok / xAI",
+    modelNote:
+      "Default: Grok free via xAI. Har du teamkonto hos Nous/xAI – logga in med det.",
+    altProvider: "OpenAI/ChatGPT valfritt senare – inte krav.",
+  },
 } as const;
 
 export type HermesGuideSection = {
@@ -17,90 +33,51 @@ export type HermesGuideSection = {
   bullets?: string[];
 };
 
+/** Kort “efter start”-guide – inte en kursroman */
 export const hermesGuideSections: HermesGuideSection[] = [
   {
-    id: "vad-ar-hermes",
-    title: "Vad är Hermes Agents?",
+    id: "steg-1",
+    title: "1. Installera (ett klick)",
     paragraphs: [
-      "Hermes Agents (från Nous Research) är AI-agenter som kan utföra arbetsflöden – inte bara svara på frågor. Till skillnad från en vanlig chattbot kan en agent planera steg, använda verktyg, hämta data och lämna ifrån sig ett resultat ni kan agera på.",
-      "För svenska bolag betyder det konkreta saker: sammanfatta mejltrådar, förbereda underlag från CRM, skapa utkast till offert eller rapport, och flagga avvikelser i adminflöden. Målet är inte “mer AI” – utan färre manuella timmar på repetitivt arbete.",
-    ],
-  },
-  {
-    id: "varfor-sme",
-    title: "Varför det passar svenska SMEs",
-    paragraphs: [
-      "Många bolag med 10–200 anställda har redan verktyg (mejl, kalender, CRM, Fortnox/Visma, projektverktyg) – men saknar tid och kompetens att koppla ihop dem säkert. Det är precis där agenter skapar nytta: de sitter mellan era system och era människor.",
-      "Hermes-kursen och den här guiden är byggda med affärsfokus: GDPR, svenska arbetssätt och mätbar tidsvinst – inte tech-demo för teknikens skull.",
+      "Tryck Starta här på landningssidan och ladda ner Hermes Desktop för din dator. Installern tar det tunga: app + CLI-grunder. På Mac kan systemet be om Command Line Tools/Git en gång – klicka Installera och vänta ut det.",
     ],
     bullets: [
-      "Ni behöver inte bli AI-labb – ni behöver 2–3 processer som sparar tid varje vecka.",
-      "Börja där volymen och enformigheten är högst: admin, intern rapportering, kunduppföljning.",
-      "Koppla alltid till ett affärsmål: färre övertidstimmar, snabbare offert, eller en dag mer frihet i veckan.",
+      "Mac: öppna .dmg → dra till Program → starta Hermes",
+      "Windows: kör installern → Starta Hermes",
+      "Stuck? Skicka skärmdump till hello@4days.ai – vi hjälper dig vidare",
     ],
   },
   {
-    id: "hog-roi",
-    title: "Hög-ROI-fall att börja med",
+    id: "steg-2",
+    title: "2. Logga in – Grok/xAI som default",
     paragraphs: [
-      "Starta lean. En agent som sparar 3–5 timmar i veckan på ett team är mer värd än tio halvfärdiga experiment. Här är fall som ofta ger snabbast utväxling i kunskapsintensiva bolag:",
+      "När Hermes öppnas: koppla modell. Vi vill att default ska vara Grok via xAI (free funkar att börja). Har du redan ett team- eller företagskonto – logga in med det i stället för att skapa nytt.",
     ],
     bullets: [
-      "Mejl & mötesprep: sammanfatta inkommande trådar, föreslå svar, skapa agenda och action points.",
-      "CRM-hygien: påminna om uppföljning, fylla i saknade fält från anteckningar, skapa nästa steg.",
-      "Intern rapportering: dra ihop veckostatus från Slack/Notion/ärendesystem till ett utkast ledningen kan granska.",
-      "Ekonomi-admin: sortera underlag, skapa checklistor inför bokslut, flagga saknade kvitton (utan att “gissa” bokföring).",
-      "Kundsupport nivå 1: föreslå svar utifrån er kunskapsbas – med människa i loopen innan något skickas.",
+      "Grok/xAI: skapa/logga in på grok.com eller xAI-konto i webben, koppla i Hermes",
+      "Teamkonto: använd samma inloggning ni fått av IT/4days",
+      "ChatGPT/OpenAI: valfritt senare – hoppa över nu",
     ],
   },
   {
-    id: "kom-igang",
-    title: "Så kommer ni igång på 7 dagar (mini-plan)",
+    id: "steg-3",
+    title: "3. Två koder? Lugnt.",
     paragraphs: [
-      "Ni behöver inte en stor transformation. Använd den här veckoplanen som mall för ett första agent-pilotprojekt.",
-    ],
-    bullets: [
-      "Dag 1–2: Välj EN process. Skriv ner stegen ni gör manuellt idag (input → beslut → output).",
-      "Dag 3: Definiera regler. Vad får agenten göra själv? Vad kräver mänskligt godkännande?",
-      "Dag 4: Samla data/källor. Policyer, mallar, exempel på bra/dåliga utfall.",
-      "Dag 5: Bygg ett smalt flöde (MVP). Ett verktyg, ett mål, en ansvarig ägare.",
-      "Dag 6: Testa på riktiga fall. Mät tid före/efter och antal fel/omarbetningar.",
-      "Dag 7: Bestäm nästa steg. Skala, pausa, eller ta hjälp med säkrare integrationer.",
+      "Login kan visa mejl-kod (6 siffror) och sedan enhetskod (XXXX-XXXX). De är olika steg – inte samma kod. Ha webbläsare och Hermes öppna samtidigt. Försvann sidan? Re-open verification page i Hermes.",
     ],
   },
   {
-    id: "gdpr",
-    title: "GDPR, säkerhet och svenska system",
+    id: "steg-4",
+    title: "4. Din första agent (5 min)",
     paragraphs: [
-      "Det här är punkten där de flesta DIY-projekt bromsar in – och det är okej. Att koppla en agent till kunddata, personaldata eller ekonomisystem kräver tydliga ramar.",
-      "Som minimum bör ni: minimera vilka data agenten ser, logga vad som körs, ha mänsklig granskning på utgående kommunikation, och undvika att lägga hemligheter i promptar. Integrationer mot Fortnox, Visma, CRM eller HR-system ska ske med behörighetsstyrning – inte via delade lösenord i chatten.",
-    ],
-    bullets: [
-      "Personuppgifter: behandla bara det som behövs för uppgiften.",
-      "Leverantörsavtal: förstå var data processas och hur länge den sparas.",
-      "Åtkomst: separata API-nycklar per miljö, snäv behörighet, möjlighet att dra tillbaka access.",
-      "Revision: spara exempel på input/output så ni kan förklara beslut i efterhand.",
+      "Välj EN tidstjuv: mejlsammanfattning, mötesnotes → actions, eller veckorapport-utkast. Be Hermes bygga agenten. Målet är en win samma dag – inte en perfekt stack.",
     ],
   },
   {
-    id: "diy-vs-oss",
-    title: "Bygga själva eller låta oss göra det?",
+    id: "steg-5",
+    title: "5. Dela frihet – eller behåll edge",
     paragraphs: [
-      "Gratis utbildning är till för att ni ska förstå möjligheterna och kunna ställa rätt krav. Men de flesta bolag vill inte själva driftsätta säkra, GDPR-anpassade agenter med integrationer – och det är precis därför hybridmodellen fungerar.",
-      "DIY passar när processen är intern, risken låg och ni har teknisk kapacitet. Done-for-you passar när ni vill ha produktionssäkerhet, integrationer, uppföljning och en tydlig ROI-plan.",
-    ],
-    bullets: [
-      "Gratis (den här guiden + kommande mini-kurs): kunskap, mallar, community-idéer.",
-      "Betalt: blueprints, implementation, teamutbildning, support och uppföljning.",
-      "Målbilden hos 4days.ai: frigjord tid som gör en 4-dagarsvecka med full lön möjlig.",
-    ],
-  },
-  {
-    id: "nasta-steg",
-    title: "Nästa steg",
-    paragraphs: [
-      "Om ni vill gå vidare: välj ett hög-ROI-fall från listan ovan, räkna grovt hur många timmar det tar idag, och boka ett kort strategisamtal. Vi hjälper er avgöra vad som ska automatiseras först – och vad som hellre får vänta.",
-      "Den här guiden är starten på en större Hermes-satsning under 4days.ai: mini-kurs, community där ni kan dela byggen och promptar, och betalda spår för dem som vill ha det gjort åt er.",
+      "När du sparar tid: du får behålla försprånget. Vill du att fler andas ut? Dela resultatet (inte hela receptet) och boka 30 min intro/audit när bolaget ska ta nästa steg.",
     ],
   },
 ];
