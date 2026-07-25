@@ -84,7 +84,8 @@ export function HermesGuideForm() {
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
               Bekräfta din e-post via länken vi skickar (dubbel opt-in). Därefter
-              får du guiden <strong>{hermesGuideMeta.title}</strong> i mejlet.
+              får du mejl med länk till PDF-guiden{" "}
+              <strong>{hermesGuideMeta.pdfFileName}</strong>.
             </p>
             <Button
               className="mt-6"
