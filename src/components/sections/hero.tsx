@@ -10,7 +10,7 @@ export function HeroSection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden text-white">
+    <section id="start" className="relative min-h-[100svh] overflow-hidden text-white">
       <Image
         src="/bilder/hero-bg.webp"
         alt=""
