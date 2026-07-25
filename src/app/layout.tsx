@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "Hjälper kunskapsintensiva svenska företag gå från 5 till 4 dagar med full lön – genom AI-automatisering.",
     images: [
       {
-        url: "/og-image-v2.jpg",
+        url: "/og-image-v3.jpg",
         width: 1200,
         height: 630,
         alt: "4days.ai – En dag mer frihet. Med AI.",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "4-dagarsvecka med full lön | AI-konsult | 4days.ai",
     description:
       "Från 5 till 4 – smartare, inte hårdare. 100% lön · 80% tid · 100% output.",
-    images: ["/og-image-v2.jpg"],
+    images: ["/og-image-v3.jpg"],
   },
   alternates: {
     canonical: "/",

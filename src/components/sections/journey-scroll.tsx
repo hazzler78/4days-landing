@@ -13,20 +13,20 @@ const COOKIE_KEY = "4days_journey_track";
 
 const VALUES = [
   {
-    title: "AI som tar det repetitiva",
-    text: "Administration och stökiga flöden på autopilot. Ni behåller det mänskliga – kreativitet, relationer, affären.",
+    title: "Människan först",
+    text: "AI ersätter inte er – den tar det repetitiva så ni får tid till kreativitet, kunder och liv.",
   },
   {
-    title: "100-80-100",
-    text: "100 % lön · 80 % arbetstid · 100 % output. Evidensbaserat – inte fluff.",
+    title: "Tillsammans med AI",
+    text: "Vi bygger trygg samverkan: team + smarta agenter. Mindre tvivel, mer konkret nytta i vardagen.",
   },
   {
     title: "Utmaningen",
-    text: "Fem dagar i veckan? Vi utmanar er att nå fyra – med bibehållen eller högre output. Tar ni bettet?",
+    text: "Fem dagar i veckan? Vi utmanar er till fyra – med bibehållen eller högre output. Tar ni bettet?",
   },
   {
     title: "En dag mer frihet. Med AI.",
-    text: "Det är därför 4days.ai finns. Inte mer teknik för teknikens skull – mer tid till livet.",
+    text: "Det är därför 4days.ai finns. Inte teknik för teknikens skull – mer tid till det som betyder något.",
   },
 ];
 
@@ -63,7 +63,7 @@ export function JourneyScrollSection() {
   // After first visit, prefer future city next time
   useEffect(() => {
     if (track === "build") {
-      const t = window.setTimeout(() => writeTrack("future"), 12_000);
+      const t = window.setTimeout(() => writeTrack("future"), 45_000);
       return () => window.clearTimeout(t);
     }
   }, [track]);
@@ -73,14 +73,15 @@ export function JourneyScrollSection() {
     if (reduceMotion) return;
     const id = window.setInterval(() => {
       setActiveCard((i) => (i + 1) % VALUES.length);
-    }, 3500);
+    }, 5000);
     return () => window.clearInterval(id);
   }, [reduceMotion]);
 
+  // Full story montage (~40s): bygge → människor+AI → färdig framtid
   const src =
     track === "future"
-      ? "/videos/journey/future/01-aerial.mp4"
-      : "/videos/journey/build/01-aerial.mp4";
+      ? "/videos/journey/future/story.mp4"
+      : "/videos/journey/main.mp4";
   const poster =
     track === "future"
       ? "/videos/journey/posters/01-future.jpg"
@@ -151,15 +152,15 @@ export function JourneyScrollSection() {
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
             {track === "build"
-              ? "Visionen byggs — med AI"
-              : "När transformationen sitter"}
+              ? "Från bygge till samarbete — med AI"
+              : "När människor och AI jobbar tillsammans"}
           </div>
           <button
             type="button"
             onClick={toggleTrack}
             className="rounded-full border border-white/20 bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur hover:bg-black/55"
           >
-            {track === "build" ? "Visa efter →" : "← Visa före"}
+            {track === "build" ? "Kort framtidsslinga →" : "← Hela resan"}
           </button>
         </div>
 
