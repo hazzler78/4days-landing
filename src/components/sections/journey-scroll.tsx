@@ -23,8 +23,8 @@ const COOKIE_KEY = "4days_journey_track";
 const SEGMENTS: Segment[] = [
   {
     id: "aerial",
-    title: "En stad byggs om",
-    subtitle: "AI och automation tar det repetitiva — framtiden uppgraderas i realtid.",
+    title: "En ny stad tar form",
+    subtitle: "En byggnadsplats under uppbyggnad — AI och robotar bygger det som saknas.",
     build: "/videos/journey/build/01-aerial.mp4",
     future: "/videos/journey/future/01-aerial.mp4",
     posterBuild: "/videos/journey/posters/01-build.jpg",
@@ -32,8 +32,8 @@ const SEGMENTS: Segment[] = [
   },
   {
     id: "waterfront",
-    title: "Samma riktning. Ny energi.",
-    subtitle: "Konturer som känns igen — men allt blir smartare, snabbare, ljusare.",
+    title: "Genom bygget",
+    subtitle: "Flyg mellan ofärdiga torn, kranar och robotar som sätter staden på plats.",
     build: "/videos/journey/build/02-waterfront.mp4",
     future: "/videos/journey/future/02-waterfront.mp4",
     posterBuild: "/videos/journey/posters/01-build.jpg",
@@ -41,8 +41,8 @@ const SEGMENTS: Segment[] = [
   },
   {
     id: "street",
-    title: "Människan i centrum",
-    subtitle: "Tekniken bygger och lastar. Ni fokuserar på det som skapar värde.",
+    title: "Gatorna formas",
+    subtitle: "Ännu inte klart — men riktningen är tydlig: smartare, snabbare, bättre.",
     build: "/videos/journey/build/04-street.mp4",
     future: "/videos/journey/future/04-street.mp4",
     posterBuild: "/videos/journey/posters/01-build.jpg",
@@ -50,8 +50,8 @@ const SEGMENTS: Segment[] = [
   },
   {
     id: "fpv",
-    title: "Framtiden är närmare än du tror",
-    subtitle: "Med AI går transformationen fort. Scrolla — och känn farten.",
+    title: "Staden är klar",
+    subtitle: "Samma plats. Färdigbyggd. Så fort kan AI hjälpa oss bygga framtiden.",
     build: "/videos/journey/build/05-fpv.mp4",
     future: "/videos/journey/future/05-fpv.mp4",
     posterBuild: "/videos/journey/posters/05-build.jpg",
@@ -214,8 +214,8 @@ export function JourneyScrollSection() {
               <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                 <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
                 {track === "build"
-                  ? "Första resan — framtiden byggs"
-                  : "Välkommen tillbaka — staden är klar"}
+                  ? "Första resan — ny stad under uppbyggnad"
+                  : "Välkommen tillbaka — den ståtliga staden är klar"}
               </div>
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-300">
                 Stopp {segIndex + 1} / {SEGMENTS.length}
