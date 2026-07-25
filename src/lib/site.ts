@@ -10,10 +10,10 @@ export const siteConfig = {
   url: "https://www.4days.ai",
   /**
    * Booking CTA.
-   * - "email" (current): mailto hello@4days.ai
-   * - "calendly" (later): set bookingMode + use calendlyUrl
+   * - "calendly" (current): https://calendly.com/hello-4days/30min (30 min intro/audit)
+   * - "email": mailto hello@4days.ai (fallback)
    */
-  bookingMode: "email" as "email" | "calendly",
+  bookingMode: "calendly" as "email" | "calendly",
   calendlyUrl: "https://calendly.com/hello-4days/30min",
   bookingUrl:
     "mailto:hello@4days.ai?subject=Boka%20intro%20%2F%20AI%20Time-Saver%20Audit%20%E2%80%93%204days.ai&body=Hej%204days%2C%0A%0AJag%20vill%20boka%20en%20tid%20(intro%20eller%20AI%20Time-Saver%20Audit).%0A%0ANamn%3A%0AF%C3%B6retag%3A%0AAntal%20anst%C3%A4llda%20(ca)%3A%0AKort%20om%20behov%3A%0A%0ATack%21%0A",
@@ -35,7 +35,7 @@ export const siteConfig = {
   },
 } as const;
 
-/** Resolve active booking link (email now, Calendly when bookingMode flips). */
+/** Resolve active booking link (Calendly when mode=calendly, else mailto). */
 export function getBookingUrl(): string {
   if (siteConfig.bookingMode === "calendly") return siteConfig.calendlyUrl;
   return siteConfig.bookingUrl;

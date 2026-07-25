@@ -2,10 +2,13 @@
 export const funnelAgentContent = {
   slogan: "En dag mer frihet. Med AI.",
   bookingEmail: "hello@4days.ai",
-  bookingMode: "email" as "email" | "calendly",
+  bookingMode: "calendly" as "email" | "calendly",
   /** Parked — flip bookingMode to calendly when ready */
   calendlyUrl: "https://calendly.com/hello-4days/30min",
   auditPrice: "2 500 kr",
+  meetingMinutes: 30,
+  calendlyEventName: "30 Minute Meeting", // rename in Calendly UI to AI Audit/Intro when ready
+
   tracks: {
     champion: {
       id: "A",
