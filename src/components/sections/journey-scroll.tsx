@@ -18,7 +18,7 @@ const VALUES = [
   },
   {
     title: "Tillsammans med AI",
-    text: "Vi bygger trygg samverkan: team + smarta agenter. Mindre tvivel, mer konkret nytta i vardagen.",
+    text: "AI som formerar sig runt er – på plats när ni behöver den. Trygg samverkan, mindre tvivel, mer nytta.",
   },
   {
     title: "Utmaningen",
@@ -85,7 +85,7 @@ export function JourneyScrollSection() {
   const poster =
     track === "future"
       ? "/videos/journey/posters/01-future.jpg"
-      : "/videos/journey/posters/01-build.jpg";
+      : "/videos/journey/posters/nano-assemble.jpg";
 
   useEffect(() => {
     const video = videoRef.current;
@@ -152,8 +152,8 @@ export function JourneyScrollSection() {
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
             {track === "build"
-              ? "Från bygge till samarbete — med AI"
-              : "När människor och AI jobbar tillsammans"}
+              ? "AI som materialiseras när ni behöver den"
+              : "När AI formerar sig runt människan"}
           </div>
           <button
             type="button"
