@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /guides/
+Disallow: /hermes-agenter-guide
 
 Sitemap: https://www.4days.ai/sitemap.xml

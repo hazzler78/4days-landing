@@ -19,11 +19,11 @@ export const metadata: Metadata = {
 };
 
 const benefits = [
+  "PDF-guide: Quick Start för Mac (6 sidor)",
   "Vad Hermes Agents är – utan tech-jargong",
   "5 hög-ROI-fall för svenska SMEs (mejl, CRM, admin, rapportering)",
   "7-dagars mini-plan för er första agent-pilot",
   "GDPR-checklistor innan ni kopplar Fortnox/Visma/CRM",
-  "När ni bör bygga själva vs ta hjälp (hybridmodellen)",
 ];
 
 export default function HermesGuideLandingPage() {
@@ -95,7 +95,7 @@ export default function HermesGuideLandingPage() {
 
             <div id="formular" className="scroll-mt-28">
               <p className="mb-3 text-center text-sm font-medium text-slate-200 lg:text-left">
-                Fyll i formuläret – guiden skickas efter e-postbekräftelse.
+                Fyll i formuläret – PDF-guiden skickas efter e-postbekräftelse.
               </p>
               <HermesGuideForm />
             </div>

@@ -2,9 +2,11 @@ export const hermesGuideMeta = {
   title: "Kom igång med Hermes Agents för svenska bolag",
   shortTitle: "Gratis guide: Hermes Agents",
   description:
-    "Gratis mini-guide: vad Hermes Agents är, hög-ROI-fall för svenska SMEs, GDPR och när ni bör bygga själva vs låta oss implementera – kopplat till mer tid och 4-dagarsvecka.",
+    "Gratis mini-guide (PDF): vad Hermes Agents är, hög-ROI-fall för svenska SMEs, GDPR och när ni bör bygga själva vs låta oss implementera – kopplat till mer tid och 4-dagarsvecka.",
   landingPath: "/gratis-guide-hermes-agenter",
   deliveryPath: "/hermes-agenter-guide",
+  pdfPath: "/guides/4Days_AI_Hermes_Quick_Start_Mac_v1.1.pdf",
+  pdfFileName: "4Days_AI_Hermes_Quick_Start_Mac_v1.1.pdf",
   source: "hermes-guide",
 } as const;
 
