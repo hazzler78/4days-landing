@@ -172,7 +172,7 @@ export default function GuiderPage() {
               <GuideCard
                 href="/gratis-guide-hermes-agenter"
                 tag="Ny · AI-agenter"
-                title="Kom igång med Hermes Agents"
+                title="Starta Hermes på några klick"
                 description="Gratis mini-guide: hög-ROI-fall för svenska SMEs, GDPR och när ni bör bygga själva vs ta hjälp."
               />
               <GuideCard
@@ -195,7 +195,7 @@ export default function GuiderPage() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
                 <Link href="/gratis-guide-hermes-agenter">
-                  Få Hermes-guiden gratis
+                  Starta Hermes gratis
                 </Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
