@@ -22,7 +22,8 @@ const benefits = [
   "PDF-guide: Quick Start för Mac (6 sidor)",
   "Vad Hermes Agents är – utan tech-jargong",
   "5 hög-ROI-fall för svenska SMEs (mejl, CRM, admin, rapportering)",
-  "7-dagars mini-plan för er första agent-pilot",
+  "7-dagars mini-plan för din första agent",
+  "Valfritt: visa resultat uppåt — utan att ge bort hela din edge",
   "GDPR-checklistor innan ni kopplar Fortnox/Visma/CRM",
 ];
 
@@ -60,15 +61,15 @@ export default function HermesGuideLandingPage() {
           <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
             <div>
               <p className="text-sm font-semibold text-accent">
-                Ny gratis lead-magnet · Mini-guide
+                Gratis start · Individ först · Audit när ni är redo
               </p>
               <h1 className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 {hermesGuideMeta.title}
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-200">
-                Lär er hur AI-agenter kan ta repetitivt arbete – så ni frigör tid
-                och kommer närmare en 4-dagarsvecka med full lön. Praktiskt,
-                svenskt och utan fluff.
+                Börja själv med guide och första agenten. Behåll gärna försprånget —
+                eller bli den som tar in nästa steg för teamet. När det är dags:
+                AI Time-Saver Audit. Praktiskt, svenskt, utan fluff.
               </p>
               <ul className="mt-8 space-y-3 text-sm text-slate-100">
                 {benefits.map((item) => (
