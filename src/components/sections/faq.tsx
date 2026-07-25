@@ -9,7 +9,7 @@ import {
 import { Reveal } from "@/components/motion/reveal";
 import { faqItems } from "@/lib/faq-data";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export function FaqSection() {
   return (
@@ -47,7 +47,7 @@ export function FaqSection() {
             </Button>
             <Button asChild size="lg" variant="outline">
               <a
-                href={siteConfig.calendlyUrl}
+                href={getBookingUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
               >

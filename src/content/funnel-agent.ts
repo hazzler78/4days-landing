@@ -1,13 +1,17 @@
 /** 4days free→paid funnel — source of truth for agent copy on web */
 export const funnelAgentContent = {
   slogan: "En dag mer frihet. Med AI.",
-  calendly: "https://calendly.com/hello-4days/30min",
+  bookingEmail: "hello@4days.ai",
+  bookingMode: "email" as "email" | "calendly",
+  /** Parked — flip bookingMode to calendly when ready */
+  calendlyUrl: "https://calendly.com/hello-4days/30min",
   auditPrice: "2 500 kr",
   tracks: {
     champion: {
       id: "A",
       name: "Champion",
-      promise: "Status uppåt — du blir den som tar in spelet, inte den som tappar edge.",
+      promise:
+        "Status uppåt — du blir den som tar in spelet, inte den som tappar edge.",
     },
     quietHero: {
       id: "B",

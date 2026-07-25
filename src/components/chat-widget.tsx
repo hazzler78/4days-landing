@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { MessageCircle, Send, X } from "lucide-react";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, getBookingUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type ChatMessage = {
@@ -229,7 +229,7 @@ export function ChatWidget() {
           </form>
           <p className="bg-white px-3 pb-3 text-center text-[11px] text-slate-500">
             AI-assistent ·{" "}
-            <a href={siteConfig.calendlyUrl} target="_blank" rel="noopener noreferrer" className="underline">
+            <a href={getBookingUrl()} target="_blank" rel="noopener noreferrer" className="underline">
               Boka möte
             </a>
           </p>

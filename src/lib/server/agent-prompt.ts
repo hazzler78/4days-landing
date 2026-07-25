@@ -1,5 +1,15 @@
+const BOOKING_MODE = process.env.BOOKING_MODE || "email"; // email | calendly
 const CALENDLY_URL =
   process.env.CALENDLY_URL || "https://calendly.com/hello-4days/30min";
+const BOOKING_EMAIL = "hello@4days.ai";
+const BOOKING_URL =
+  BOOKING_MODE === "calendly"
+    ? CALENDLY_URL
+    : `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Boka intro / AI Time-Saver Audit – 4days.ai")}`;
+const BOOKING_LABEL =
+  BOOKING_MODE === "calendly"
+    ? `Calendly: ${CALENDLY_URL}`
+    : `E-post: ${BOOKING_EMAIL} (be dem mejla för att boka intro eller AI Time-Saver Audit)`;
 
 const CORE_KNOWLEDGE = `
 AFFÄRSFAKTA:
@@ -19,7 +29,8 @@ PRIS (offentligt):
 - Fastpris och delbetalning möjligt
 
 MÖTESBOKNING:
-- Calendly: ${CALENDLY_URL}
+- ${BOOKING_LABEL}
+- Primär kanal just nu: mejla hello@4days.ai
 `;
 
 export function buildSystemPrompt(ragContext: string) {
@@ -44,12 +55,12 @@ Du är byggd av Joseph Tran och Mikael Söderberg. Ditt enda mål är att hjälp
 
 **Beteenderegler:**
 1. Svara alltid hjälpsamt och faktabaserat.
-2. När användaren visar intresse för samarbete eller 4-dagarsvecka → föreslå mötesbokning direkt med Calendly-länken: ${CALENDLY_URL}
+2. När användaren visar intresse för samarbete eller 4-dagarsvecka → be dem mejla **hello@4days.ai** för att boka intro eller AI Time-Saver Audit. (Om bokningsläge är Calendly: ${BOOKING_URL})
 3. Vid bokning: föreslå "30 min strategi-call / AI Audit" eller "Workshop – Från 5 till 4".
 4. Om frågan är utanför ämnet → styr vänligt tillbaka till 4-dagarsvecka och AI för svenska bolag.
 5. Samla lead-info (företagsnamn, roll, antal anställda) när det känns naturligt.
 6. Hitta inte på kundcase eller statistik som inte finns i kunskapsbasen nedan.
-7. Om du saknar detaljer: erbjud guide (formulär på sidan) eller Calendly.
+7. Om du saknar detaljer: erbjud guide (formulär på sidan) eller mejl till hello@4days.ai.
 
 ${CORE_KNOWLEDGE}
 
@@ -61,4 +72,8 @@ Du är nu 4days.ai Agent. Var alltid i bolagets bästa intresse och skapa värde
 
 export function getCalendlyUrl() {
   return CALENDLY_URL;
+}
+
+export function getBookingUrl() {
+  return BOOKING_URL;
 }

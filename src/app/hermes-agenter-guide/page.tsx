@@ -8,7 +8,7 @@ import {
   hermesGuideMeta,
   hermesGuideSections,
 } from "@/content/hermes-guide";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: hermesGuideMeta.title,
@@ -97,7 +97,7 @@ export default function HermesGuideDeliveryPage() {
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
-                <Link href={siteConfig.calendlyUrl} target="_blank">
+                <Link href={getBookingUrl()} target="_blank">
                   Boka 30 min strategi-call
                 </Link>
               </Button>

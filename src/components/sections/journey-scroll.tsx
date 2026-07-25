@@ -6,6 +6,7 @@ import { useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { siteConfig, getBookingUrl } from "@/lib/site";
 
 type Track = "build" | "future";
 
@@ -217,7 +218,7 @@ export function JourneyScrollSection() {
           </Button>
           <Button asChild size="lg" variant="secondary">
             <a
-              href="https://calendly.com/hello-4days/30min"
+              href={getBookingUrl()}
               target="_blank"
               rel="noopener noreferrer"
             >

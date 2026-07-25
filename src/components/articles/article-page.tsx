@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, getBookingUrl } from "@/lib/site";
 import type { Article } from "@/lib/articles";
 
 function formatDate(value?: string) {
@@ -99,7 +99,7 @@ export function ArticlePage({ article }: { article: Article }) {
                 </Button>
                 <Button asChild size="lg" variant="secondary">
                   <a
-                    href={siteConfig.calendlyUrl}
+                    href={getBookingUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

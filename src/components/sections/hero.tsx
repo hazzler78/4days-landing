@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export function HeroSection() {
   const reduceMotion = useReducedMotion();
@@ -99,7 +99,7 @@ export function HeroSection() {
             </Button>
             <Button asChild size="xl" variant="secondary">
               <a
-                href={siteConfig.calendlyUrl}
+                href={getBookingUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
 import { Button } from "@/components/ui/button";
 import { hermesGuideMeta } from "@/content/hermes-guide";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: hermesGuideMeta.shortTitle,
@@ -125,7 +125,7 @@ export default function HermesGuideLandingPage() {
               <a href="#formular">Hämta guiden gratis</a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href={siteConfig.calendlyUrl} target="_blank">
+              <Link href={getBookingUrl()} target="_blank">
                 Boka 30 min strategi-call
               </Link>
             </Button>
