@@ -20,6 +20,7 @@ function formatDate(value?: string) {
 
 export function ArticlePage({ article }: { article: Article }) {
   const publishedLabel = formatDate(article.published);
+  const modifiedLabel = formatDate(article.modified);
 
   return (
     <>
@@ -37,15 +38,27 @@ export function ArticlePage({ article }: { article: Article }) {
           <header>
             {article.eyebrow && (
               <p className="mb-2 text-sm font-semibold text-accent">
-                {article.eyebrow}
+                {article.eyebrow.replace(/&amp;/g, "&")}
               </p>
             )}
             <h1 className="text-3xl font-bold leading-tight tracking-tight text-brand sm:text-4xl">
               {article.h1}
             </h1>
-            {publishedLabel && (
-              <p className="mt-4 text-sm text-slate-500">
-                <time dateTime={article.published}>{publishedLabel}</time>
+            {(publishedLabel || modifiedLabel) && (
+              <p className="mt-4 flex flex-wrap items-center gap-x-2 text-sm text-slate-500">
+                {publishedLabel && (
+                  <time dateTime={article.published}>
+                    Publicerad {publishedLabel}
+                  </time>
+                )}
+                {publishedLabel && modifiedLabel && (
+                  <span aria-hidden="true">·</span>
+                )}
+                {modifiedLabel && (
+                  <time dateTime={article.modified}>
+                    Uppdaterad {modifiedLabel}
+                  </time>
+                )}
               </p>
             )}
             {article.lead && (
@@ -87,11 +100,14 @@ export function ArticlePage({ article }: { article: Article }) {
           {!article.isLegal && (
             <div className="mt-14 rounded-3xl bg-brand p-8 text-white shadow-[var(--shadow-premium)]">
               <h2 className="text-2xl font-bold">
-                Vill du se hur en 4-dagarsvecka kan se ut hos er?
+                {article.slug === "bemanningsplanering-ai"
+                  ? "Vill ni effektivisera er bemanningsplanering?"
+                  : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
               </h2>
               <p className="mt-3 text-slate-300">
-                Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka
-                ett kort intro-call.
+                {article.slug === "bemanningsplanering-ai"
+                  ? "Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er."
+                  : "Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call."}
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">

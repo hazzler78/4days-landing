@@ -6,10 +6,16 @@ import { Button } from "@/components/ui/button";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Guider: 4-dagarsvecka, AI-automatisering & AI-schemaläggning",
+  title: "Guider: AI-schemaläggning, 4-dagarsvecka & AI-automatisering",
   description:
-    "Alla våra guider samlade: 4-dagarsvecka med full lön, 100-80-100-modellen, AI-automatisering, AI-verktyg som sparar tid och AI-schemaläggning.",
+    "Guider på svenska: AI-schemaläggning och automatisk schemaläggning, bemanningsplanering med AI, 4-dagarsvecka med full lön och AI-automatisering för företag.",
   alternates: { canonical: "/guider" },
+  openGraph: {
+    title: "Guider: AI-schemaläggning, 4-dagarsvecka & AI-automatisering",
+    description:
+      "Samlad kunskapsbank: AI-schemaläggning, bemanningsplanering, 4-dagarsvecka och AI-automatisering.",
+    url: `${siteConfig.url}/guider`,
+  },
 };
 
 const weekGuides = [
@@ -68,9 +74,9 @@ const aiGuides = [
   {
     href: "/bemanningsplanering-ai",
     tag: "Schemaläggning",
-    title: "AI-schemaläggning och bemanningsplanering",
+    title: "AI-schemaläggning och automatisk schemaläggning",
     description:
-      "Komplett guide till automatisk schemaläggning med AI – flöde, branschexempel och checklista.",
+      "Så fungerar schemaläggning med AI i praktiken – bemanningsplanering, branschexempel (vård, skola, handel) och checklista.",
   },
   {
     href: "/ai-guide-ledningsgrupper",
@@ -127,14 +133,44 @@ export default function GuiderPage() {
           <header className="max-w-3xl">
             <p className="mb-2 text-sm font-semibold text-accent">Kunskapsbank</p>
             <h1 className="text-3xl font-bold leading-tight tracking-tight text-brand sm:text-4xl">
-              Guider om 4-dagarsvecka, AI-automatisering och AI-schemaläggning
+              Guider om AI-schemaläggning, 4-dagarsvecka och AI-automatisering
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
-              Allt vi vet om att korta arbetsveckan med hjälp av AI – samlat på
-              ett ställe. Praktiska guider på svenska, baserade på forskning,
-              svenska piloter och vårt eget arbete med kunder.
+              Praktiska guider på svenska – från{" "}
+              <strong className="font-semibold text-brand">
+                automatisk schemaläggning med AI
+              </strong>{" "}
+              och bemanningsplanering till 4-dagarsvecka med full lön. Baserat på
+              forskning, svenska piloter och vårt arbete med kunder.
             </p>
           </header>
+
+          <section
+            className="mt-10 rounded-3xl border border-accent/30 bg-white p-6 shadow-sm sm:p-8"
+            aria-labelledby="guider-featured"
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+              Mest efterfrågad
+            </p>
+            <h2
+              id="guider-featured"
+              className="mt-2 text-2xl font-bold text-brand"
+            >
+              AI-schemaläggning och automatisk schemaläggning
+            </h2>
+            <p className="mt-3 max-w-2xl text-slate-600 leading-relaxed">
+              Komplett guide till hur AI lägger schema, hur bemanningsplanering
+              fungerar i vård, skola och handel – plus checklista och svar på
+              vanliga frågor.
+            </p>
+            <div className="mt-6">
+              <Button asChild size="lg">
+                <Link href="/bemanningsplanering-ai">
+                  Läs guiden om AI-schemaläggning
+                </Link>
+              </Button>
+            </div>
+          </section>
 
           <section className="mt-12" aria-labelledby="guider-4dagars">
             <h2
