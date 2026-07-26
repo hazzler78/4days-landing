@@ -111,8 +111,11 @@ export async function POST(request: Request) {
   const defaultGroupId = process.env.MAILERLITE_GROUP_ID;
   const hermesGroupId = process.env.MAILERLITE_HERMES_GROUP_ID;
 
-  if (source === "hermes-guide" && hermesGroupId) {
-    // Hermes-lead: endast Hermes-gruppen (separat automation + välkomstmejl)
+  const isHermesLead =
+    source === "hermes-start" || source === "hermes-guide";
+
+  if (isHermesLead && hermesGroupId) {
+    // Hermes one-click / tips-mejl: endast Hermes-gruppen (separat automation)
     hermesGroupId
       .split(",")
       .map((id) => id.trim())

@@ -173,7 +173,7 @@ export default function GuiderPage() {
                 href="/gratis-guide-hermes-agenter"
                 tag="Ny · AI-agenter"
                 title="Starta Hermes på några klick"
-                description="Gratis mini-guide: hög-ROI-fall för svenska SMEs, GDPR och när ni bör bygga själva vs ta hjälp."
+                description="Klicka Starta här, installera Hermes Desktop, koppla Grok/xAI och kör din första agent samma dag."
               />
               <GuideCard
                 href="/#guide"

@@ -191,8 +191,8 @@ export function HermesGuideForm() {
                 required
               />
               <span>
-                Jag vill ha den gratis Hermes-guiden och tips om AI-agenter för
-                svenska bolag. Läs mer i vår{" "}
+                Jag vill ha korta tips om Hermes-start och AI-agenter för svenska
+                bolag. Läs mer i vår{" "}
                 <Link
                   href="/integritetspolicy"
                   className="font-medium text-accent-dim underline-offset-2 hover:underline"
@@ -221,7 +221,7 @@ export function HermesGuideForm() {
                   Skickar...
                 </>
               ) : (
-                "Skicka mig guiden gratis"
+                "Skicka mig tips"
               )}
             </Button>
           </form>

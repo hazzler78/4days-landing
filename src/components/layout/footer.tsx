@@ -5,7 +5,7 @@ const articleLinks = [
   { href: "/guider", label: "Alla guider" },
   {
     href: "/gratis-guide-hermes-agenter",
-    label: "Gratis guide: Hermes Agents",
+    label: "Starta Hermes gratis",
   },
   { href: "/4-dagarsvecka-sverige", label: "4-dagarsvecka i Sverige" },
   { href: "/4-dagarsvecka-lonsamhet", label: "4-dagarsvecka & lönsamhet" },
