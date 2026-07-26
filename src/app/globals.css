@@ -40,6 +40,10 @@
 }
 
 html {
+  /* Smooth only after first paint — avoids “auto-scroll” on load */
+  scroll-behavior: auto;
+}
+html[data-smooth-scroll="true"] {
   scroll-behavior: smooth;
 }
 

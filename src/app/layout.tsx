@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { AnalyticsGate } from "@/components/analytics-gate";
 import { CookieConsent } from "@/components/cookie-consent";
 import { ChatWidget } from "@/components/chat-widget";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -79,6 +80,7 @@ export default function RootLayout({
   return (
     <html lang="sv" className={inter.variable}>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+        <ScrollToTop />
         {children}
         <CookieConsent />
         <ChatWidget />

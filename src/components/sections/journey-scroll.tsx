@@ -112,7 +112,7 @@ export function JourneyScrollSection() {
   return (
     <section
       id="resa"
-      className="relative flex min-h-[100svh] items-end overflow-hidden bg-brand-dark"
+      className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-brand-dark"
       aria-label="4days.ai — vision och värderingar"
     >
       <div className="absolute inset-0">
@@ -136,6 +136,7 @@ export function JourneyScrollSection() {
             preload="auto"
             controls={false}
             aria-hidden="true"
+            tabIndex={-1}
           />
         )}
         <div
