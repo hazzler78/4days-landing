@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: article.h1,
       description: article.description,
       url: `${siteConfig.url}/${article.slug}`,
-      images: ["/og-image.jpg"],
+      images: ["/og-image-v5.jpg"],
       ...(article.published
         ? { publishedTime: article.published }
         : {}),
@@ -49,7 +49,7 @@ function ArticleJsonLd({
       inLanguage: "sv-SE",
       mainEntityOfPage: url,
       url,
-      image: `${siteConfig.url}/og-image.jpg`,
+      image: `${siteConfig.url}/og-image-v5.jpg`,
       datePublished: article.published || undefined,
       dateModified: article.modified || article.published || undefined,
       author: {
