@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { siteConfig, getBookingUrl } from "@/lib/site";
+import { getBookingUrl } from "@/lib/site";
 import type { Article } from "@/lib/articles";
 
 function formatDate(value?: string) {

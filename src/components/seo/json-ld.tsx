@@ -35,7 +35,8 @@ export function JsonLd() {
       },
       {
         "@type": "FAQPage",
-        "@id": `${siteConfig.url}/#faq`,
+        "@id": `${siteConfig.url}/faq#faq`,
+        url: `${siteConfig.url}/faq`,
         mainEntity: faqItems.map((item) => ({
           "@type": "Question",
           name: item.question,

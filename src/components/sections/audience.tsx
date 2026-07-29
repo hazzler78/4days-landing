@@ -44,28 +44,32 @@ const audiences = [
 
 export function AudienceSection() {
   return (
-    <section id="for-vem" className="scroll-mt-24 py-20 sm:py-28">
+    <section
+      id="for-vem"
+      className="scroll-mt-24 border-y border-slate-200/80 bg-white py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="text-sm font-semibold text-accent">För vem vi arbetar</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-brand sm:text-4xl">
+        <Reveal className="mx-auto mb-16 max-w-2xl text-center">
+          <p className="text-sm font-semibold text-accent">För vem</p>
+          <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
             Byggt för kunskapsintensiva företag
           </h2>
           <p className="mt-4 text-slate-600">
             Vi passar bäst där arbetet är digitalt, kompetenstungt och fullt av
-            repetitiva moment som AI kan ta över – med eller utan mål om
-            4-dagarsvecka från dag ett.
+            repetitiva moment som AI kan ta över.
           </p>
         </Reveal>
 
-        <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {audiences.map((item) => (
             <StaggerItem key={item.title}>
-              <article className="h-full rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-soft text-accent-dim">
+              <article className="h-full">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center text-accent-dim">
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <h3 className="text-lg font-semibold text-brand">{item.title}</h3>
+                <h3 className="font-display text-lg font-semibold text-brand">
+                  {item.title}
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
                   {item.description}
                 </p>

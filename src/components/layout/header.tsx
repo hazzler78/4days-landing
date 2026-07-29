@@ -10,12 +10,12 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
 
 const navItems = [
-  { href: "/#resa", label: "Resan" },
-  { href: "/#varfor", label: "Varför vi" },
+  { href: "/#varfor", label: "Varför" },
   { href: "/#hur-det-fungerar", label: "Så fungerar det" },
-  { href: "/#kalkylator", label: "Kalkylator" },
-  { href: "/#om-oss", label: "Om oss" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/#bevis", label: "Bevis" },
+  { href: "/#for-vem", label: "För vem" },
+  { href: "/om-oss", label: "Om oss" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export function Header() {
@@ -68,7 +68,12 @@ export function Header() {
             priority
           />
           <div className="leading-tight">
-            <p className={cn("text-sm font-semibold", solid ? "text-brand" : "text-white")}>
+            <p
+              className={cn(
+                "font-display text-sm font-semibold",
+                solid ? "text-brand" : "text-white"
+              )}
+            >
               4 Days <span className="text-accent">AI</span>
             </p>
             <p
@@ -82,9 +87,9 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Huvudmeny">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Huvudmeny">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className={cn(
@@ -93,18 +98,18 @@ export function Header() {
               )}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="hidden sm:inline-flex">
-            <Link href="/#guide">Få guiden gratis</Link>
+            <Link href="/#guide">Ladda ner guide</Link>
           </Button>
           <button
             type="button"
             className={cn(
-              "inline-flex h-10 w-10 items-center justify-center rounded-xl border md:hidden",
+              "inline-flex h-10 w-10 items-center justify-center rounded-xl border lg:hidden",
               solid
                 ? "border-slate-200 text-brand"
                 : "border-white/15 text-white"
@@ -121,7 +126,7 @@ export function Header() {
       {open && (
         <div
           className={cn(
-            "border-t px-4 py-4 md:hidden",
+            "border-t px-4 py-4 lg:hidden",
             solid
               ? "border-slate-200 bg-white"
               : "border-white/10 bg-brand-dark/95"
@@ -129,7 +134,7 @@ export function Header() {
         >
           <nav className="flex flex-col gap-3" aria-label="Mobilmeny">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
@@ -141,11 +146,11 @@ export function Header() {
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button asChild className="mt-2">
               <Link href="/#guide" onClick={() => setOpen(false)}>
-                Få guiden gratis
+                Ladda ner guide
               </Link>
             </Button>
           </nav>

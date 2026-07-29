@@ -1,12 +1,17 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
-const articleLinks = [
+const companyLinks = [
+  { href: "/om-oss", label: "Om oss" },
+  { href: "/faq", label: "FAQ" },
   { href: "/guider", label: "Alla guider" },
   {
     href: "/gratis-guide-hermes-agenter",
     label: "Starta Hermes gratis",
   },
+];
+
+const articleLinks = [
   { href: "/4-dagarsvecka-sverige", label: "4-dagarsvecka i Sverige" },
   { href: "/4-dagarsvecka-lonsamhet", label: "4-dagarsvecka & lönsamhet" },
   { href: "/100-80-100-modellen", label: "100-80-100-modellen" },
@@ -18,9 +23,9 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-800 bg-brand-dark text-slate-300">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
           <div>
-            <p className="text-lg font-semibold text-white">
+            <p className="font-display text-lg font-semibold text-white">
               4 Days <span className="text-accent">AI</span>{" "}
               <span className="text-sm font-normal text-slate-400">AB</span>
             </p>
@@ -32,6 +37,24 @@ export function Footer() {
               dagars arbetsvecka med full lön – genom AI-automatisering och
               evidensbaserad metodik.
             </p>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Företag
+            </p>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {companyLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="transition-colors hover:text-accent"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>

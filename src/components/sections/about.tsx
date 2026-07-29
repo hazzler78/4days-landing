@@ -26,11 +26,11 @@ const founders = [
 
 export function AboutSection() {
   return (
-    <section id="om-oss" className="scroll-mt-24 border-y border-slate-200/80 bg-white py-20 sm:py-28">
+    <section id="om-oss" className="scroll-mt-24 bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto mb-12 max-w-2xl text-center">
+        <Reveal className="mx-auto mb-14 max-w-2xl text-center">
           <p className="text-sm font-semibold text-accent">Om oss</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-brand sm:text-4xl">
+          <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
             Teamet bakom 4days.ai
           </h2>
           <p className="mt-4 text-slate-600">

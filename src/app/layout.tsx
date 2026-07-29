@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, Instrument_Sans } from "next/font/google";
 import { AnalyticsGate } from "@/components/analytics-gate";
 import { CookieConsent } from "@/components/cookie-consent";
 import { ChatWidget } from "@/components/chat-widget";
@@ -7,9 +7,15 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-instrument",
   display: "swap",
 });
 
@@ -78,7 +84,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sv" className={inter.variable}>
+    <html
+      lang="sv"
+      className={`${dmSans.variable} ${instrumentSans.variable}`}
+    >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <ScrollToTop />
         {children}

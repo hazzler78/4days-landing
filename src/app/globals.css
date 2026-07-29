@@ -30,7 +30,8 @@
   --color-accent-soft: var(--accent-soft);
   --color-cyan: var(--cyan);
   --color-ring: var(--ring);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-instrument);
   --shadow-premium: 0 20px 50px -20px rgb(15 23 42 / 0.25);
   --shadow-card: 0 10px 30px -12px rgb(15 23 42 / 0.12);
 }
@@ -50,9 +51,14 @@ html[data-smooth-scroll="true"] {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-instrument), var(--font-dm-sans), ui-sans-serif, system-ui,
+    sans-serif;
 }
 
 ::selection {

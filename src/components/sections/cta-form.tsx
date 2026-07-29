@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
+import { getBookingUrl } from "@/lib/site";
 
 type FormState = {
   firstName: string;
@@ -80,14 +81,25 @@ export function CtaFormSection() {
     >
       <div className="mx-auto max-w-xl px-4 sm:px-6">
         <Reveal className="text-center">
-          <p className="text-sm font-semibold text-accent">Kom igång</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-brand sm:text-4xl">
-            Få guiden + inbjudan till webinar
+          <p className="text-sm font-semibold text-accent">Nästa steg</p>
+          <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
+            Ladda ner guide
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
             Praktisk guide för ledningsgrupper – plus plats på vårt kommande
             webinar. Bekräftelse via e-post (dubbel opt-in).
           </p>
+          <div className="mt-6">
+            <Button asChild size="lg" variant="outline">
+              <a
+                href={getBookingUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Boka 30 min kartläggning
+              </a>
+            </Button>
+          </div>
         </Reveal>
 
         <Reveal delay={0.1} className="mt-10">
@@ -248,7 +260,7 @@ export function CtaFormSection() {
                         Skickar...
                       </>
                     ) : (
-                      "Få guiden + webinar-inbjudan gratis"
+                      "Ladda ner guide"
                     )}
                   </Button>
                 </form>

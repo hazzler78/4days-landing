@@ -6,7 +6,7 @@ import { useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { siteConfig, getBookingUrl } from "@/lib/site";
+import { getBookingUrl } from "@/lib/site";
 
 type Track = "build" | "future";
 
