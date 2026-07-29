@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { FaqSection } from "@/components/sections/faq";
+import { FaqJsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <>
+      <FaqJsonLd />
       <Header />
       <main className="pt-20">
         <FaqSection />

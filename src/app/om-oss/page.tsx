@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AboutSection } from "@/components/sections/about";
+import { AboutJsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <AboutJsonLd />
       <Header />
       <main className="pt-20">
         <AboutSection />
