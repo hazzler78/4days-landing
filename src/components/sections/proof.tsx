@@ -33,7 +33,7 @@ export function ProofSection() {
         <Reveal className="mx-auto mb-16 max-w-2xl text-center">
           <p className="text-sm font-semibold text-accent">Bevis & garanti</p>
           <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
-            100-80-100 — evidens, inte magkänsla
+            100-80-100 — bevis, inte magkänsla
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
             Full lön, kortare tid och bibehållen produktivitet. Vi mäter före och

@@ -53,24 +53,24 @@ export function Header() {
           : "bg-transparent text-white"
       )}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex min-w-0 items-center gap-3"
+          className="flex min-w-0 items-center gap-3.5"
           aria-label={`${siteConfig.brand} – startsida`}
         >
           <Image
             src={solid ? "/bilder/logo-light.png" : "/bilder/logo-dark.png"}
             alt={siteConfig.brand}
-            width={44}
-            height={44}
-            className="h-10 w-10 rounded-lg"
+            width={72}
+            height={72}
+            className="h-14 w-14 rounded-xl sm:h-16 sm:w-16"
             priority
           />
           <div className="leading-tight">
             <p
               className={cn(
-                "font-display text-sm font-semibold",
+                "font-display text-base font-semibold sm:text-lg",
                 solid ? "text-brand" : "text-white"
               )}
             >
@@ -78,7 +78,7 @@ export function Header() {
             </p>
             <p
               className={cn(
-                "hidden text-xs sm:block",
+                "hidden text-xs sm:block sm:text-sm",
                 solid ? "text-slate-500" : "text-slate-300"
               )}
             >

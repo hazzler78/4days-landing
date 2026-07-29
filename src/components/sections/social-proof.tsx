@@ -25,7 +25,7 @@ export function SocialProofSection() {
         <Reveal className="mx-auto mb-10 max-w-2xl text-center">
           <p className="text-sm font-semibold text-accent">Bevis & riktning</p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-brand sm:text-3xl">
-            Byggt på evidens – inte magkänsla
+            Byggt på bevis – inte magkänsla
           </h2>
         </Reveal>
 

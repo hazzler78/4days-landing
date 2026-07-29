@@ -2,7 +2,7 @@ export const faqItems = [
   {
     question: "Vad är egentligen en 4-dagarsvecka?",
     answer:
-      "En 4-dagarsvecka innebär oftast att man arbetar 32 timmar istället för 40, fördelat på fyra dagar – med bibehållen lön och fokus på 100 % output. Hos 4days.ai använder vi den evidensbaserade 100-80-100-modellen: 100 % lön, 80 % tid, 100 % produktivitet. Det handlar inte om att jobba hårdare, utan smartare med hjälp av AI.",
+      "En 4-dagarsvecka innebär oftast att man arbetar 32 timmar istället för 40, fördelat på fyra dagar – med bibehållen lön och fokus på 100 % output. Hos 4days.ai använder vi den bevisbaserade 100-80-100-modellen: 100 % lön, 80 % tid, 100 % produktivitet. Det handlar inte om att jobba hårdare, utan smartare med hjälp av AI.",
   },
   {
     question: "Fungerar 4-dagarsvecka på riktigt i Sverige?",
@@ -32,7 +32,7 @@ export const faqItems = [
   {
     question: "Hur mäter ni att produktiviteten verkligen hålls uppe?",
     answer:
-      "Vi använder evidensbaserad uppföljning från 4 Day Week Global-metodiken plus egna verktyg för tidsbesparingsrapporter. Före/efter-mätningar på stress, produktivitet och output säkerställer att ni når 100 % output på 80 % tid.",
+      "Vi använder bevisbaserad uppföljning från 4 Day Week Global-metodiken plus egna verktyg för tidsbesparingsrapporter. Före/efter-mätningar på stress, produktivitet och output säkerställer att ni når 100 % output på 80 % tid.",
   },
   {
     question: "Hur kommer vi igång?",

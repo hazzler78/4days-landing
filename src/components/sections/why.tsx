@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { HeartHandshake, LineChart, Trophy } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
+import { siteConfig } from "@/lib/site";
 
 const values = [
   {
@@ -29,6 +31,13 @@ export function WhySection() {
     <section id="varfor" className="scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto mb-16 max-w-2xl text-center">
+          <Image
+            src="/bilder/logo-light.png"
+            alt={siteConfig.brand}
+            width={96}
+            height={96}
+            className="mx-auto mb-6 h-20 w-20 rounded-2xl sm:h-24 sm:w-24"
+          />
           <p className="text-sm font-semibold text-accent">Varför 4days.ai</p>
           <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
             Smartare, inte hårdare

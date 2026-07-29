@@ -35,7 +35,7 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
               Vi hjälper kunskapsintensiva svenska företag att gå från 5 till 4
               dagars arbetsvecka med full lön – genom AI-automatisering och
-              evidensbaserad metodik.
+              bevisbaserad metodik.
             </p>
           </div>
 
