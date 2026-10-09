@@ -6,14 +6,14 @@ import { Button } from "@/components/ui/button";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Guider: AI-schemaläggning, 4-dagarsvecka & AI-automatisering",
+  title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
   description:
-    "Guider på svenska: AI-schemaläggning och automatisk schemaläggning, bemanningsplanering med AI, 4-dagarsvecka med full lön och AI-automatisering för företag.",
+    "Guider på svenska: vad är en AI-agent, AI-schemaläggning, bemanningsplanering med AI, 4-dagarsvecka med full lön och AI-automatisering för företag.",
   alternates: { canonical: "/guider" },
   openGraph: {
-    title: "Guider: AI-schemaläggning, 4-dagarsvecka & AI-automatisering",
+    title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
     description:
-      "Samlad kunskapsbank: AI-schemaläggning, bemanningsplanering, 4-dagarsvecka och AI-automatisering.",
+      "Samlad kunskapsbank: AI-agenter, AI-schemaläggning, bemanningsplanering, 4-dagarsvecka och AI-automatisering.",
     url: `${siteConfig.url}/guider`,
   },
 };
@@ -57,6 +57,13 @@ const weekGuides = [
 ];
 
 const aiGuides = [
+  {
+    href: "/vad-ar-en-ai-agent",
+    tag: "Agenter",
+    title: "Vad är en AI-agent?",
+    description:
+      "Inte bara en chatbot – en digital kollega som agerar. Skillnad mot ChatGPT, namn/roll och hur ni kommer igång.",
+  },
   {
     href: "/ai-automatisering-foretag",
     tag: "Grunderna",

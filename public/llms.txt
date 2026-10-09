@@ -21,10 +21,11 @@ Viktiga fakta:
 - [4-dagarsvecka i Sverige](https://www.4days.ai/4-dagarsvecka-sverige): Vad en 4-dagarsvecka är, svenska piloter och forskning, och hur AI gör den möjlig.
 - [100-80-100-modellen](https://www.4days.ai/100-80-100-modellen): Modellen bakom en hållbar 4-dagarsvecka – 100 % lön, 80 % tid, 100 % output – och hur den mäts.
 - [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag): Vad som kan automatiseras, hur arbetet går till och vad det kostar.
+- [Vad är en AI-agent?](https://www.4days.ai/vad-ar-en-ai-agent): Skillnaden mot chatbot – digital kollega som planerar och agerar, med roll, mandat och ofta eget namn.
 
 ## Guider och artiklar
 
-- [Alla guider](https://www.4days.ai/guider): Samlingssida med alla guider om 4-dagarsvecka, AI-automatisering och AI-schemaläggning.
+- [Alla guider](https://www.4days.ai/guider): Samlingssida med alla guider om 4-dagarsvecka, AI-agenter, AI-automatisering och AI-schemaläggning.
 - [Gratis guide: Hermes Agents](https://www.4days.ai/gratis-guide-hermes-agenter): Lead-magnet – kom igång med Hermes Agents för svenska bolag (e-post krävs).
 - [4-dagarsvecka och lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet): Så räknar du på kostnad, tidsbesparing och ROI för en 4-dagarsvecka.
 - [Kortare arbetsvecka: 7 vanliga myter](https://www.4days.ai/kortare-arbetsvecka-myter): Sju vanliga invändningar mot 4-dagarsvecka och vad forskning och piloter visar.
