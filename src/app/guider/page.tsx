@@ -74,9 +74,9 @@ const aiGuides = [
   {
     href: "/bemanningsplanering-ai",
     tag: "Schemaläggning",
-    title: "AI-schemaläggning och automatisk schemaläggning",
+    title: "Bemanningsplanering med AI",
     description:
-      "Så fungerar schemaläggning med AI i praktiken – bemanningsplanering, branschexempel (vård, skola, handel) och checklista.",
+      "System, verktyg och automatisk schemaläggning – guide med checklista för vård, skola och handel.",
   },
   {
     href: "/ai-guide-ledningsgrupper",
@@ -156,17 +156,17 @@ export default function GuiderPage() {
               id="guider-featured"
               className="mt-2 text-2xl font-bold text-brand"
             >
-              AI-schemaläggning och automatisk schemaläggning
+              Bemanningsplanering med AI
             </h2>
             <p className="mt-3 max-w-2xl text-slate-600 leading-relaxed">
-              Komplett guide till hur AI lägger schema, hur bemanningsplanering
-              fungerar i vård, skola och handel – plus checklista och svar på
-              vanliga frågor.
+              System, verktyg och automatisk schemaläggning – hur det fungerar i
+              vård, skola och handel, vad ni bör kräva av ett system, plus
+              checklista och FAQ.
             </p>
             <div className="mt-6">
               <Button asChild size="lg">
                 <Link href="/bemanningsplanering-ai">
-                  Läs guiden om AI-schemaläggning
+                  Läs guiden om bemanningsplanering med AI
                 </Link>
               </Button>
             </div>
