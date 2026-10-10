@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
 import { getBookingUrl } from "@/lib/site";
 import type { Article } from "@/lib/articles";
 
@@ -18,9 +19,14 @@ function formatDate(value?: string) {
   }
 }
 
+function isAgentLeadArticle(slug: string) {
+  return slug === "vad-ar-en-ai-agent";
+}
+
 export function ArticlePage({ article }: { article: Article }) {
   const publishedLabel = formatDate(article.published);
   const modifiedLabel = formatDate(article.modified);
+  const agentLead = isAgentLeadArticle(article.slug);
 
   return (
     <>
@@ -73,6 +79,39 @@ export function ArticlePage({ article }: { article: Article }) {
             dangerouslySetInnerHTML={{ __html: article.body }}
           />
 
+          {agentLead && (
+            <section
+              id="agent-tips"
+              className="mt-14 scroll-mt-24"
+              aria-labelledby="agent-tips-heading"
+            >
+              <div className="mb-6">
+                <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+                  Nästa steg
+                </p>
+                <h2
+                  id="agent-tips-heading"
+                  className="mt-2 text-2xl font-bold text-brand"
+                >
+                  Få agent-tips + Hermes one-click
+                </h2>
+                <p className="mt-3 text-slate-600 leading-relaxed">
+                  Lämna mejl så skickar vi korta tips om AI-agenter för svenska
+                  bolag – och hur du startar din första agent samma dag.
+                </p>
+              </div>
+              <HermesGuideForm
+                source="vad-ar-en-ai-agent"
+                tags="vad-ar-en-ai-agent,hermes-start,ai-agenter,article-lead"
+                idPrefix="agent-article"
+                submitLabel="Skicka tips till mig"
+                successCtaHref="/gratis-guide-hermes-agenter#starta"
+                successCtaLabel="Starta Hermes nu"
+                successNote="Bekräfta e-posten (dubbel opt-in). Sen skickar vi tips — du kan också starta Hermes direkt."
+              />
+            </section>
+          )}
+
           {article.related.length > 0 && (
             <aside className="mt-14" aria-label="Relaterade guider">
               <h2 className="mb-4 text-xl font-bold text-brand">
@@ -100,29 +139,61 @@ export function ArticlePage({ article }: { article: Article }) {
           {!article.isLegal && (
             <div className="mt-14 rounded-3xl bg-brand p-8 text-white shadow-[var(--shadow-premium)]">
               <h2 className="text-2xl font-bold">
-                {article.slug === "bemanningsplanering-ai"
-                  ? "Vill ni effektivisera er bemanningsplanering?"
-                  : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
+                {agentLead
+                  ? "Redo att testa en riktig AI-agent?"
+                  : article.slug === "bemanningsplanering-ai"
+                    ? "Vill ni effektivisera er bemanningsplanering?"
+                    : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
               </h2>
               <p className="mt-3 text-slate-300">
-                {article.slug === "bemanningsplanering-ai"
-                  ? "Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er."
-                  : "Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call."}
+                {agentLead
+                  ? "Starta Hermes one-click – eller boka 30 min så tittar vi på var en agent sparar mest tid hos er."
+                  : article.slug === "bemanningsplanering-ai"
+                    ? "Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er."
+                    : "Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call."}
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg">
-                  <Link href="/#guide">Få guiden gratis</Link>
-                </Button>
-                <Button asChild size="lg" variant="secondary">
+                {agentLead ? (
+                  <>
+                    <Button asChild size="lg">
+                      <a href="#agent-tips">Få tips i mejlen</a>
+                    </Button>
+                    <Button asChild size="lg" variant="secondary">
+                      <Link href="/gratis-guide-hermes-agenter#starta">
+                        Starta Hermes
+                      </Link>
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button asChild size="lg">
+                      <Link href="/#guide">Få guiden gratis</Link>
+                    </Button>
+                    <Button asChild size="lg" variant="secondary">
+                      <a
+                        href={getBookingUrl()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Boka 30 min intro
+                      </a>
+                    </Button>
+                  </>
+                )}
+              </div>
+              {agentLead && (
+                <p className="mt-4 text-sm text-slate-400">
+                  Vill ni hellre prata?{" "}
                   <a
                     href={getBookingUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="font-medium text-white underline-offset-2 hover:underline"
                   >
                     Boka 30 min intro
                   </a>
-                </Button>
-              </div>
+                </p>
+              )}
             </div>
           )}
         </article>

@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useId, useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { hermesGuideMeta } from "@/content/hermes-guide";
+import { cn } from "@/lib/utils";
 
 type FormState = {
   firstName: string;
@@ -27,7 +28,29 @@ const initialState: FormState = {
   consent: false,
 };
 
-export function HermesGuideForm() {
+export type HermesGuideFormProps = {
+  source?: string;
+  tags?: string;
+  idPrefix?: string;
+  className?: string;
+  submitLabel?: string;
+  successCtaHref?: string;
+  successCtaLabel?: string;
+  successNote?: string;
+};
+
+export function HermesGuideForm({
+  source = hermesGuideMeta.source,
+  tags = "hermes-start,ai-agenter,gratis-start,grok-default",
+  idPrefix,
+  className,
+  submitLabel = "Skicka mig tips",
+  successCtaHref = "/gratis-guide-hermes-agenter#starta",
+  successCtaLabel = "Till Starta här",
+  successNote = "Bekräfta e-posten (dubbel opt-in). Sen skickar vi korta tips — men du kan redan klicka Starta här och installera Hermes direkt.",
+}: HermesGuideFormProps) {
+  const reactId = useId().replace(/:/g, "");
+  const prefix = idPrefix || `hermes-${reactId}`;
   const [form, setForm] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -50,8 +73,8 @@ export function HermesGuideForm() {
           role: form.role,
           employees: "10–200",
           consent: form.consent,
-          source: hermesGuideMeta.source,
-          tags: "hermes-start,ai-agenter,gratis-start,grok-default",
+          source,
+          tags,
         }),
       });
 
@@ -74,7 +97,12 @@ export function HermesGuideForm() {
   };
 
   return (
-    <Card className="border-accent/20 shadow-[var(--shadow-premium)]">
+    <Card
+      className={cn(
+        "border-accent/20 shadow-[var(--shadow-premium)]",
+        className
+      )}
+    >
       <CardContent className="p-6 sm:p-8">
         {submitted ? (
           <div className="py-6 text-center">
@@ -83,18 +111,13 @@ export function HermesGuideForm() {
               Tack – kolla din inkorg!
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-              Bekräfta e-posten (dubbel opt-in). Sen skickar vi korta tips —
-              men du kan redan klicka <strong>Starta här</strong> ovan och
-              installera Hermes direkt.
+              {successNote}
             </p>
             <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-center">
               <Button asChild>
-                <Link href="/gratis-guide-hermes-agenter#starta">Till Starta här</Link>
+                <Link href={successCtaHref}>{successCtaLabel}</Link>
               </Button>
-              <Button
-                variant="outline"
-                onClick={() => setSubmitted(false)}
-              >
+              <Button variant="outline" onClick={() => setSubmitted(false)}>
                 Skicka igen
               </Button>
             </div>
@@ -103,11 +126,11 @@ export function HermesGuideForm() {
           <form onSubmit={onSubmit} className="space-y-4" noValidate>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="space-y-2">
-                <Label htmlFor="hermes-firstName">
+                <Label htmlFor={`${prefix}-firstName`}>
                   Förnamn <span className="text-red-500">*</span>
                 </Label>
                 <Input
-                  id="hermes-firstName"
+                  id={`${prefix}-firstName`}
                   required
                   autoComplete="given-name"
                   value={form.firstName}
@@ -118,11 +141,11 @@ export function HermesGuideForm() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="hermes-lastName">
+                <Label htmlFor={`${prefix}-lastName`}>
                   Efternamn <span className="text-red-500">*</span>
                 </Label>
                 <Input
-                  id="hermes-lastName"
+                  id={`${prefix}-lastName`}
                   required
                   autoComplete="family-name"
                   value={form.lastName}
@@ -135,11 +158,11 @@ export function HermesGuideForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="hermes-email">
+              <Label htmlFor={`${prefix}-email`}>
                 E-post <span className="text-red-500">*</span>
               </Label>
               <Input
-                id="hermes-email"
+                id={`${prefix}-email`}
                 type="email"
                 required
                 autoComplete="email"
@@ -152,11 +175,11 @@ export function HermesGuideForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="hermes-company">
+              <Label htmlFor={`${prefix}-company`}>
                 Företag <span className="text-red-500">*</span>
               </Label>
               <Input
-                id="hermes-company"
+                id={`${prefix}-company`}
                 required
                 autoComplete="organization"
                 value={form.company}
@@ -168,9 +191,9 @@ export function HermesGuideForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="hermes-role">Roll</Label>
+              <Label htmlFor={`${prefix}-role`}>Roll</Label>
               <Input
-                id="hermes-role"
+                id={`${prefix}-role`}
                 autoComplete="organization-title"
                 value={form.role}
                 onChange={(e) =>
@@ -221,7 +244,7 @@ export function HermesGuideForm() {
                   Skickar...
                 </>
               ) : (
-                "Skicka mig tips"
+                submitLabel
               )}
             </Button>
           </form>
