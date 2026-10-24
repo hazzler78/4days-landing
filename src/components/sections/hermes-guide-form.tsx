@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { hermesGuideMeta } from "@/content/hermes-guide";
 import { cn } from "@/lib/utils";
+import { trackHermesGuideSignup } from "@/lib/vercelEvents";
 
 type FormState = {
   firstName: string;
@@ -37,6 +38,7 @@ export type HermesGuideFormProps = {
   successCtaHref?: string;
   successCtaLabel?: string;
   successNote?: string;
+  analyticsPlacement?: string;
 };
 
 export function HermesGuideForm({
@@ -48,6 +50,7 @@ export function HermesGuideForm({
   successCtaHref = "/gratis-guide-hermes-agenter#starta",
   successCtaLabel = "Till Starta här",
   successNote = "Bekräfta e-posten (dubbel opt-in). Sen skickar vi korta tips — men du kan redan klicka Starta här och installera Hermes direkt.",
+  analyticsPlacement = "hermes-guide-form",
 }: HermesGuideFormProps) {
   const reactId = useId().replace(/:/g, "");
   const prefix = idPrefix || `hermes-${reactId}`;
@@ -83,6 +86,7 @@ export function HermesGuideForm({
         throw new Error(data.error || "Kunde inte skicka formuläret.");
       }
 
+      trackHermesGuideSignup(analyticsPlacement);
       setSubmitted(true);
       setForm(initialState);
     } catch (err) {

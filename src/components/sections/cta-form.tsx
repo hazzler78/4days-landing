@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { getBookingUrl } from "@/lib/site";
+import { trackBookCallClick, trackGuideSignup } from "@/lib/vercelEvents";
 
 type FormState = {
   firstName: string;
@@ -61,6 +62,7 @@ export function CtaFormSection() {
         throw new Error(data.error || "Kunde inte skicka formuläret.");
       }
 
+      trackGuideSignup("cta-form");
       setSubmitted(true);
       setForm(initialState);
     } catch (err) {
@@ -95,6 +97,7 @@ export function CtaFormSection() {
                 href={getBookingUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackBookCallClick("cta-form")}
               >
                 Boka 30 min kartläggning
               </a>

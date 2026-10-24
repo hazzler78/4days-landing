@@ -11,6 +11,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { faqItems } from "@/lib/faq-data";
 import { Button } from "@/components/ui/button";
 import { getBookingUrl } from "@/lib/site";
+import { trackBookCallClick } from "@/lib/vercelEvents";
 
 export function FaqSection() {
   return (
@@ -48,6 +49,7 @@ export function FaqSection() {
                 href={getBookingUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackBookCallClick("faq")}
               >
                 Boka 30 min kartläggning
               </a>

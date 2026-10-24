@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollCity } from "@/components/city/scroll-city";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 import { readVisitMode, type VisitMode } from "@/lib/visit-tracker";
+import { trackBookCallClick } from "@/lib/vercelEvents";
 
 const CityAtmosphere = dynamic(
   () =>
@@ -76,6 +77,7 @@ export function CityHero() {
                   href={getBookingUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackBookCallClick("city-hero")}
                 >
                   <CalendarDays className="h-5 w-5" aria-hidden="true" />
                   Boka 30 min kartläggning
