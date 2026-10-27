@@ -17,9 +17,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticle(slug);
   if (!article) return {};
 
+  const isProofPackage = article.slug === "bevispaketet";
+
   return {
     title: article.title,
     description: article.description,
+    ...(isProofPackage
+      ? {
+          keywords: [
+            "Bevispaketet",
+            "4days.ai",
+            "AI",
+            "arbetstimmar",
+            "svenska företag",
+          ],
+        }
+      : {}),
     alternates: { canonical: `/${article.slug}` },
     openGraph: {
       type: "article",
@@ -32,6 +45,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : {}),
       ...(article.modified ? { modifiedTime: article.modified } : {}),
     },
+    ...(isProofPackage
+      ? {
+          twitter: {
+            card: "summary_large_image" as const,
+            title: article.h1,
+            description: article.description,
+            images: ["/og-image-v6.jpg"],
+          },
+        }
+      : {}),
   };
 }
 

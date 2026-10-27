@@ -8,12 +8,12 @@ import { siteConfig, getBookingUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
   description:
-    "Guider på svenska: vad är en AI-agent, AI-schemaläggning, bemanningsplanering med AI, 4-dagarsvecka med full lön och AI-automatisering för företag.",
+    "Guider på svenska: Bevispaketet, vad är en AI-agent, AI-schemaläggning, bemanningsplanering med AI, 4-dagarsvecka med full lön och AI-automatisering för företag.",
   alternates: { canonical: "/guider" },
   openGraph: {
     title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
     description:
-      "Samlad kunskapsbank: AI-agenter, AI-schemaläggning, bemanningsplanering, 4-dagarsvecka och AI-automatisering.",
+      "Samlad kunskapsbank: Bevispaketet, AI-agenter, AI-schemaläggning, bemanningsplanering, 4-dagarsvecka och AI-automatisering.",
     url: `${siteConfig.url}/guider`,
   },
 };
@@ -57,6 +57,13 @@ const weekGuides = [
 ];
 
 const aiGuides = [
+  {
+    href: "/bevispaketet",
+    tag: "Erbjudande",
+    title: "Bevispaketet",
+    description:
+      "Fem veckors mätning av vad AI ger i arbetstimmar, med era egna siffror. Minst fyra sparade timmar per person och vecka – annars pengarna tillbaka.",
+  },
   {
     href: "/vad-ar-en-ai-agent",
     tag: "Agenter",
@@ -149,6 +156,16 @@ export default function GuiderPage() {
               </strong>{" "}
               och bemanningsplanering till 4-dagarsvecka med full lön. Baserat på
               forskning, svenska piloter och vårt arbete med kunder.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              Vill du veta vad AI ger i arbetstimmar hos er?{" "}
+              <Link
+                href="/bevispaketet"
+                className="font-semibold text-accent-dim underline-offset-2 hover:underline"
+              >
+                Bevispaketet
+              </Link>{" "}
+              är en mätning under fem veckor, med era egna siffror.
             </p>
           </header>
 

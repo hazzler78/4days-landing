@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
-import { getBookingUrl } from "@/lib/site";
+import { getBookingUrl, siteConfig } from "@/lib/site";
 import type { Article } from "@/lib/articles";
 
 function formatDate(value?: string) {
@@ -23,10 +23,15 @@ function isAgentLeadArticle(slug: string) {
   return slug === "vad-ar-en-ai-agent";
 }
 
+function isProofPackageArticle(slug: string) {
+  return slug === "bevispaketet";
+}
+
 export function ArticlePage({ article }: { article: Article }) {
   const publishedLabel = formatDate(article.published);
   const modifiedLabel = formatDate(article.modified);
   const agentLead = isAgentLeadArticle(article.slug);
+  const proofPackage = isProofPackageArticle(article.slug);
 
   return (
     <>
@@ -71,6 +76,38 @@ export function ArticlePage({ article }: { article: Article }) {
               <p className="mt-5 text-lg leading-relaxed text-slate-600">
                 {article.lead}
               </p>
+            )}
+            {proofPackage && (
+              <dl className="mt-8 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-accent">
+                    Mätning
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold leading-snug text-brand">
+                    Fem veckor, era egna siffror
+                  </dd>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-accent">
+                    Garanti
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold leading-snug text-brand">
+                    Minst fyra sparade timmar per person och vecka
+                  </dd>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-accent">
+                    Pris
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold leading-snug text-brand">
+                    45 000–85 000 kr exkl. moms
+                    <span className="mt-1 block text-xs font-medium text-slate-500">
+                      Grundarpris 45 000 kr för de tre första som bokar senast
+                      31 oktober 2026
+                    </span>
+                  </dd>
+                </div>
+              </dl>
             )}
           </header>
 
@@ -137,20 +174,38 @@ export function ArticlePage({ article }: { article: Article }) {
           )}
 
           {!article.isLegal && (
-            <div className="mt-14 rounded-3xl bg-brand p-8 text-white shadow-[var(--shadow-premium)]">
+            <div
+              id={proofPackage ? "kontakt" : undefined}
+              className="mt-14 scroll-mt-24 rounded-3xl bg-brand p-8 text-white shadow-[var(--shadow-premium)]"
+            >
               <h2 className="text-2xl font-bold">
                 {agentLead
                   ? "Redo att testa en riktig AI-agent?"
-                  : article.slug === "bemanningsplanering-ai"
-                    ? "Vill ni effektivisera er bemanningsplanering?"
-                    : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
+                  : proofPackage
+                    ? "Vill du veta vad AI ger er?"
+                    : article.slug === "bemanningsplanering-ai"
+                      ? "Vill ni effektivisera er bemanningsplanering?"
+                      : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
               </h2>
               <p className="mt-3 text-slate-300">
-                {agentLead
-                  ? "Starta Hermes one-click – eller boka 30 min så tittar vi på var en agent sparar mest tid hos er."
-                  : article.slug === "bemanningsplanering-ai"
-                    ? "Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er."
-                    : "Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call."}
+                {agentLead ? (
+                  "Starta Hermes one-click – eller boka 30 min så tittar vi på var en agent sparar mest tid hos er."
+                ) : proofPackage ? (
+                  <>
+                    Hör av dig via 4days.ai. Boka 30 minuter, eller mejla{" "}
+                    <a
+                      href={`mailto:${siteConfig.email}?subject=Bevispaketet%20via%204days.ai`}
+                      className="font-medium text-white underline-offset-2 hover:underline"
+                    >
+                      {siteConfig.email}
+                    </a>
+                    .
+                  </>
+                ) : article.slug === "bemanningsplanering-ai" ? (
+                  "Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er."
+                ) : (
+                  "Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call."
+                )}
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 {agentLead ? (
@@ -162,6 +217,25 @@ export function ArticlePage({ article }: { article: Article }) {
                       <Link href="/gratis-guide-hermes-agenter#starta">
                         Starta Hermes
                       </Link>
+                    </Button>
+                  </>
+                ) : proofPackage ? (
+                  <>
+                    <Button asChild size="lg">
+                      <a
+                        href={getBookingUrl()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Boka 30 min intro
+                      </a>
+                    </Button>
+                    <Button asChild size="lg" variant="secondary">
+                      <a
+                        href={`mailto:${siteConfig.email}?subject=Bevispaketet%20via%204days.ai`}
+                      >
+                        Mejla {siteConfig.email}
+                      </a>
                     </Button>
                   </>
                 ) : (
@@ -198,7 +272,9 @@ export function ArticlePage({ article }: { article: Article }) {
           )}
         </article>
       </main>
-      <Footer />
+      <Footer
+        omitHrefs={proofPackage ? ["/100-80-100-modellen"] : undefined}
+      />
     </>
   );
 }
