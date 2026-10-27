@@ -1,10 +1,41 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
+import {
+  BOOK_AMAZON_REL,
+  BOOK_COVER_ALT,
+  BOOK_COVER_HEIGHT,
+  BOOK_COVER_SRC,
+  BOOK_COVER_WIDTH,
+  BOOK_KINDLE_URL,
+  BOOK_PAPERBACK_URL,
+} from "@/content/boken";
 import { getBookingUrl, siteConfig } from "@/lib/site";
 import type { Article } from "@/lib/articles";
+
+function BookBuyLinks({ tone }: { tone: "light" | "dark" }) {
+  return (
+    <div className="flex flex-col gap-3 sm:flex-row">
+      <Button asChild size="lg">
+        <a href={BOOK_KINDLE_URL} target="_blank" rel={BOOK_AMAZON_REL}>
+          Köp boken på Amazon
+        </a>
+      </Button>
+      <Button
+        asChild
+        size="lg"
+        variant={tone === "dark" ? "secondary" : "outline"}
+      >
+        <a href={BOOK_PAPERBACK_URL} target="_blank" rel={BOOK_AMAZON_REL}>
+          Köp pocket på Amazon
+        </a>
+      </Button>
+    </div>
+  );
+}
 
 function formatDate(value?: string) {
   if (!value) return null;
@@ -27,11 +58,16 @@ function isProofPackageArticle(slug: string) {
   return slug === "bevispaketet";
 }
 
+function isBookArticle(slug: string) {
+  return slug === "boken";
+}
+
 export function ArticlePage({ article }: { article: Article }) {
   const publishedLabel = formatDate(article.published);
   const modifiedLabel = formatDate(article.modified);
   const agentLead = isAgentLeadArticle(article.slug);
   const proofPackage = isProofPackageArticle(article.slug);
+  const bookPage = isBookArticle(article.slug);
 
   return (
     <>
@@ -76,6 +112,56 @@ export function ArticlePage({ article }: { article: Article }) {
               <p className="mt-5 text-lg leading-relaxed text-slate-600">
                 {article.lead}
               </p>
+            )}
+            {bookPage && (
+              <div className="mt-8 grid gap-6 sm:grid-cols-[220px_1fr] sm:items-start">
+                <Image
+                  src={BOOK_COVER_SRC}
+                  alt={BOOK_COVER_ALT}
+                  width={BOOK_COVER_WIDTH}
+                  height={BOOK_COVER_HEIGHT}
+                  priority
+                  className="mx-auto h-auto w-full max-w-[280px] rounded-2xl border border-slate-200 shadow-sm sm:mx-0"
+                />
+                <div>
+                  <dl className="grid gap-3 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                      <dt className="text-xs font-semibold uppercase tracking-wide text-accent">
+                        Författare
+                      </dt>
+                      <dd className="mt-1 text-sm font-semibold leading-snug text-brand">
+                        Joseph Tran
+                        <span className="mt-1 block text-xs font-medium text-slate-500">
+                          Förlag: 4 Days AI AB
+                        </span>
+                      </dd>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                      <dt className="text-xs font-semibold uppercase tracking-wide text-accent">
+                        Omfång
+                      </dt>
+                      <dd className="mt-1 text-sm font-semibold leading-snug text-brand">
+                        129 sidor, svenska
+                      </dd>
+                    </div>
+                    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:col-span-2">
+                      <dt className="text-xs font-semibold uppercase tracking-wide text-accent">
+                        Format
+                      </dt>
+                      <dd className="mt-1 text-sm font-semibold leading-snug text-brand">
+                        Kindle och pocket
+                        <span className="mt-1 block text-xs font-medium text-slate-500">
+                          ISBN-13 pocket 9798165121296. Pris och format visas på
+                          Amazon.
+                        </span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <div className="mt-4">
+                    <BookBuyLinks tone="light" />
+                  </div>
+                </div>
+              </div>
             )}
             {proofPackage && (
               <dl className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -175,20 +261,24 @@ export function ArticlePage({ article }: { article: Article }) {
 
           {!article.isLegal && (
             <div
-              id={proofPackage ? "kontakt" : undefined}
+              id={bookPage ? "kop" : proofPackage ? "kontakt" : undefined}
               className="mt-14 scroll-mt-24 rounded-3xl bg-brand p-8 text-white shadow-[var(--shadow-premium)]"
             >
               <h2 className="text-2xl font-bold">
-                {agentLead
-                  ? "Redo att testa en riktig AI-agent?"
-                  : proofPackage
-                    ? "Vill du veta vad AI ger er?"
-                    : article.slug === "bemanningsplanering-ai"
-                      ? "Vill ni effektivisera er bemanningsplanering?"
-                      : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
+                {bookPage
+                  ? "Köp boken"
+                  : agentLead
+                    ? "Redo att testa en riktig AI-agent?"
+                    : proofPackage
+                      ? "Vill du veta vad AI ger er?"
+                      : article.slug === "bemanningsplanering-ai"
+                        ? "Vill ni effektivisera er bemanningsplanering?"
+                        : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
               </h2>
               <p className="mt-3 text-slate-300">
-                {agentLead ? (
+                {bookPage ? (
+                  "Pris och format visas på Amazon."
+                ) : agentLead ? (
                   "Starta Hermes one-click – eller boka 30 min så tittar vi på var en agent sparar mest tid hos er."
                 ) : proofPackage ? (
                   <>
@@ -208,7 +298,9 @@ export function ArticlePage({ article }: { article: Article }) {
                 )}
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                {agentLead ? (
+                {bookPage ? (
+                  <BookBuyLinks tone="dark" />
+                ) : agentLead ? (
                   <>
                     <Button asChild size="lg">
                       <a href="#agent-tips">Få tips i mejlen</a>
@@ -273,7 +365,9 @@ export function ArticlePage({ article }: { article: Article }) {
         </article>
       </main>
       <Footer
-        omitHrefs={proofPackage ? ["/100-80-100-modellen"] : undefined}
+        omitHrefs={
+          proofPackage || bookPage ? ["/100-80-100-modellen"] : undefined
+        }
       />
     </>
   );
