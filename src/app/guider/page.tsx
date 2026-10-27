@@ -8,12 +8,12 @@ import { siteConfig, getBookingUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
   description:
-    "Guider på svenska: Bevispaketet, vad är en AI-agent, AI-schemaläggning, bemanningsplanering med AI, 4-dagarsvecka med full lön och AI-automatisering för företag.",
+    "Guider på svenska: Bevispaketet, boken Fyra dagar, full lön, samma resultat?, vad är en AI-agent, AI-schemaläggning och AI-automatisering för företag.",
   alternates: { canonical: "/guider" },
   openGraph: {
     title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
     description:
-      "Samlad kunskapsbank: Bevispaketet, AI-agenter, AI-schemaläggning, bemanningsplanering, 4-dagarsvecka och AI-automatisering.",
+      "Samlad kunskapsbank: Bevispaketet, boken Fyra dagar, full lön, samma resultat?, AI-agenter, schemaläggning och AI-automatisering.",
     url: `${siteConfig.url}/guider`,
   },
 };
@@ -167,6 +167,17 @@ export default function GuiderPage() {
               </Link>{" "}
               är en mätning under fem veckor, med era egna siffror.
             </p>
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              Boken{" "}
+              <Link
+                href="/boken"
+                className="font-semibold text-accent-dim underline-offset-2 hover:underline"
+              >
+                Fyra dagar, full lön, samma resultat?
+              </Link>{" "}
+              av Joseph Tran tar upp vad forskningen vet om AI, arbetstid och
+              produktivitet – och vad den inte vet.
+            </p>
           </header>
 
           <section
@@ -218,6 +229,20 @@ export default function GuiderPage() {
               {aiGuides.map((guide) => (
                 <GuideCard key={guide.href} {...guide} />
               ))}
+            </div>
+          </section>
+
+          <section className="mt-14" aria-labelledby="guider-boken">
+            <h2 id="guider-boken" className="mb-6 text-2xl font-bold text-brand">
+              Boken
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <GuideCard
+                href="/boken"
+                tag="Bok"
+                title="Fyra dagar, full lön, samma resultat?"
+                description="Vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet. Av Joseph Tran."
+              />
             </div>
           </section>
 
