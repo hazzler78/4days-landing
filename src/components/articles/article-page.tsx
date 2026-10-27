@@ -227,6 +227,7 @@ export function ArticlePage({ article }: { article: Article }) {
                 source="vad-ar-en-ai-agent"
                 tags="vad-ar-en-ai-agent,hermes-start,ai-agenter,article-lead"
                 idPrefix="agent-article"
+                analyticsPlacement="article"
                 submitLabel="Skicka tips till mig"
                 successCtaHref="/gratis-guide-hermes-agenter#starta"
                 successCtaLabel="Starta Hermes nu"

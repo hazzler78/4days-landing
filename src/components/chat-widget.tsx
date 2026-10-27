@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { MessageCircle, Send, X } from "lucide-react";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { trackChatMessage, trackChatOpen } from "@/lib/vercelEvents";
 
 type ChatMessage = {
   role: "user" | "assistant";
@@ -105,6 +106,7 @@ export function ChatWidget() {
     setInput("");
     setLoading(true);
     setError(null);
+    trackChatMessage();
 
     try {
       const res = await fetch("/api/chat", {
@@ -238,7 +240,12 @@ export function ChatWidget() {
 
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() =>
+          setOpen((v) => {
+            if (!v) trackChatOpen();
+            return !v;
+          })
+        }
         className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-sm font-bold text-brand-dark shadow-lg shadow-accent/30 transition hover:-translate-y-0.5"
         aria-expanded={open}
         aria-label={open ? "Stäng chat" : "Öppna chat"}
