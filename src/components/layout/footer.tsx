@@ -19,7 +19,7 @@ const articleLinks = [
   { href: "/ai-guide-ledningsgrupper", label: "AI-guide för ledningsgrupper" },
 ];
 
-export function Footer() {
+export function Footer({ omitHrefs = [] }: { omitHrefs?: string[] } = {}) {
   return (
     <footer className="border-t border-slate-800 bg-brand-dark text-slate-300">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
@@ -62,7 +62,9 @@ export function Footer() {
               Läs mer
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {articleLinks.map((link) => (
+              {articleLinks
+                .filter((link) => !omitHrefs.includes(link.href))
+                .map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
