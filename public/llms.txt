@@ -42,3 +42,7 @@ Viktiga fakta:
 
 - [Integritetspolicy](https://www.4days.ai/integritetspolicy): Hur personuppgifter behandlas enligt GDPR.
 - [Cookies](https://www.4days.ai/cookies): Cookiepolicy.
+
+## Fullständigt innehåll
+
+- [Allt innehåll i en fil](https://www.4days.ai/llms-full.txt): All text från sajtens 19 sidor samlad för AI-agenter.
