@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PageAiActions } from "@/components/page-ai-actions";
 import { ScrollCity } from "@/components/city/scroll-city";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 import { readVisitMode, type VisitMode } from "@/lib/visit-tracker";
@@ -70,6 +71,8 @@ export function CityHero() {
                 ? "När det repetitiva är automatiserat får människor tid över — och staden lever."
                 : "Scrolla och se hur AI och människor bygger nästa arbetsvecka tillsammans."}
             </p>
+
+            <PageAiActions mdPath="/index.md" tone="dark" className="mt-6" />
 
             <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <Button asChild size="xl">

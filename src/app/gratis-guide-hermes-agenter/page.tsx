@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { HermesStartPanel } from "@/components/sections/hermes-start-panel";
 import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
 import { Button } from "@/components/ui/button";
+import { PageAiActions } from "@/components/page-ai-actions";
 import { hermesGuideMeta } from "@/content/hermes-guide";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 
@@ -67,6 +68,11 @@ export default function HermesGuideLandingPage() {
               <h1 className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 {hermesGuideMeta.title}
               </h1>
+              <PageAiActions
+                mdPath="/gratis-guide-hermes-agenter.md"
+                tone="dark"
+                className="mt-4"
+              />
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-200">
                 Slipp läskursen. Klicka{" "}
                 <span className="font-semibold text-white">Starta här</span>,
