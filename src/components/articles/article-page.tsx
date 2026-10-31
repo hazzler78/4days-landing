@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
+import { PageAiActions } from "@/components/page-ai-actions";
 import {
   BOOK_AMAZON_REL,
   BOOK_COVER_ALT,
@@ -108,6 +109,7 @@ export function ArticlePage({ article }: { article: Article }) {
                 )}
               </p>
             )}
+            <PageAiActions mdPath={`/${article.slug}.md`} className="mt-4" />
             {article.lead && (
               <p className="mt-5 text-lg leading-relaxed text-slate-600">
                 {article.lead}

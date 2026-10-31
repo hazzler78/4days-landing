@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { siteConfig } from "@/lib/site";
+import { PageAiActions } from "@/components/page-ai-actions";
 
 const founders = [
   {
@@ -37,6 +38,7 @@ export function AboutSection() {
             Vi kombinerar affärsutveckling, ledarskap och hands-on AI-implementation
             – så att 4-dagarsveckan blir både mänsklig och mätbar.
           </p>
+          <PageAiActions mdPath="/om-oss.md" className="mt-5 justify-center" />
         </Reveal>
 
         <Stagger className="grid gap-6 md:grid-cols-2">

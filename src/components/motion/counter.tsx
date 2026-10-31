@@ -49,7 +49,14 @@ export function AnimatedNumber({
   }, [inView, value, duration, reduceMotion]);
 
   return (
-    <motion.span ref={ref} className={className}>
+    <motion.span
+      ref={ref}
+      className={className}
+      data-llm-value={value.toLocaleString("sv-SE", {
+        maximumFractionDigits: decimals,
+        minimumFractionDigits: decimals,
+      })}
+    >
       {display.toLocaleString("sv-SE", {
         maximumFractionDigits: decimals,
         minimumFractionDigits: decimals,

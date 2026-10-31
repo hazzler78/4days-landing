@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+import { PageAiActions } from "@/components/page-ai-actions";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -149,6 +150,7 @@ export default function GuiderPage() {
             <h1 className="text-3xl font-bold leading-tight tracking-tight text-brand sm:text-4xl">
               Guider om AI-schemaläggning, 4-dagarsvecka och AI-automatisering
             </h1>
+            <PageAiActions mdPath="/guider.md" className="mt-4" />
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
               Praktiska guider på svenska – från{" "}
               <strong className="font-semibold text-brand">
@@ -200,8 +202,11 @@ export default function GuiderPage() {
             </p>
             <div className="mt-6">
               <Button asChild size="lg">
-                <Link href="/bemanningsplanering-ai">
-                  Läs guiden om bemanningsplanering med AI
+                <Link
+                  href="/bemanningsplanering-ai"
+                  aria-label="Läs guiden om bemanningsplanering med AI"
+                >
+                  Läs guiden
                 </Link>
               </Button>
             </div>
