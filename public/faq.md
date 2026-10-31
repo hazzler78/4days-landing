@@ -1,0 +1,43 @@
+> Källa: https://www.4days.ai/faq
+
+Vanliga frågor
+
+## 4-dagarsvecka & AI – FAQ
+
+Svar på det ledningsgrupper och HR oftast undrar – med koppling till 100-80-100-modellen och vår AI-konsultation.
+
+### Vad är egentligen en 4-dagarsvecka?
+
+En 4-dagarsvecka innebär oftast att man arbetar 32 timmar istället för 40, fördelat på fyra dagar – med bibehållen lön och fokus på 100 % output. Hos 4days.ai använder vi den bevisbaserade 100-80-100-modellen: 100 % lön, 80 % tid, 100 % produktivitet. Det handlar inte om att jobba hårdare, utan smartare med hjälp av AI.
+
+### Fungerar 4-dagarsvecka på riktigt i Sverige?
+
+Ja. I svenska piloter 2024–2026 (bland annat via 4 Day Week Sverige) valde 10 av 11 organisationer att fortsätta efter testperioden. Resultaten visar minskad stress (−19 %), bättre sömn, ökad livskvalitet (+25 %) och bibehållen eller ökad produktivitet.
+
+### Får man samma lön med färre dagar?
+
+Absolut. Modellen bygger på full lön (100 %) trots 80 % arbetstid. Det är en investering i medarbetarnas välmående som ofta leder till lägre sjukfrånvaro och högre engagemang – vilket gynnar både anställda och företagets resultat.
+
+### Hur kan AI hjälpa oss att klara en 4-dagarsvecka?
+
+AI tar över repetitiva uppgifter som e-posthantering, rapportgenerering, mötesbokning, dataanalys och kundsupport. Genom processkartläggning och smart automatisering frigör vi tid så att teamet kan fokusera på det som skapar mest värde. Många av våra kunder ser tidsbesparingar på 15–30 % redan efter några veckor.
+
+### Är 4-dagarsvecka lämpligt för alla branscher?
+
+Det fungerar bäst för kunskapsintensiva företag (10–200 anställda) inom IT, konsultverksamhet, kreativa branscher och vissa delar av offentlig sektor. Inom tillverkning eller kundtjänst med strikta öppettider krävs mer anpassning, men AI kan ändå frigöra betydande tid. Vi gör alltid en skräddarsydd analys först.
+
+### Vad kostar det att införa 4-dagarsvecka med 4days.ai?
+
+Våra konsulttimmar ligger på 2 500 kr/tim (med volymrabatter). Ett typiskt AI Kickstart-paket (20–40 timmar) kostar 45 000–90 000 kr och ger er en konkret plan plus första automatiseringar. Vi erbjuder också fastpris och delbetalning för trygghet.
+
+### Hur mäter ni att produktiviteten verkligen hålls uppe?
+
+Vi använder bevisbaserad uppföljning från 4 Day Week Global-metodiken plus egna verktyg för tidsbesparingsrapporter. Före/efter-mätningar på stress, produktivitet och output säkerställer att ni når 100 % output på 80 % tid.
+
+### Hur kommer vi igång?
+
+Börja med att ladda ner vår kostnadsfria guide via formuläret. Därefter kan du boka ett 30-minuters intro-call så kartlägger vi era processer och tar fram en anpassad implementeringsplan.
+
+Vill du veta hur 4-dagarsvecka kan se ut hos er?
+
+[Boka 30 min kartläggning](https://calendly.com/hello-4days/30min) [Ladda ner guide](https://www.4days.ai/#guide)
