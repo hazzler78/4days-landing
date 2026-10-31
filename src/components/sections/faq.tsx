@@ -10,6 +10,7 @@ import {
 import { Reveal } from "@/components/motion/reveal";
 import { faqItems } from "@/lib/faq-data";
 import { Button } from "@/components/ui/button";
+import { PageAiActions } from "@/components/page-ai-actions";
 import { getBookingUrl } from "@/lib/site";
 import { trackBookCallClick } from "@/lib/vercelEvents";
 
@@ -26,6 +27,7 @@ export function FaqSection() {
             Svar på det ledningsgrupper och HR oftast undrar – med koppling till
             100-80-100-modellen och vår AI-konsultation.
           </p>
+          <PageAiActions mdPath="/faq.md" className="mt-5 justify-center" />
         </Reveal>
 
         <Reveal delay={0.08}>
