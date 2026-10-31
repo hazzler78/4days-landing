@@ -207,6 +207,8 @@ function prepareMain(doc) {
   for (const t of findAll(m, named("script", "style", "noscript", "svg", "img", "picture", "video", "iframe", "template", "input", "select", "textarea"))) decompose(t);
   for (const t of findAll(m, (d) => d.attrs["aria-hidden"] === "true")) if (!getText(t, "", true)) decompose(t);
   for (const f of findAll(m, named("form"))) decompose(f);
+  // The page's own "Kopiera för AI" / "Visa som Markdown" buttons are UI, not content.
+  for (const t of findAll(m, (d) => d.attrs["data-page-ai-actions"] !== undefined)) decompose(t);
 
   // Animated counters (AnimatedNumber) render 0 on the server; the real value is in data-llm-value.
   for (const sp of findAll(m, (d) => d.attrs["data-llm-value"] !== undefined)) setString(sp, sp.attrs["data-llm-value"]);
