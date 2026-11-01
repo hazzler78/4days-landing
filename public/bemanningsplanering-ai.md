@@ -42,7 +42,7 @@ Tre begrepp som ofta blandas ihop, men som beskriver olika mognadsnivåer:
 
 De flesta verksamheter som "lägger schema med AI" idag använder en kombination av nivå två och tre: automatisk schemagenerering med AI-baserade behovsprognoser ovanpå.
 
-## Vad är bemanningsplanering med AI?
+## Hur hänger bemanningsplanering och schemaläggning ihop?
 
 Bemanningsplanering handlar om att matcha tillgänglig personal mot verksamhetens behov över tid – ett steg före själva schemaläggningen. Med AI menar vi att använda maskininlärning och automatisering för att **prognostisera behovet** och **generera eller optimera scheman** – med hänsyn till kompetens, tillgänglighet, arbetstidslag och kollektivavtal. Bemanningsplanering med AI och AI-schemaläggning hänger ihop: prognosen säger *hur många och vilka* som behövs, schemaläggningen säger *vem som jobbar när*.
 
@@ -92,7 +92,7 @@ Rätt använd tar AI över det repetitiva och lyfter fram besluten som faktiskt 
 
 ### Vård, omsorg och kommuner
 
-Här är schemapusslet som mest komplext: dygnet-runt-verksamhet, strikta kompetenskrav och flera kollektivavtal. Flera svenska kommuner använder redan AI-driven schemaläggning i äldreomsorgen – [Tjörns kommun rapporterar via SKR](https://dela.skr.se/losningar/ai-schemalaggning-omsorg/) mindre administration, bättre individanpassning och mer tid till omsorgsarbetet, utan att några schemaregler ändrades. Inom sjukvården har bland annat [Östersunds sjukhus pilottestat AI-schemaoptimering](https://www.sjukhuslakaren.se/optimalt-nar-ai-far-gora-schemat/) för scheman som tidigare tog en överläkare två heltidsveckor per termin att lägga.
+Här är schemapusslet som mest komplext: dygnet-runt-verksamhet, strikta kompetenskrav och flera kollektivavtal. Flera svenska kommuner använder redan AI-driven schemaläggning i äldreomsorgen – [Tjörns kommun rapporterar via SKR](https://dela.skr.se/losningar/ai-schemalaggning-omsorg/) mindre administration, bättre individanpassning och mer tid till omsorgsarbetet, utan att några schemaregler ändrades. Inom sjukvården startade ortopeden vid Östersunds sjukhus 2023 en pilot med AI-schemaoptimering. En termins schema för ett 40-tal läkare tog tidigare en överläkare cirka två heltidsveckor att lägga, enligt [Dagens Medicin](https://www.dagensmedicin.se/vardens-styrning/digitalisering/sjukhus-testar-att-optimera-scheman-med-ai-fran-flygindustrin/) (21 december 2023) och [Sjukhusläkaren](https://www.sjukhuslakaren.se/optimalt-nar-ai-far-gora-schemat/).
 
 ### Restaurang och besöksnäring
 
