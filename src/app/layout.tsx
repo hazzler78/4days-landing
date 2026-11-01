@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Instrument_Sans } from "next/font/google";
 import { AnalyticsGate } from "@/components/analytics-gate";
 import { CookieConsent } from "@/components/cookie-consent";
+import { PlausibleAnalytics } from "@/components/plausible-analytics";
 import { ChatWidget } from "@/components/chat-widget";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { siteConfig } from "@/lib/site";
@@ -93,6 +94,7 @@ export default function RootLayout({
         {children}
         <CookieConsent />
         <ChatWidget />
+        <PlausibleAnalytics />
         <AnalyticsGate />
       </body>
     </html>

@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { getBookingUrl } from "@/lib/site";
+import { plausibleEvents, trackPlausible } from "@/lib/plausible";
 import { trackBookCallClick, trackGuideSignup } from "@/lib/vercelEvents";
 
 type FormState = {
@@ -63,6 +64,10 @@ export function CtaFormSection() {
       }
 
       trackGuideSignup("cta-form");
+      trackPlausible(plausibleEvents.leadSubmit, {
+        source: "landing-4days-ai",
+        path: "/",
+      });
       setSubmitted(true);
       setForm(initialState);
     } catch (err) {

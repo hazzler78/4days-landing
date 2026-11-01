@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { hermesGuideMeta } from "@/content/hermes-guide";
+import { plausibleEvents, trackPlausible } from "@/lib/plausible";
 import { cn } from "@/lib/utils";
 import { trackHermesGuideSignup } from "@/lib/vercelEvents";
 
@@ -87,6 +88,11 @@ export function HermesGuideForm({
       }
 
       trackHermesGuideSignup(analyticsPlacement);
+      trackPlausible(plausibleEvents.leadSubmit, {
+        source,
+        path:
+          typeof window !== "undefined" ? window.location.pathname : source,
+      });
       setSubmitted(true);
       setForm(initialState);
     } catch (err) {

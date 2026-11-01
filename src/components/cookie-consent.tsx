@@ -43,8 +43,9 @@ export function CookieConsent() {
     >
       <div className="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl sm:p-6">
         <p className="text-sm leading-relaxed text-slate-700">
-          Vi använder nödvändiga cookies för att sidan ska fungera. Med ditt
-          samtycke använder vi även analytics för att förbättra webbplatsen.{" "}
+          Vi använder nödvändiga cookies för att sidan ska fungera. Anonym
+          statistik (Plausible, utan cookies) körs alltid. Med ditt samtycke
+          aktiveras även Vercel Analytics.{" "}
           <Link href="/cookies" className="font-medium text-accent-dim hover:underline">
             Läs mer
           </Link>
