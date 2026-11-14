@@ -6,7 +6,7 @@
 
 Scrolla och se hur AI och människor bygger nästa arbetsvecka tillsammans.
 
-[Boka 30 min kartläggning](https://calendly.com/hello-4days/30min) [Ladda ner guide](https://www.4days.ai/#guide)
+[Boka 30 min kartläggning](https://calendly.com/hello-4days/30min) [Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide)
 
 Scrolla för att bygga staden
 
@@ -123,8 +123,8 @@ Företag med 10–200 anställda som vill bli en mer attraktiv arbetsgivare utan
 
 Nästa steg
 
-## Ladda ner guide
+## Prenumerera på nyhetsbrevet
 
-Praktisk guide för ledningsgrupper – plus plats på vårt kommande webinar. Bekräftelse via e-post (dubbel opt-in).
+Tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl.
 
 [Boka 30 min kartläggning](https://calendly.com/hello-4days/30min)

@@ -55,6 +55,6 @@ Ett Kickstart-paket ger er en konkret plan plus de första automatiseringarna p�
 
 ## Vill du se hur en 4-dagarsvecka kan se ut hos er?
 
-Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call.
+Prenumerera på nyhetsbrevet – tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl. Eller boka ett kort intro-call.
 
-[Få guiden gratis](https://www.4days.ai/#guide) [Boka 30 min intro](https://calendly.com/hello-4days/30min)
+[Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide) [Boka 30 min intro](https://calendly.com/hello-4days/30min)

@@ -90,11 +90,11 @@ export function CtaFormSection() {
         <Reveal className="text-center">
           <p className="text-sm font-semibold text-accent">Nästa steg</p>
           <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
-            Ladda ner guide
+            Prenumerera på nyhetsbrevet
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
-            Praktisk guide för ledningsgrupper – plus plats på vårt kommande
-            webinar. Bekräftelse via e-post (dubbel opt-in).
+            Tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din
+            anmälan via mejl.
           </p>
           <div className="mt-6">
             <Button asChild size="lg" variant="outline">
@@ -120,8 +120,7 @@ export function CtaFormSection() {
                     Tack – kolla din inkorg!
                   </h3>
                   <p className="mt-2 text-sm text-slate-600">
-                    Bekräfta din e-post via länken vi skickar (dubbel opt-in) –
-                    då får du guiden och inbjudan till webinaret.
+                    Bekräfta din anmälan via länken vi skickar (dubbel opt-in).
                   </p>
                   <Button
                     className="mt-6"
@@ -268,7 +267,7 @@ export function CtaFormSection() {
                         Skickar...
                       </>
                     ) : (
-                      "Ladda ner guide"
+                      "Prenumerera på nyhetsbrevet"
                     )}
                   </Button>
                 </form>

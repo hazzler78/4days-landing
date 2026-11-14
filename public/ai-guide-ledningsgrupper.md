@@ -44,9 +44,9 @@ Följ upp KPI:er vecka för vecka – stress, produktivitet och faktisk output. 
 
 Många ledningsgrupper börjar bredare – som ren AI- och automationssatsning – och låter 4-dagarsveckan bli slutmålet. Det är en sund väg. När tiden väl är frigjord bygger ni vidare på [100-80-100-modellen](https://www.4days.ai/100-80-100-modellen): 100 % lön, 80 % arbetstid, 100 % output. Vill ni förstå hur kalkylen ser ut på sista raden, läs [4-dagarsvecka och lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet). En typisk tidsplan från start till fungerande 4-dagarsvecka är 6–12 månader.
 
-## Ladda ner den fullständiga guiden
+## Prenumerera på nyhetsbrevet
 
-Vill ledningsgruppen ha hela ramverket samlat? Vår kostnadsfria guide *"Praktisk guide för ledningsgrupper – från 5 till 4-dagarsvecka med AI"* går igenom faserna i detalj, med checklistor och frågor att ta med till nästa ledningsmöte. Den hämtar ni direkt via formuläret på startsidan.
+Tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl. [Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide).
 
 ## Relaterade guider
 
@@ -58,6 +58,6 @@ Vill ledningsgruppen ha hela ramverket samlat? Vår kostnadsfria guide *"Praktis
 
 ## Vill du se hur en 4-dagarsvecka kan se ut hos er?
 
-Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call.
+Prenumerera på nyhetsbrevet – tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl. Eller boka ett kort intro-call.
 
-[Få guiden gratis](https://www.4days.ai/#guide) [Boka 30 min intro](https://calendly.com/hello-4days/30min)
+[Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide) [Boka 30 min intro](https://calendly.com/hello-4days/30min)

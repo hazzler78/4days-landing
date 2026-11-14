@@ -213,7 +213,7 @@ export function JourneyScrollSection() {
         <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Button asChild size="lg">
             <Link href="#guide">
-              Få guiden gratis
+              Prenumerera på nyhetsbrevet
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>

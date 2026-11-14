@@ -15,7 +15,7 @@ Viktiga fakta:
 
 ## Huvudsidor
 
-- [Startsida](https://www.4days.ai/): Översikt av erbjudandet – 4-dagarsvecka med full lön via AI, fördelar, så fungerar det, bevis/100-80-100 och gratis guide.
+- [Startsida](https://www.4days.ai/): Översikt av erbjudandet – 4-dagarsvecka med full lön via AI, fördelar, så fungerar det, bevis/100-80-100 och nyhetsbrev.
 - [FAQ](https://www.4days.ai/faq): Vanliga frågor om 4-dagarsvecka, 100-80-100-modellen och AI-konsultation.
 - [Om oss](https://www.4days.ai/om-oss): Teamet bakom 4days.ai – Joseph Tran och Mikael Söderberg.
 - [4-dagarsvecka i Sverige](https://www.4days.ai/4-dagarsvecka-sverige): Vad en 4-dagarsvecka är, svenska piloter och forskning, och hur AI gör den möjlig.

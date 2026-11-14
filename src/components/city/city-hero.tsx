@@ -88,7 +88,7 @@ export function CityHero() {
               </Button>
               <Button asChild size="xl" variant="secondary">
                 <a href="#guide">
-                  Ladda ner guide
+                  Prenumerera på nyhetsbrevet
                   <ArrowRight className="h-5 w-5" aria-hidden="true" />
                 </a>
               </Button>

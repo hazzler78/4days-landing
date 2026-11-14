@@ -50,11 +50,11 @@ Ledning – [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-lednin
 
 Bok – [Fyra dagar, full lön, samma resultat?](https://www.4days.ai/boken) – Vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet. Av Joseph Tran.
 
-## Gratis guider via e-post
+## Nyhetsbrev och guider
 
 Ny · AI-agenter – [Starta Hermes på några klick](https://www.4days.ai/gratis-guide-hermes-agenter) – Klicka Starta här, installera Hermes Desktop, koppla Grok/xAI och kör din första agent samma dag.
 
-4-dagarsvecka – [Guide + webinar för ledningsgrupper](https://www.4days.ai/#guide) – Praktisk guide för ledningsgrupper som vill gå från 5 till 4 dagar med AI – plus webinar-inbjudan.
+Nyhetsbrev – [Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide) – Tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl.
 
 ## Vill ni veta var AI gör störst nytta hos just er?
 

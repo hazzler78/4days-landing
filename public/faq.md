@@ -36,8 +36,8 @@ Vi använder bevisbaserad uppföljning från 4 Day Week Global-metodiken plus eg
 
 ### Hur kommer vi igång?
 
-Börja med att ladda ner vår kostnadsfria guide via formuläret. Därefter kan du boka ett 30-minuters intro-call så kartlägger vi era processer och tar fram en anpassad implementeringsplan.
+Börja med att prenumerera på nyhetsbrevet via formuläret. Därefter kan du boka ett 30-minuters intro-call så kartlägger vi era processer och tar fram en anpassad implementeringsplan.
 
 Vill du veta hur 4-dagarsvecka kan se ut hos er?
 
-[Boka 30 min kartläggning](https://calendly.com/hello-4days/30min) [Ladda ner guide](https://www.4days.ai/#guide)
+[Boka 30 min kartläggning](https://calendly.com/hello-4days/30min) [Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide)
