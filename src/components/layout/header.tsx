@@ -104,7 +104,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="hidden sm:inline-flex">
-            <Link href="/#guide">Ladda ner guide</Link>
+            <Link href="/#guide">Prenumerera på nyhetsbrevet</Link>
           </Button>
           <button
             type="button"
@@ -150,7 +150,7 @@ export function Header() {
             ))}
             <Button asChild className="mt-2">
               <Link href="/#guide" onClick={() => setOpen(false)}>
-                Ladda ner guide
+                Prenumerera på nyhetsbrevet
               </Link>
             </Button>
           </nav>

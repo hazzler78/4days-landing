@@ -256,7 +256,7 @@ export default function GuiderPage() {
               id="guider-leadmagnets"
               className="mb-6 text-2xl font-bold text-brand"
             >
-              Gratis guider via e-post
+              Nyhetsbrev och guider
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <GuideCard
@@ -267,9 +267,9 @@ export default function GuiderPage() {
               />
               <GuideCard
                 href="/#guide"
-                tag="4-dagarsvecka"
-                title="Guide + webinar för ledningsgrupper"
-                description="Praktisk guide för ledningsgrupper som vill gå från 5 till 4 dagar med AI – plus webinar-inbjudan."
+                tag="Nyhetsbrev"
+                title="Prenumerera på nyhetsbrevet"
+                description="Tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl."
               />
             </div>
           </section>

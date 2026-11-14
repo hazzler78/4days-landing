@@ -297,7 +297,7 @@ export function ArticlePage({ article }: { article: Article }) {
                 ) : article.slug === "bemanningsplanering-ai" ? (
                   "Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er."
                 ) : (
-                  "Ladda ner vår kostnadsfria guide för ledningsgrupper – eller boka ett kort intro-call."
+                  "Prenumerera på nyhetsbrevet – tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl. Eller boka ett kort intro-call."
                 )}
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -336,7 +336,7 @@ export function ArticlePage({ article }: { article: Article }) {
                 ) : (
                   <>
                     <Button asChild size="lg">
-                      <Link href="/#guide">Få guiden gratis</Link>
+                      <Link href="/#guide">Prenumerera på nyhetsbrevet</Link>
                     </Button>
                     <Button asChild size="lg" variant="secondary">
                       <a

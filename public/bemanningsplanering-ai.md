@@ -200,4 +200,4 @@ I bemanningsstyrda verksamheter är schemat ofta det som gör en kortare arbetsv
 
 Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er.
 
-[Få guiden gratis](https://www.4days.ai/#guide) [Boka 30 min intro](https://calendly.com/hello-4days/30min)
+[Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide) [Boka 30 min intro](https://calendly.com/hello-4days/30min)

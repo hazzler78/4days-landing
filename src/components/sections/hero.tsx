@@ -93,7 +93,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
             <Button asChild size="xl">
               <a href="#guide">
-                Få guiden gratis
+                Prenumerera på nyhetsbrevet
                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </a>
             </Button>

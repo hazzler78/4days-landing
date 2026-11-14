@@ -57,7 +57,7 @@ export function FaqSection() {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/#guide">Ladda ner guide</Link>
+              <Link href="/#guide">Prenumerera på nyhetsbrevet</Link>
             </Button>
           </div>
         </Reveal>

@@ -37,6 +37,6 @@ export const faqItems = [
   {
     question: "Hur kommer vi igång?",
     answer:
-      "Börja med att ladda ner vår kostnadsfria guide via formuläret. Därefter kan du boka ett 30-minuters intro-call så kartlägger vi era processer och tar fram en anpassad implementeringsplan.",
+      "Börja med att prenumerera på nyhetsbrevet via formuläret. Därefter kan du boka ett 30-minuters intro-call så kartlägger vi era processer och tar fram en anpassad implementeringsplan.",
   },
 ] as const;
