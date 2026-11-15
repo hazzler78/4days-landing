@@ -19,6 +19,14 @@ const articleLinks = [
   { href: "/ai-guide-ledningsgrupper", label: "AI-guide för ledningsgrupper" },
 ];
 
+const serviceLinks = [
+  {
+    href: "https://www.fullmaktsagent.se",
+    // Non-breaking hyphen so "AI-agenter" stays on one line in the narrow column.
+    label: "Fullmaktsagenten – digital fullmakt för AI\u2011agenter",
+  },
+];
+
 export function Footer({ omitHrefs = [] }: { omitHrefs?: string[] } = {}) {
   return (
     <footer className="border-t border-slate-800 bg-brand-dark text-slate-300">
@@ -37,6 +45,24 @@ export function Footer({ omitHrefs = [] }: { omitHrefs?: string[] } = {}) {
               dagars arbetsvecka med full lön – genom AI-automatisering och
               bevisbaserad metodik.
             </p>
+            <p className="mt-8 text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Våra tjänster
+            </p>
+            <ul className="mt-4 max-w-sm space-y-2.5 text-sm">
+              {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-accent"
+                  >
+                    {link.label}
+                    <span className="sr-only"> (öppnas i ny flik)</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
