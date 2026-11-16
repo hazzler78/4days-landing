@@ -65,7 +65,7 @@ Att spara tid är värdefullt i sig, men den verkliga vinsten uppstår när tide
 
 [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag) – Vad som kan automatiseras, hur det går till och vad det kostar.
 
-[4-dagarsvecka för IT &amp; konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
+[4-dagarsvecka för IT & konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
 
 [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper) – Så kommer ledningen igång – steg för steg.
 

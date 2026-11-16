@@ -78,9 +78,23 @@ export function ArticlePage({ article }: { article: Article }) {
           <nav className="mb-6 text-sm text-slate-500" aria-label="Brödsmulor">
             <Link href="/" className="hover:text-accent-dim">
               Hem
-            </Link>{" "}
+            </Link>
+            {article.section ? (
+              <>
+                {" "}
+                <span aria-hidden="true">/</span>{" "}
+                <Link
+                  href={article.section.href}
+                  className="hover:text-accent-dim"
+                >
+                  {article.section.name}
+                </Link>
+              </>
+            ) : null}{" "}
             <span aria-hidden="true">/</span>{" "}
-            <span className="text-slate-700">{article.h1}</span>
+            <span className="text-slate-700">
+              {article.breadcrumbName || article.h1}
+            </span>
           </nav>
 
           <header>
@@ -92,8 +106,26 @@ export function ArticlePage({ article }: { article: Article }) {
             <h1 className="text-3xl font-bold leading-tight tracking-tight text-brand sm:text-4xl">
               {article.h1}
             </h1>
-            {(publishedLabel || modifiedLabel) && (
+            {(article.author || publishedLabel || modifiedLabel) && (
               <p className="mt-4 flex flex-wrap items-center gap-x-2 text-sm text-slate-500">
+                {article.author && (
+                  <span>
+                    Av{" "}
+                    {article.author.url ? (
+                      <a
+                        href={article.author.url}
+                        className="font-medium text-slate-600 underline-offset-2 hover:underline"
+                      >
+                        {article.author.name}
+                      </a>
+                    ) : (
+                      article.author.name
+                    )}
+                  </span>
+                )}
+                {article.author && (publishedLabel || modifiedLabel) && (
+                  <span aria-hidden="true">·</span>
+                )}
                 {publishedLabel && (
                   <time dateTime={article.published}>
                     Publicerad {publishedLabel}
@@ -275,7 +307,7 @@ export function ArticlePage({ article }: { article: Article }) {
                     : proofPackage
                       ? "Vill du veta vad AI ger er?"
                       : article.slug === "bemanningsplanering-ai"
-                        ? "Vill ni effektivisera er bemanningsplanering?"
+                        ? "Vill ni kartlägga er bemanningsplanering?"
                         : "Vill du se hur en 4-dagarsvecka kan se ut hos er?"}
               </h2>
               <p className="mt-3 text-slate-300">
@@ -295,7 +327,7 @@ export function ArticlePage({ article }: { article: Article }) {
                     .
                   </>
                 ) : article.slug === "bemanningsplanering-ai" ? (
-                  "Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er."
+                  "Berätta hur schemat läggs idag. Vi kartlägger var superintelligens kan ta det regelstyrda räknandet – utan att lova en siffra i förväg."
                 ) : (
                   "Prenumerera på nyhetsbrevet – tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mejl. Eller boka ett kort intro-call."
                 )}

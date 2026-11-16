@@ -5,6 +5,13 @@ export type ArticleFaq = {
   answer: string;
 };
 
+export type ArticleAuthor = {
+  name: string;
+  jobTitle?: string;
+  url?: string;
+  sameAs?: string[];
+};
+
 export type Article = {
   slug: string;
   title: string;
@@ -14,6 +21,16 @@ export type Article = {
   lead: string;
   published: string;
   modified?: string;
+  /** When true, the document title is used as-is, without the site title template. */
+  titleAbsolute?: boolean;
+  ogTitle?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  author?: ArticleAuthor;
+  section?: { name: string; href: string };
+  breadcrumbName?: string;
+  about?: string[];
+  citations?: string[];
   body: string;
   faq?: ArticleFaq[];
   related: Array<{ href: string; title: string; description: string }>;

@@ -49,7 +49,7 @@ Ett Kickstart-paket ger er en konkret plan plus de första automatiseringarna p�
 
 [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper) – Så kommer ledningen igång – steg för steg.
 
-[4-dagarsvecka för IT &amp; konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
+[4-dagarsvecka för IT & konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
 
 [AI-schemaläggning](https://www.4days.ai/bemanningsplanering-ai) – Automatisk schemaläggning och bemanningsplanering – komplett guide.
 

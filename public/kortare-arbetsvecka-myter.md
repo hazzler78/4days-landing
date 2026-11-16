@@ -40,7 +40,7 @@ Man behöver inte gå hela vägen direkt. Många börjar med en kartläggning oc
 
 [4-dagarsvecka i Sverige](https://www.4days.ai/4-dagarsvecka-sverige) – Svenska piloter, forskning och hur AI gör den möjlig.
 
-[4-dagarsvecka &amp; lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet) – Så räknar du på kostnad, tidsbesparing och ROI.
+[4-dagarsvecka & lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet) – Så räknar du på kostnad, tidsbesparing och ROI.
 
 [100-80-100-modellen](https://www.4days.ai/100-80-100-modellen) – 100 % lön, 80 % tid, 100 % output – modellen förklarad.
 

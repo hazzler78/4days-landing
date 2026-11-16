@@ -50,7 +50,7 @@ Vi arbetar i fyra steg: kartläggning av processer, AI-automatisering av de mest
 
 [AI-verktyg som sparar tid](https://www.4days.ai/ai-verktyg-spara-tid) – Verktygen som kapar mest tid på kontoret.
 
-[4-dagarsvecka &amp; lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet) – Så räknar du på kostnad, tidsbesparing och ROI.
+[4-dagarsvecka & lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet) – Så räknar du på kostnad, tidsbesparing och ROI.
 
 [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper) – Så kommer ledningen igång – steg för steg.
 

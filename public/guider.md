@@ -4,21 +4,13 @@
 
 Kunskapsbank
 
-# Guider om AI-schemaläggning, 4-dagarsvecka och AI-automatisering
+# Guider om 4-dagarsvecka och AI
 
-Praktiska guider på svenska – från **automatisk schemaläggning med AI** och bemanningsplanering till 4-dagarsvecka med full lön. Baserat på forskning, svenska piloter och vårt arbete med kunder.
+Praktiska guider på svenska om 4-dagarsvecka med full lön, AI-agenter och automatisering. Baserat på forskning, svenska piloter och vårt arbete med kunder.
 
 Vill du veta vad AI ger i arbetstimmar hos er? [Bevispaketet](https://www.4days.ai/bevispaketet) är en mätning under fem veckor, med era egna siffror.
 
 Boken [Fyra dagar, full lön, samma resultat?](https://www.4days.ai/boken) av Joseph Tran tar upp vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet.
-
-Mest efterfrågad
-
-## Bemanningsplanering med AI
-
-System, verktyg och automatisk schemaläggning – hur det fungerar i vård, skola och handel, vad ni bör kräva av ett system, plus checklista och FAQ.
-
-[Läs guiden](https://www.4days.ai/bemanningsplanering-ai)
 
 ## 4-dagarsvecka
 
@@ -42,7 +34,7 @@ Grunderna – [AI-automatisering för företag](https://www.4days.ai/ai-automati
 
 Verktyg – [AI-verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid) – Verktygen som kapar mest tid – mejl, rapporter, möten, dataanalys, kundsupport och admin.
 
-Schemaläggning – [Bemanningsplanering med AI](https://www.4days.ai/bemanningsplanering-ai) – System, verktyg och automatisk schemaläggning – guide med checklista för vård, skola och handel.
+Guide – [Automatisk schemaläggning med AI](https://www.4days.ai/bemanningsplanering-ai) – Oberoende guide: verktygstyper, urval och checklista.
 
 Ledning – [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper) – Hur ledningen bör tänka kring AI-införande, steg för steg – och vanliga misstag att undvika.
 
