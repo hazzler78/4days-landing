@@ -7,14 +7,14 @@ import { PageAiActions } from "@/components/page-ai-actions";
 import { siteConfig, getBookingUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
+  title: "Guider om 4-dagarsvecka och AI",
   description:
-    "Guider på svenska: Bevispaketet, boken Fyra dagar, full lön, samma resultat?, vad är en AI-agent, AI-schemaläggning och AI-automatisering för företag.",
+    "Guider på svenska: Bevispaketet, boken Fyra dagar, full lön, samma resultat?, vad är en AI-agent och AI-automatisering för företag.",
   alternates: { canonical: "/guider" },
   openGraph: {
-    title: "Guider: AI-agenter, schemaläggning & 4-dagarsvecka",
+    title: "Guider om 4-dagarsvecka och AI",
     description:
-      "Samlad kunskapsbank: Bevispaketet, boken Fyra dagar, full lön, samma resultat?, AI-agenter, schemaläggning och AI-automatisering.",
+      "Samlad kunskapsbank: Bevispaketet, boken Fyra dagar, full lön, samma resultat?, AI-agenter och AI-automatisering.",
     url: `${siteConfig.url}/guider`,
   },
 };
@@ -88,10 +88,10 @@ const aiGuides = [
   },
   {
     href: "/bemanningsplanering-ai",
-    tag: "Schemaläggning",
-    title: "Bemanningsplanering med AI",
+    tag: "Guide",
+    title: "Automatisk schemaläggning med AI",
     description:
-      "System, verktyg och automatisk schemaläggning – guide med checklista för vård, skola och handel.",
+      "Oberoende guide: verktygstyper, urval och checklista.",
   },
   {
     href: "/ai-guide-ledningsgrupper",
@@ -148,16 +148,13 @@ export default function GuiderPage() {
           <header className="max-w-3xl">
             <p className="mb-2 text-sm font-semibold text-accent">Kunskapsbank</p>
             <h1 className="text-3xl font-bold leading-tight tracking-tight text-brand sm:text-4xl">
-              Guider om AI-schemaläggning, 4-dagarsvecka och AI-automatisering
+              Guider om 4-dagarsvecka och AI
             </h1>
             <PageAiActions mdPath="/guider.md" className="mt-4" />
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
-              Praktiska guider på svenska – från{" "}
-              <strong className="font-semibold text-brand">
-                automatisk schemaläggning med AI
-              </strong>{" "}
-              och bemanningsplanering till 4-dagarsvecka med full lön. Baserat på
-              forskning, svenska piloter och vårt arbete med kunder.
+              Praktiska guider på svenska om 4-dagarsvecka med full lön,
+              AI-agenter och automatisering. Baserat på forskning, svenska
+              piloter och vårt arbete med kunder.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
               Vill du veta vad AI ger i arbetstimmar hos er?{" "}
@@ -181,36 +178,6 @@ export default function GuiderPage() {
               produktivitet – och vad den inte vet.
             </p>
           </header>
-
-          <section
-            className="mt-10 rounded-3xl border border-accent/30 bg-white p-6 shadow-sm sm:p-8"
-            aria-labelledby="guider-featured"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-accent">
-              Mest efterfrågad
-            </p>
-            <h2
-              id="guider-featured"
-              className="mt-2 text-2xl font-bold text-brand"
-            >
-              Bemanningsplanering med AI
-            </h2>
-            <p className="mt-3 max-w-2xl text-slate-600 leading-relaxed">
-              System, verktyg och automatisk schemaläggning – hur det fungerar i
-              vård, skola och handel, vad ni bör kräva av ett system, plus
-              checklista och FAQ.
-            </p>
-            <div className="mt-6">
-              <Button asChild size="lg">
-                <Link
-                  href="/bemanningsplanering-ai"
-                  aria-label="Läs guiden om bemanningsplanering med AI"
-                >
-                  Läs guiden
-                </Link>
-              </Button>
-            </div>
-          </section>
 
           <section className="mt-12" aria-labelledby="guider-4dagars">
             <h2

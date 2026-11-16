@@ -42,8 +42,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   return {
-    title: article.title,
+    title: article.titleAbsolute ? { absolute: article.title } : article.title,
     description: article.description,
+    ...(article.author
+      ? {
+          authors: [
+            { name: article.author.name, url: article.author.url },
+          ],
+        }
+      : {}),
     ...(isBook
       ? {
           keywords: [
@@ -80,7 +87,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         }
       : {
           type: "article",
-          title: article.h1,
+          title: article.ogTitle || article.h1,
           description: article.description,
           url: `${siteConfig.url}/${article.slug}`,
           images: ["/og-image-v6.jpg"],
@@ -96,7 +103,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             images: isBook ? [bookImage] : ["/og-image-v6.jpg"],
           },
         }
-      : {}),
+      : article.twitterTitle
+        ? {
+            twitter: {
+              card: "summary_large_image" as const,
+              title: article.twitterTitle,
+              description: article.twitterDescription || article.description,
+              images: ["/og-image-v6.jpg"],
+            },
+          }
+        : {}),
   };
 }
 
@@ -143,6 +159,7 @@ function ArticleJsonLd({
         }
       : {
           "@type": "Article",
+          "@id": `${url}#article`,
           headline: article.h1,
           description: article.description,
           inLanguage: "sv-SE",
@@ -151,11 +168,23 @@ function ArticleJsonLd({
           image: `${siteConfig.url}/og-image-v6.jpg`,
           datePublished: article.published || undefined,
           dateModified: article.modified || article.published || undefined,
-          author: {
-            "@type": "Organization",
-            name: siteConfig.legalName,
-            url: `${siteConfig.url}/`,
-          },
+          author: article.author
+            ? {
+                "@type": "Person",
+                name: article.author.name,
+                ...(article.author.jobTitle
+                  ? { jobTitle: article.author.jobTitle }
+                  : {}),
+                ...(article.author.url ? { url: article.author.url } : {}),
+                ...(article.author.sameAs?.length
+                  ? { sameAs: article.author.sameAs }
+                  : {}),
+              }
+            : {
+                "@type": "Organization",
+                name: siteConfig.legalName,
+                url: `${siteConfig.url}/`,
+              },
           publisher: {
             "@type": "Organization",
             name: siteConfig.legalName,
@@ -164,23 +193,55 @@ function ArticleJsonLd({
               url: `${siteConfig.url}/bilder/logo-light.png`,
             },
           },
+          ...(article.about?.length
+            ? {
+                about: article.about.map((name) => ({
+                  "@type": "Thing",
+                  name,
+                })),
+              }
+            : {}),
+          ...(article.citations?.length
+            ? { citation: article.citations }
+            : {}),
         },
     {
       "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Hem",
-          item: `${siteConfig.url}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: article.h1,
-          item: url,
-        },
-      ],
+      itemListElement: article.section
+        ? [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Hem",
+              item: `${siteConfig.url}/`,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: article.section.name,
+              item: `${siteConfig.url}${article.section.href}`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: article.breadcrumbName || article.h1,
+              item: url,
+            },
+          ]
+        : [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Hem",
+              item: `${siteConfig.url}/`,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: article.h1,
+              item: url,
+            },
+          ],
     },
   ];
 

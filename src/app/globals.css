@@ -78,6 +78,66 @@ body {
   backdrop-filter: blur(12px);
 }
 
+.prose-article .table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.prose-article table {
+  width: 100%;
+  min-width: 68rem;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.prose-article caption {
+  caption-side: bottom;
+  padding-top: 0.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.prose-article th,
+.prose-article td {
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.prose-article th {
+  background: #fff;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.prose-article aside.summary {
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.prose-article aside.summary > p:first-child {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #059669;
+}
+
+.prose-article .note {
+  margin-top: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
 .timeline-line {
   background: linear-gradient(
     180deg,

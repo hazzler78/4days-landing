@@ -54,7 +54,7 @@ Tips om 4-dagarsvecka, AI och nästa webinar. Du bekräftar din anmälan via mej
 
 [AI-verktyg som sparar tid](https://www.4days.ai/ai-verktyg-spara-tid) – Verktygen som kapar mest tid på kontoret.
 
-[4-dagarsvecka för IT &amp; konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
+[4-dagarsvecka för IT & konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
 
 ## Vill du se hur en 4-dagarsvecka kan se ut hos er?
 

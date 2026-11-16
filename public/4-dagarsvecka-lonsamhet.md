@@ -42,7 +42,7 @@ Lönsamheten står och faller med att produktiviteten inte sjunker. Därför mä
 
 ## Relaterade guider
 
-[4-dagarsvecka för IT &amp; konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
+[4-dagarsvecka för IT & konsult](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
 
 [100-80-100-modellen](https://www.4days.ai/100-80-100-modellen) – 100 % lön, 80 % tid, 100 % output – modellen förklarad.
 

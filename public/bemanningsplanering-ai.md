@@ -1,203 +1,264 @@
 > Källa: https://www.4days.ai/bemanningsplanering-ai
 
-[Hem](https://www.4days.ai/) / Bemanningsplanering med AI
+[Hem](https://www.4days.ai/) / [Guider](https://www.4days.ai/guider) / Bemanningsplanering och AI-schemaläggning
 
-Guide · Bemanningsplanering & AI-schemaläggning
+Oberoende guide
 
-# Bemanningsplanering med AI
+# Bemanningsplanering och AI-schemaläggning – så fungerar det och så väljer ni verktyg
 
-Publicerad 8 juli 2026 · Uppdaterad 9 oktober 2026
+Av [Mikael Söderberg](https://www.4days.ai/om-oss) · Publicerad 8 juli 2026 · Uppdaterad 16 november 2026
 
-Söker ni bemanningsplanering med AI – system eller verktyg som faktiskt sparar tid? Den här guiden förklarar hur automatisk schemaläggning fungerar, vad ni bör kräva av ett system, och hur ni kommer igång utan att köpa fel lösning.
+Bemanningsplanering med AI betyder att ett system räknar fram hur många medarbetare med vilken kompetens som behövs och sedan lägger schemaförslag automatiskt, inom arbetstidslagen, kollektivavtal och medarbetarnas önskemål. Planeraren granskar och beslutar. Det ger mest där behovet varierar och schemat är ett pussel, till exempel i vård, handel och logistik.
+
+4days.ai säljer inget schemaläggningssystem. Därför kan vi beskriva alternativen neutralt, per typ av verktyg och inte per varumärke.
+
+I korthet
+
+- Bemanningsplanering svarar på hur många och vilka som behövs. Schemaläggning svarar på vem som jobbar när.
+- Superintelligens (SI) räknar fram schemaförslag. Planeraren granskar och beslutar.
+- Det finns fyra verktygstyper: i löne- eller tidsystemet, fristående schemaverktyg, SI-optimering och prognos, och egen lösning.
+- Arbetstidslagen och kollektivavtal måste ligga som regler i systemet. Ni ansvarar för att de är rätt inlagda.
+- Störst nytta där behovet varierar, till exempel i vård, omsorg, handel och logistik.
 
 ## Vad är bemanningsplanering med AI?
 
-**Bemanningsplanering med AI** betyder att ni använder AI för att prognostisera bemanningsbehovet och skapa eller optimera scheman – med hänsyn till kompetens, tillgänglighet, arbetstidslag och kollektivavtal. I praktiken kallas det också *AI-schemaläggning*, *automatisk schemaläggning* eller *schemaläggning med AI*: systemet tar det tunga, regelstyrda räknandet, så planeraren kan granska, justera och besluta.
+Bemanningsplanering med superintelligens (SI) betyder att ett system först räknar fram hur många medarbetare med vilken kompetens som behövs, och sedan lägger schemaförslag. Förslagen ska hålla sig inom arbetstidslagen, kollektivavtal och medarbetarnas önskemål. Planeraren granskar, justerar och beslutar.
 
-Målet är enkelt: **rätt person på rätt plats vid rätt tid** – på sekunder i stället för timmar i kalkylark.
+Samma arbete kallas också automatisk schemaläggning eller schemaläggning med SI. Grundidén är densamma: systemet tar det regelstyrda räknandet, människan tar prioriteringarna och undantagen. Målet är rätt person på rätt plats vid rätt tid, utan att schemat byggs rad för rad i ett kalkylark.
 
-## Bemanningsplanering AI – system och verktyg
+SI är 4days.ai:s ord för tekniken bakom förslagen. Vi påstår inte att ett schemaverktyg i sig är superintelligens. Det är ett system som kan räkna på regler, behov och önskemål, om ni har lagt in dem.
 
-När folk söker *bemanningsplanering system* eller *bemanningsplanering verktyg* menar de oftast samma sak: en lösning som tar emot behov, regler och personaldata och ger schemaförslag. Marknaden kan delas in så här:
+## Bemanningsplanering eller schemaläggning – vad är skillnaden?
 
-- **Workforce management-system** – breda plattformar för schema, tid och bemanning i skiftverksamhet.
-- **Nischade AI-schemaläggare** – byggda för t.ex. vård, skola eller restaurang med branschregler inbyggda.
-- **Lättare AI-kalenderverktyg** – för kontor: mötesbokning, fokustid och belastningsbalans.
+Orden används ofta som om de vore samma sak. Det är de inte. Bemanningsplaneringen säger hur stort behovet är. Schemaläggningen säger vem som täcker det.
 
-Vi på 4days.ai säljer inte ett eget schemaläggningssystem. Vi hjälper er kartlägga behovet, välja rätt typ av verktyg och införa det så att tidsvinsten blir verklig – inte bara en ny licens.
+Bemanningsplanering och schemaläggning svarar på olika frågor.
 
-## Vad är AI-schemaläggning?
+|  | Bemanningsplanering | Schemaläggning |
+| --- | --- | --- |
+| Fråga | Hur många, med vilken kompetens, behövs? | Vem jobbar vilket pass? |
+| Tidshorisont | Veckor till säsong, ibland ett eller flera kvartal. | Den kommande schemaperioden, ofta några veckor. |
+| Underlag | Historik, bokningar, beläggning och budget. | Bemanningen, avtal, tillgänglighet och önskemål. |
+| Vem som äger den | Verksamheten, ofta en enhetschef. | Den som lägger passen. |
+| När det går fel | Över- eller underbemanning: folk saknas, eller står över. | Rätt personer på fel tid, eller ett schema som bryter mot vila och avtal. |
 
-**AI-schemaläggning** innebär att artificiell intelligens skapar och optimerar arbetsscheman automatiskt. Systemet får veta era förutsättningar – bemanningsbehov, kompetenser, tillgänglighet, arbetstidslag och kollektivavtal – och genererar sedan färdiga schemaförslag på sekunder. Planeraren slipper bygga schemat rad för rad och kan i stället granska, justera och besluta.
+En **bemanningsplan** är underlaget: hur många personer med vilken kompetens som behövs, var och när, per dag, vecka eller säsong. **Schemaplanering** är steget där passen ritas. **Bemanningsoptimering** är när passen justeras mot regler, kostnad och fördelning. Schemaläggningen är det färdiga svaret.
 
-Begreppen används ofta blandat: *AI-schemaläggning*, *schemaläggning med AI*, *automatisk schemaläggning* och *AI-driven bemanningsplanering* syftar i praktiken på samma grundidé – att låta ett system ta den tunga, regelstyrda delen av schemapusslet, så att människan kan fokusera på prioriteringar och undantag.
+Så tar ni fram planen:
 
-## Digital, automatisk eller AI-driven schemaläggning – vad är skillnaden?
+1. **Kartlägg behovet.** Hur varierar belastningen per timme, dag och säsong? Utgå från historik: bokningar, beläggning, försäljning eller ärendevolymer.
+2. **Definiera kraven.** Vilka kompetenser, behörigheter och roller måste finnas på plats vid varje given tid?
+3. **Inventera resurserna.** Vilka medarbetare finns, med vilka avtal, vilken tillgänglighet och vilka önskemål?
+4. **Matcha och följ upp.** Sätt en nivå som täcker behovet utan onödig överkapacitet, och revidera när verkligheten avviker.
 
-Tre begrepp som ofta blandas ihop, men som beskriver olika mognadsnivåer:
+Steg 1 och steg 4 är räknetunga. Det är där SI gör mest nytta. Planen ska uppdateras när nya data kommer in, inte ligga kvar som en årsprodukt.
 
-- **Digital schemaläggning** – schemat byggs i ett system i stället för på papper eller i Excel, men fortfarande manuellt. Systemet är en digital anslagstavla.
-- **Automatisk schemaläggning** – systemet genererar scheman utifrån regler ni definierat: bemanningsbehov per pass, kompetenskrav, vilotider och tillgänglighet. Ni sätter ramarna, systemet räknar.
-- **AI-driven schemaläggning** – lägger till prognoser och maskininlärning. Systemet förutsäger behovet utifrån historik, säsong och bokningar, optimerar mot flera mål samtidigt (kostnad, täckning, rättvisa) och blir bättre över tid.
+## Vad är skillnaden mellan manuell, mallbaserad och AI-driven schemaläggning?
 
-De flesta verksamheter som "lägger schema med AI" idag använder en kombination av nivå två och tre: automatisk schemagenerering med AI-baserade behovsprognoser ovanpå.
+Tre sätt att lägga samma schema. Skillnaden är vem som räknar, och vad som händer när något ändras.
 
-## Hur hänger bemanningsplanering och schemaläggning ihop?
+### Manuell schemaläggning
 
-Bemanningsplanering handlar om att matcha tillgänglig personal mot verksamhetens behov över tid – ett steg före själva schemaläggningen. Med AI menar vi att använda maskininlärning och automatisering för att **prognostisera behovet** och **generera eller optimera scheman** – med hänsyn till kompetens, tillgänglighet, arbetstidslag och kollektivavtal. Bemanningsplanering med AI och AI-schemaläggning hänger ihop: prognosen säger *hur många och vilka* som behövs, schemaläggningen säger *vem som jobbar när*.
+En person bygger varje rad, på papper eller i ett kalkylark. Varje sjukdag, varje önskemål och varje regel räknas om för hand. Det leder till samma problem om och om igen: det tar tid, behovet är lätt att missa när det varierar, sista-minuten-ändringar löses med rundringning, vilotider är lätta att förbise, obekväma pass fördelas ojämnt, och kunskapen om hur schemat brukar läggas sitter hos en enda person. Det fungerar i ett litet team med stabilt behov. Det blir skört när passen är många.
 
-## Vad är en bemanningsplan – och hur gör man en?
+### Mallbaserad schemaläggning
 
-En **bemanningsplan** är dokumentet (eller datamodellen) som beskriver hur många personer med vilken kompetens som behövs, var och när – ofta per dag, vecka och säsong. Den är grunden för all schemaläggning och kallas ibland även *schemaplanering* eller *bemanningsöversikt*. Så tar ni fram en:
+Ni utgår från ett färdigt mönster: ett rullande grundschema, en kopierad vecka eller en mall där namnen fylls i. Mallen sparar tid när veckorna liknar varandra. Den räknar inte om när frånvaron ökar, när behovet skiftar eller när en regel ändras. Undantagen hamnar ändå på planeraren. En mall är ett formulär, inte en beräkning.
 
-1. **Kartlägg behovet.** Hur varierar arbetsbelastningen per timme, dag och säsong? Utgå från historik – försäljning, bokningar, ärendevolymer eller beläggning.
-2. **Definiera kraven.** Vilka kompetenser, behörigheter och roller måste finnas på plats vid varje given tidpunkt?
-3. **Inventera resurserna.** Vilka medarbetare finns, med vilka avtal, tillgänglighet och önskemål?
-4. **Matcha och följ upp.** Sätt bemanningsnivåer som täcker behovet utan onödig överkapacitet – och revidera planen löpande när verkligheten avviker.
+### AI-driven schemaläggning
 
-Det är här AI gör störst skillnad: steg 1 (behovsprognosen) och steg 4 (den löpande matchningen) är räknetunga och datadrivna – precis det maskininlärning är bra på. En AI-stödd bemanningsplan uppdaterar sig i praktiken själv när nya data kommer in, i stället för att bli en årlig pappersprodukt.
+I den här texten kallar vi nivån SI-driven. Systemet räknar fram ett eller flera förslag utifrån behov, kompetens, viloregler, avtal och önskemål. Planeraren granskar och publicerar. Skillnaden mot mallen är att förslaget kan räknas om när förutsättningarna ändras, i stället för att ni flyttar pass för hand.
 
-## Vanliga utmaningar i bemanningsplanering idag
+De flesta verksamheter som lägger schema med stöd av SI använder inte bara en nivå. Ofta finns en mall eller ett grundmönster kvar, och SI räknar fram varianterna ovanpå.
 
-För många verksamheter är schemaläggning fortfarande ett manuellt pussel i kalkylark. Det leder till återkommande problem:
+## Digital, automatisk eller AI-driven schemaläggning?
 
-- **Tidskrävande** – planerare lägger ofta många timmar i veckan bara på att få ihop schemat. I vården kan en termins läkarschema ta veckor av heltidsarbete att lägga för hand.
-- **Över- och underbemanning** – svårt att träffa rätt när behovet varierar, vilket kostar pengar eller sänker servicenivån.
-- **Sista-minuten-ändringar** – sjukfrånvaro och toppar tvingar fram snabba omplaneringar och dyra vikarielösningar.
-- **Regelverk** – vilotider, arbetstidslag och kollektivavtal är lätta att missa när det görs manuellt.
-- **Rättvisa och trivsel** – ojämnt fördelade pass och obekväma tider påverkar arbetsmiljön och personalomsättningen.
-- **Personberoende** – kunskapen om hur schemat "brukar läggas" sitter ofta i huvudet på en enda person.
+Tre andra ord beskriver mognaden, inte branschen. Nivå tre heter SI-driven i den här texten.
 
-## Så fungerar automatisk schemaläggning i praktiken
+Tre mognadsnivåer, från digital anslagstavla till förslag som bygger på en prognos.
 
-Grundidén är inte att systemet ska bestämma åt er, utan att automatisera det som är regelstyrt och repetitivt. Att **lägga schema med AI** ser i praktiken ut så här:
+| Nivå | Vad systemet gör | Vad planeraren gör |
+| --- | --- | --- |
+| Digital schemaläggning | Visar schemat i ett system i stället för på papper. Passen läggs fortfarande för hand. | Bygger varje rad. |
+| Automatisk schemaläggning | Genererar ett schema utifrån regler ni har lagt in: behov per pass, kompetens, vila och tillgänglighet. | Sätter ramarna och granskar. |
+| SI-driven schemaläggning | Lägger till en prognos av behovet och väger flera mål samtidigt, till exempel täckning, kostnad och fördelning av obekväma pass. | Granskar förslaget och beslutar. |
 
-1. **Ni definierar förutsättningarna.** Bemanningsbehov per enhet och tid på dygnet, kompetens- och behörighetskrav, arbetstidsregler, kollektivavtal och medarbetarnas tillgänglighet och önskemål.
-2. **Systemet genererar schemaförslag.** AI:n räknar fram ett eller flera scheman som uppfyller reglerna och optimerar mot era mål – täckning, kostnad och rättvis fördelning av pass. Det som tog timmar tar sekunder.
-3. **Planeraren granskar och beslutar.** AI:n känner inte till gruppdynamik, enskilda livssituationer eller verksamhetens kultur. Planeraren fintrimmar och godkänner – med full insyn i varför förslaget ser ut som det gör.
-4. **Medarbetarna får självservice.** Pass syns i mobilen, byten och önskemål hanteras i systemet, och vid frånvaro föreslås ersättare automatiskt utifrån kompetens och regler.
+En digital anslagstavla blir inte automatisk för att den ligger i molnet. Automatisk blir inte SI-driven för att den följer regler. Prognosen är skillnaden: systemet uppskattar hur stort behovet blir, i stället för att ni skriver in varje timme för hand.
 
-## Så hjälper AI – konkret
+## Så lägger ni schema med AI – steg för steg
 
-Rätt använd tar AI över det repetitiva och lyfter fram besluten som faktiskt kräver en människa:
+Grundidén är inte att systemet bestämmer åt er. Det tar det som är regelstyrt. Flödet är detsamma oavsett verktygstyp.
 
-- **Behovsprognos** – AI förutsäger bemanningsbehovet utifrån historik, säsong, bokningar, försäljningsdata och andra signaler.
-- **Automatisk schemaläggning** – förslag på scheman genereras på sekunder i stället för timmar.
-- **Kompetensmatchning** – rätt kompetens och behörighet hamnar på rätt pass.
-- **Frånvaro och förändring** – vid sjukdom föreslås ersättare automatiskt utifrån regler och tillgänglighet.
-- **Scenarier och simulering** – testa "vad händer om" innan beslut fattas.
-- **Regelefterlevnad** – arbetstidslag och avtal byggs in så att förslagen redan är compliant.
+1. **Behov.** Hur många med vilken kompetens, per enhet och tid på dygnet. Underlaget kan vara historik, bokningar eller beläggning.
+2. **Regler.** Arbetstid, avtal, behörighet, minsta bemanning och de outtalade regler som i dag sitter i väggarna. Skriv ner dem innan ni ber systemet lägga ett schema.
+3. **Förslag från SI.** Systemet räknar fram ett eller flera scheman mot era mål: täckning, kostnad och fördelning av pass.
+4. **Planeraren granskar.** SI känner inte gruppdynamik, enskilda livssituationer eller verksamhetens kultur. Människan justerar och godkänner, och ska kunna se varför förslaget ser ut som det gör.
+5. **Publicering.** Passen syns för medarbetarna. Önskemål och byten kan hanteras i systemet. Vid frånvaro kan ett nytt förslag räknas fram utifrån kompetens och regler.
 
-## AI-schemaläggning i olika branscher
+## Kan AI lägga schema enligt arbetstidslagen och kollektivavtal?
 
-### Vård, omsorg och kommuner
+SI kan lägga in viloregler, övertidsgränser och avtalsvillkor som hårda villkor, så att ett förslag som bryter mot dem kan stoppas innan det publiceras. Det händer bara om reglerna är rätt inlagda. Ni ansvarar för att schemat som publiceras följer lagen och ert avtal. Ett system ersätter inte den bedömningen.
 
-Här är schemapusslet som mest komplext: dygnet-runt-verksamhet, strikta kompetenskrav och flera kollektivavtal. Flera svenska kommuner använder redan AI-driven schemaläggning i äldreomsorgen – [Tjörns kommun rapporterar via SKR](https://dela.skr.se/losningar/ai-schemalaggning-omsorg/) mindre administration, bättre individanpassning och mer tid till omsorgsarbetet, utan att några schemaregler ändrades. Inom sjukvården startade ortopeden vid Östersunds sjukhus 2023 en pilot med AI-schemaoptimering. En termins schema för ett 40-tal läkare tog tidigare en överläkare cirka två heltidsveckor att lägga, enligt [Dagens Medicin](https://www.dagensmedicin.se/vardens-styrning/digitalisering/sjukhus-testar-att-optimera-scheman-med-ai-fran-flygindustrin/) (21 december 2023) och [Sjukhusläkaren](https://www.sjukhuslakaren.se/optimalt-nar-ai-far-gora-schemat/).
+### Arbetstidslagen: dygnsvila, veckovila och övertid
 
-### Restaurang och besöksnäring
+Arbetstidslagen styr hur mycket man får arbeta och vilken vila man ska ha. På [Arbetsmiljöverkets sida om arbetstidslagen](https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/om-arbetstidslagen/) sammanfattas de vanliga nivåerna så här: ordinarie arbetstid 40 timmar per vecka, dygnsvila minst 11 timmars sammanhängande ledighet under varje period om 24 timmar, och veckovila minst 36 timmars sammanhängande ledighet under varje period om sju dagar. Den sammanlagda arbetstiden under en period av sju dagar får som mest uppgå till 48 timmar, räknat över en beräkningsperiod om fyra månader.
 
-Behovet styrs av bokningar, väder och säsong, och kollektivavtalen (OB-tillägg, vilotider, beräkningsperioder) är snåriga. AI som prognostiserar gästflödet och bemannar därefter kapar både schemaläggningstid och onödiga personalkostnader.
+Allmän övertid får tas ut med högst 200 timmar per kalenderår. Extra övertid får tas ut med högst 150 timmar per kalenderår. Allmän och extra övertid får tillsammans uppgå till högst 48 timmar under en period om fyra veckor eller 50 timmar under en kalendermånad. Ingen ska arbeta mer än fem timmar i följd utan rast, och under rasten har man rätt att lämna arbetsplatsen. Tillfälliga avvikelser från vilan kan finnas när något särskilt inte har kunnat förutses, med kompensationsledighet. Läs detaljerna hos Arbetsmiljöverket.
 
-### Handel och logistik
+Kollektivavtal kan avvika från lagen, helt eller i vissa delar, i den utsträckning lagens tredje paragraf tillåter. Då gäller avtalet i stället. Arbetsmiljöverket har tillsyn över lagen, inte över kollektivavtal.
 
-Försäljnings- och volymdata gör branschen idealisk för AI-prognoser: systemet lär sig mönster per veckodag, kampanj och säsong och föreslår bemanning som träffar behovet i stället för att gissa.
+Det här är en allmän beskrivning av lagen, inte juridisk rådgivning och inte en granskning av ert kollektivavtal. Vilka regler som gäller hos er står i avtalet och i lagen.
+
+## Fyra typer av verktyg för automatisk schemaläggning
+
+Köparen söker oftast ett system. Leverantörerna beskriver sitt eget. Här är samma marknad uppdelad på typ, så att ni kan ställa samma frågor till alla. Inga varumärken.
+
+Fyra verktygstyper. Jämförelsen gäller typen, inte ett namngivet system.
+
+| Typ | Vad det är | Passar för | Styrkor | Begränsningar | Fråga att ställa |
+| --- | --- | --- | --- | --- | --- |
+| Schemaläggning i löne- eller tidsystemet | En schemamodul i det system ni redan har för lön, tid eller HR. | Verksamheter som vill ha en enda datakälla och där schemat är ganska stabilt. | Lön, OB och avtal kan räknas i samma system. Inget nytt system att införa. | Optimering och prognos är ofta enklare. | Kan modulen generera schemaförslag, eller bara visa schemat? |
+| Fristående schemaverktyg | En molntjänst eller app för schema, passbyten och önskemål. | Små och medelstora team, butik, restaurang och enklare skift. | Snabbt igång, och ofta en bra vy för medarbetaren. | Behöver kopplas till lön och tid. Avtalsstödet varierar. | Hur förs tiden över till vårt lönesystem, och vilka avtal stöds? |
+| SI-optimering och prognos | En optimerings- eller prognosmotor, fristående eller ovanpå ett annat system, som räknar fram schemaförslag och bemanningsbehov. | Dygnet runt-verksamhet, många regler och varierande behov, till exempel vård, omsorg och logistik. | Störst tidsvinst när schemat är komplext. Jämför det enskilda fallet Tjörns kommun via [SKR Dela](https://dela.skr.se/losningar/ai-schemalaggning-omsorg/). | Kräver ren data, noggrann regelinläggning och integrationer. Data kan vara låst i andra system, vilket [Göteborgsregionens innovationsarena](https://innovationsarena.goteborgsregionen.se/mojligheter-och-utmaningar-i-ai-genererad-schemalaggning/) beskriver. | Kan ni lägga vårt verkliga schema med våra regler i en pilot, före avtal? |
+| Egen lösning | Ett kalkylark med automation, en egen optimeringsmodell eller en SI-agent mot system ni redan har. | Unika regler, få anställda eller en tydlig nisch. | Full kontroll, och ingen licens per anställd. | Underhåll, personberoende, och svårt att visa att reglerna följs. | Vem underhåller den när personen som byggde den slutar? |
+
+Kunskapsbolag utan skift behöver sällan ett schemasystem. Där gör SI mer nytta i kalendern: mötesbokning, fokustid och en jämnare belastning. Det beskriver vi i guiden om [verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid).
+
+## Checklista: så väljer ni system för schemaläggning
+
+Använd listan som kravmall inför en pilot. Ju fler punkter ni kan stämma av mot era egna scheman, desto mindre risk att ni köper en licens som inte kan lägga just ert schema.
+
+- **Lag och avtal som hårda villkor.** Dygnsvila, veckovila, beräkningsperiod, OB och andra ersättningar, plus lokala avtal.
+- **De outtalade reglerna.** [Tjörns kommun rekommenderar via SKR](https://dela.skr.se/losningar/ai-schemalaggning-omsorg/) att ni skriver ner reglerna som i dag sitter i väggarna, före upphandlingen.
+- **Integration.** Lön, tid och HR via öppna gränssnitt, och vad som händer om data är låst. [Göteborgsregionens innovationsarena](https://innovationsarena.goteborgsregionen.se/mojligheter-och-utmaningar-i-ai-genererad-schemalaggning/) beskriver hur lön, detaljplanering, bemanning och schema måste kunna utbyta uppgifter.
+- **Insyn.** Kan planeraren överstyra förslaget och se varför det ser ut som det gör?
+- **Medarbetaren.** Önskemål, passbyten och en vy i mobilen eller på webben.
+- **Rättvisa.** Hur mäts den, till exempel fördelningen av obekväma pass?
+- **Prognos.** Vilken data används, och hur ofta uppdateras den?
+- **Dataskydd.** Var lagras personuppgifterna, finns personuppgiftsbiträdesavtal, och vilka säkerhetscertifieringar finns?
+- **Kostnad och utträde.** Total kostnad, se nästa avsnitt, plus villkor för uppsägning och export av data.
+- **Pilot.** Era egna scheman innan avtal, och referenser i samma bransch.
+- **Dagens schemaläggare.** Involvera dem tidigt. Det är samma råd från Tjörn via SKR.
+
+Börja med en kartläggning av hur schemat läggs i dag, prova på en enhet, mät tid och täckning, och skala först därefter. Hur en sådan kartläggning går till beskriver vi under [automatisering för företag](https://www.4days.ai/ai-automatisering-foretag).
+
+## Vad kostar automatisk schemaläggning?
+
+Prismodellerna ser i praktiken ut så här: per anställd och månad, per enhet eller som licens, och vid upphandling ofta en införandeavgift utöver licensen. Den totala kostnaden är licens plus införande, integration, regelinläggning, utbildning och er egen tid.
+
+Vi anger inga belopp i kronor. Vi har inte hittat en oberoende källa med prisintervall som gäller oavsett bransch och avtal.
+
+Ett hypotetiskt räkneexempel, inte en utlovad besparing: ta era planeringstimmar per schemaperiod och multiplicera med er egen timkostnad. Ställ det mot den totala kostnaden, och räkna bara med den tid som faktiskt försvinner när planeraren fortfarande ska granska. Effekten beror på volym, regler och nuläge. Därför börjar vi med en kartläggning innan vi säger något om tid.
+
+## Finns det gratis AI-schemaläggning?
+
+Gratismallar, gratisnivåer och provperioder finns. De duger för ett litet team eller för privat bruk, till exempel ett enkelt veckoschema hemma eller i en förening. För personalscheman saknar de oftast avtalsregler, löneunderlag och en koppling till lön och tid.
+
+SI kan hjälpa er att fylla en mall. Det är inte samma sak som ett system som känner era vilotider och ert kollektivavtal. Vill ni prova, gör det på en avgränsad period med era egna scheman, och jämför förslaget mot reglerna innan ni publicerar det. I skolan är skillnaden extra tydlig, se avsnittet om skola nedan: en gratismall kan rita ett lektionsrutnät utan att lägga ett personalschema.
+
+## Schemaläggning med SI per bransch
+
+### Vård och omsorg
+
+Här är pusslet som mest komplext: dygnet runt, strikta kompetenskrav och flera kollektivavtal. [Tjörns kommun rapporterar via SKR](https://dela.skr.se/losningar/ai-schemalaggning-omsorg/) mindre administration, bättre individanpassning och mer tid till omsorgsarbetet, utan att några schemaregler ändrades. På samma sida anger kommunen att den schematekniska tiden gick från 100 timmar per schemaperiod till mindre än 1 timme passiv tid, att övertidstimmarna blev 70 procent färre och vikarietimmarna 30 procent färre. Det är ett fall, och siffrorna kommer från kommunen själv.
+
+Inom sjukvården startade ortopeden vid Östersunds sjukhus 2023 en pilot med SI-stöd i schemaoptimeringen. En termins schema för ett 40-tal läkare tog tidigare en överläkare cirka två heltidsveckor att lägga, enligt [Dagens Medicin](https://www.dagensmedicin.se/vardens-styrning/digitalisering/sjukhus-testar-att-optimera-scheman-med-ai-fran-flygindustrin/) (21 december 2023) och [Sjukhusläkaren](https://www.sjukhuslakaren.se/optimalt-nar-ai-far-gora-schemat/).
+
+### Kommun
+
+Kommunal verksamhet har ofta samma pussel som vården: dygnet runt, kompetenskrav och kollektivavtal. Det offentligt beskrivna fallet med siffror är Tjörns kommun, via SKR Dela, ovan. Vi generaliserar inte de siffrorna till andra kommuner.
+
+### Skola
+
+Ett lektionsschema och ett personalschema är två olika problem. Lektionsschemat fördelar lärare, klasser, salar och ämnen över veckan. Personalschemat svarar på vem som arbetar vilket pass, inom arbetstidslagen och avtalet. En gratismall kan rita ett lektionsrutnät. Den lägger inte ett personalschema med dygnsvila, veckovila och lokala avtal. Fråga därför vad verktyget faktiskt lägger, innan ni utgår från att det löser bemanningen i skolan.
+
+### Handel och butik
+
+Behovet följer veckodag, kampanj och säsong. Ett system som prognostiserar utifrån försäljning kan föreslå bemanning närmare det faktiska flödet. Det ersätter inte ert avtal om obekväm tid och vila.
+
+### Restaurang
+
+Bokningar, väder och säsong flyttar behovet. Avtalen är ofta detaljerade kring vila och obekväm tid. SI kan räkna fram ett förslag. Planeraren måste fortfarande kunna se vilka regler som styrde det.
+
+### Logistik och produktion
+
+Volym per timme, arbetsstation och behörighet styr bemanningen. Prognosen är användbar när inflödet varierar. Kompetensen per station måste vara inlagd, annars ser förslaget bemannat ut utan att arbetet kan utföras.
 
 ### Kundtjänst och kontor
 
-Även utan skiftarbete finns vinster: AI-assistenter kan boka möten, skydda fokustid och balansera arbetsbelastning i kalendrar. Det är en enklare form av schemaläggning med AI som ofta är första steget för kunskapsintensiva bolag – läs mer i vår guide om [AI-verktyg som sparar tid](https://www.4days.ai/ai-verktyg-spara-tid).
+Utan skift är vinsten oftast en annan: SI i kalendern, som bokar möten, skyddar fokustid och jämnar ut belastningen. Det är ett enklare första steg för kunskapsintensiva bolag. Läs mer om [verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid).
 
-## Kollektivavtal, arbetstidslagen och rättvisa scheman
+## Vad schemaläggning med SI inte löser
 
-En vanlig oro är att AI ska "köra över" regler eller medarbetare. I praktiken är det tvärtom en av de största vinsterna: **arbetstidslagens** krav på dygnsvila, veckovila och raster samt villkoren i era kollektivavtal byggs in som hårda regler i systemet. Förslag som bryter mot reglerna flaggas eller stoppas *innan* schemat publiceras – något som är svårt att garantera när scheman läggs för hand.
-
-AI kan dessutom optimera för **rättvisa**: jämn fördelning av obekväma pass, hänsyn till individuella önskemål och förutsägbara scheman. Erfarenheterna från svenska verksamheter visar att medarbetarna ofta får *större* möjlighet att påverka sitt schema än tidigare, eftersom systemet kan hantera fler individuella önskemål än en mänsklig planerare hinner med.
-
-## Vilka verktyg finns för AI-schemaläggning?
-
-Marknaden kan grovt delas in i tre kategorier – vilken som passar beror helt på er verksamhet:
-
-- **Workforce management-plattformar** – breda system för schemaläggning, tidrapportering och bemanningsoptimering, byggda för skiftverksamheter med många medarbetare och komplexa avtal.
-- **Nischade AI-schemaläggare** – specialiserade lösningar för en bransch, till exempel vård och omsorg eller restaurang, med branschens regelverk och behovsmönster inbyggda.
-- **AI-kalenderassistenter** – verktyg för kontorsmiljöer som automatiskt bokar möten, skyddar fokustid och omplanerar uppgifter i individens kalender.
-
-Vi på 4days.ai säljer inget schemaläggningssystem – vi hjälper er att kartlägga behovet, välja rätt kategori av verktyg och införa det så att tidsvinsten faktiskt realiseras. Läs mer om hur vi arbetar med [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag).
-
-## Checklista: är ni redo för automatisk schemaläggning?
-
-Ju fler av påståendena nedan som stämmer, desto större blir vinsten med AI-schemaläggning:
-
-- Schemat läggs idag manuellt i kalkylark eller på papper.
-- En eller flera personer lägger flera timmar i veckan på schemapusslet.
-- Behovet varierar över dag, vecka eller säsong.
-- Ni har kompetens- eller behörighetskrav som måste täckas på varje pass.
-- Sjukfrånvaro löses idag med rundringning och improvisation.
-- Ni har haft (eller oroar er för) brott mot vilotider eller avtalsregler.
-- Medarbetare upplever schemat som orättvist eller oförutsägbart.
-
-Stämmer tre eller fler? Då finns det med stor sannolikhet timmar att hämta varje vecka.
-
-## Vinsterna
-
-När det repetitiva automatiseras frigörs tid och kvaliteten höjs. I praktiken handlar det om mindre administration för planerarna, bättre träffsäkerhet i bemanningen (mindre onödig över- och undertid), snabbare hantering av förändringar, färre regelbrott och ofta en mer rättvis och förutsägbar arbetsmiljö – vilket i sin tur minskar personalomsättningen.
-
-**Obs:** Effekten beror helt på era volymer, regler och nuläge. Därför börjar vi alltid med en kartläggning innan vi lovar siffror – läs mer om [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag).
+- **Data som är låst.** Lön, detaljplanering, bemanning och schema måste kunna utbyta uppgifter, i praktiken via öppna gränssnitt. [Göteborgsregionens innovationsarena](https://innovationsarena.goteborgsregionen.se/mojligheter-och-utmaningar-i-ai-genererad-schemalaggning/) beskriver hur stora system kan begränsa den åtkomsten, så att den manuella handpåläggningen blir kvar.
+- **Gruppdynamik och enskilda livssituationer.** Det ser inte systemet.
+- **En fel definition av rättvisa.** Om rättvist bara betyder jämn fördelning av kvällar kan schemat ändå upplevas som orättvist. Ni måste säga vad rättvisa betyder hos er.
+- **Behovet av en ansvarig planerare.** Utan en människa som granskar och publicerar blir förslaget en svart låda.
 
 ## Bemanningsplanering och 4-dagarsvecka
 
-Här blir det extra intressant för oss på 4days.ai. I kunskapsintensiva bolag är det ofta möten och administration som står i vägen för en kortare arbetsvecka. I **bemanningsstyrda verksamheter** – vård, handel, logistik – är det i stället **schemat självt** som är flaskhalsen. När AI optimerar bemanningen och frigör planerarnas tid blir det möjligt att pröva en kortare arbetsvecka även där, utan att tappa täckning eller kvalitet. Det är precis samma grundtanke som i [100-80-100-modellen](https://www.4days.ai/100-80-100-modellen): full lön, mindre tid, bibehållen output.
+I kunskapsintensiva bolag är det ofta möten och administration som står i vägen för en kortare arbetsvecka. I bemanningsstyrda verksamheter, vård, handel och logistik, är det schemat som är flaskhalsen. När SI tar det regelstyrda räknandet frigörs planeringstid, och täckningen kan prövas på en kortare vecka utan att ni antar att den håller.
 
-## Så kommer ni igång
+Vill ni veta vad forskningen faktiskt visar? Läs [fyradagarsvecka i Sverige – vad studien visar](https://www.4days.ai/4-dagarsvecka-sverige).
 
-Vi arbetar i samma fyra steg som för all AI-automatisering: kartläggning av hur bemanningen planeras idag, en avgränsad pilot på ett team eller en enhet, mätning av effekt (tid, täckning, kostnad, trivsel) och därefter uppskalning. Att börja smått och mäta är viktigare än att köpa den största lösningen direkt. Vill ni se vilka andra [AI-verktyg som sparar tid](https://www.4days.ai/ai-verktyg-spara-tid) som kan komplettera?
+Frigjord planeringstid är bara en del av kalkylen. Se hur ni [räknar på lönsamheten med fyradagarsvecka](https://www.4days.ai/4-dagarsvecka-lonsamhet).
 
-## Vanliga frågor om AI-schemaläggning
+”Det går inte i skiftverksamhet” är en av de [vanliga myterna om kortare arbetsvecka](https://www.4days.ai/kortare-arbetsvecka-myter).
 
-### Vad är AI-schemaläggning?
+Grundtanken är densamma som i [modellen med full lön, 80 % tid och full output](https://www.4days.ai/100-80-100-modellen). Sloganen, citerad ordagrant: ”En dag mer frihet. Med AI.”
 
-Att artificiell intelligens skapar och optimerar arbetsscheman automatiskt, utifrån bemanningsbehov, kompetens, tillgänglighet, arbetstidslagen och kollektivavtal. Färdiga förslag genereras på sekunder i stället för att byggas för hand.
-
-### Vad är skillnaden mellan digital, automatisk och AI-driven schemaläggning?
-
-Digital = schemat byggs i ett system men manuellt. Automatisk = systemet genererar scheman utifrån era regler. AI-driven = systemet förutsäger dessutom behovet med prognoser och blir bättre över tid.
-
-### Kan AI lägga schema enligt kollektivavtal och arbetstidslagen?
-
-Ja. Vilotider, raster, maxtimmar och avtalsvillkor byggs in som hårda regler, och förslag som bryter mot dem flaggas eller stoppas innan schemat publiceras.
+## Vanliga frågor
 
 ### Vad är bemanningsplanering med AI?
 
-Att använda AI för att prognostisera bemanningsbehovet och automatiskt föreslå eller optimera scheman – med hänsyn till kompetens, tillgänglighet, arbetstidsregler och kollektivavtal.
+Bemanningsplanering med superintelligens (SI) betyder att ett system räknar fram hur många medarbetare med vilken kompetens som behövs, och sedan lägger schemaförslag inom arbetstidslagen, kollektivavtal och medarbetarnas önskemål. Planeraren granskar och beslutar. Samma arbete kallas också automatisk schemaläggning eller schemaläggning med SI. Det ger mest där behovet varierar och schemat är ett pussel.
 
-### Vad är en bemanningsplan?
+### Vad är skillnaden mellan bemanningsplanering och schemaläggning?
 
-Planen som beskriver hur många personer med vilken kompetens som behövs, var och när. Med AI-stöd uppdateras den löpande utifrån ny data i stället för att bli en statisk årsprodukt.
+Bemanningsplanering svarar på hur många personer med vilken kompetens som behövs, ofta över veckor och säsonger. Schemaläggning svarar på vem som jobbar vilket pass. Bemanningen ägs av verksamheten. Schemat ägs av den som lägger passen. När bemanningen är fel saknas folk, eller står folk över. När schemat är fel är rätt personer på fel tid. En bemanningsplan är underlaget. Schemaplanering ritar passen. Bemanningsoptimering justerar dem mot regler och mål.
 
-### Vilka verksamheter passar det för?
+### Kan AI lägga schema enligt arbetstidslagen och kollektivavtal?
 
-Framför allt verksamheter med varierande behov och skiftarbete: vård och omsorg, handel, logistik, kundtjänst, restaurang, tillverkning och kommunal verksamhet. Ju mer komplext schemapusslet är, desto större nytta.
+SI kan lägga in viloregler, övertidsgränser och avtalsvillkor som hårda villkor, så att ett förslag som bryter mot dem kan stoppas innan det publiceras. Det förutsätter att reglerna är rätt inlagda. Arbetsgivaren ansvarar för schemat. Kollektivavtal kan avvika från lagen. Dygnsvila, veckovila och övertid beskrivs allmänt hos Arbetsmiljöverket. Det här är ingen juridisk bedömning av ert avtal.
 
-### Ersätter AI schemaläggaren?
+### Vilka typer av system finns för automatisk schemaläggning?
 
-Nej. AI tar över det repetitiva räknandet och genererar förslag, men människan fattar besluten och hanterar undantag.
+Det finns fyra typer, och ingen leverantör är utpekad. Schemaläggning i löne- eller tidsystemet, när allt ska ligga i systemet ni redan har. Fristående schemaverktyg, när ett team vill komma igång snabbt. SI-optimering och prognos, när reglerna är många och behovet varierar. Egen lösning, till exempel ett kalkylark med automation, när reglerna är unika. Passformen beror på data, avtal och hur komplext pusslet är.
 
 ### Vad kostar automatisk schemaläggning?
 
-De flesta system prissätts per medarbetare och månad. Den viktiga kalkylen är tidsbesparingen: kapar AI merparten av 5–10 planeringstimmar i veckan, plus minskad övertid, betalar sig systemet ofta snabbt.
+Priset sätts oftast per anställd och månad, per enhet eller som licens, ibland med en införandeavgift. Den totala kostnaden är licens plus införande, integration, regelinläggning, utbildning och er egen tid. Vi anger inga belopp i kronor, eftersom vi inte har en oberoende källa med prisintervall. Ett hypotetiskt räkneexempel är era planeringstimmar per period gånger er egen timkostnad. Det är ingen utlovad besparing.
 
-### Hur hänger det ihop med en 4-dagarsvecka?
+### Finns det gratis verktyg för att lägga schema med AI?
 
-I bemanningsstyrda verksamheter är schemat ofta det som gör en kortare arbetsvecka svår. När AI optimerar bemanningen frigörs tid – och en kortare arbetsvecka blir möjlig även där.
+Gratismallar, gratisnivåer och provperioder finns. De duger för ett litet team eller för privat bruk, till exempel ett enkelt veckoschema. För personalscheman saknar de oftast avtalsregler, löneunderlag och en koppling till lön och tid. SI kan fylla en mall. Det ersätter inte ett system som känner era vilotider och ert avtal. Prova på era egna scheman innan ni binder er.
+
+### Ersätter AI schemaläggaren?
+
+Nej. SI tar räknandet, människan besluten. Systemet kan ta fram förslag utifrån behov, regler och önskemål, men det känner inte gruppdynamik, enskilda livssituationer eller hur rättvisa ska tolkas hos er. Planeraren granskar, justerar och publicerar. Utan en ansvarig person blir schemat en svart låda, även om reglerna ser ut att vara inlagda.
+
+### Hur hänger schemaläggning med SI ihop med en 4-dagarsvecka?
+
+I kunskapsbolag är det ofta möten och administration som står i vägen för en kortare vecka. I vård, handel och logistik är det schemat. När SI tar det regelstyrda räknandet frigörs planeringstid, och täckningen kan prövas även om veckan blir kortare. Det är samma grundtanke som i modellen med full lön, 80 procent tid och full output. Effekten ska mätas hos er, inte antas i förväg.
+
+## Källor
+
+- [SKR Dela: Tjörns kommun om schemaläggning i äldreomsorgen](https://dela.skr.se/losningar/ai-schemalaggning-omsorg/). Siffrorna om tid, övertid och vikarier är kommunens egna, ett fall.
+- [Dagens Medicin, 21 december 2023](https://www.dagensmedicin.se/vardens-styrning/digitalisering/sjukhus-testar-att-optimera-scheman-med-ai-fran-flygindustrin/), om ortopeden vid Östersunds sjukhus.
+- [Sjukhusläkaren](https://www.sjukhuslakaren.se/optimalt-nar-ai-far-gora-schemat/), om samma pilot vid Östersunds sjukhus.
+- [Göteborgsregionens innovationsarena](https://innovationsarena.goteborgsregionen.se/mojligheter-och-utmaningar-i-ai-genererad-schemalaggning/), om att lön, detaljplanering, bemanning och schema måste kunna utbyta data.
+- [Arbetsmiljöverket: Om arbetstidslagen](https://www.av.se/arbetsmiljoarbete-och-inspektioner/lagar-och-regler-om-arbetsmiljo/om-arbetstidslagen/), inklusive dygnsvila, veckovila, övertid och att kollektivavtal kan avvika.
 
 ## Relaterade guider
 
-[AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag) – Vad som kan automatiseras, hur det går till och vad det kostar.
+[4-dagarsvecka i Sverige](https://www.4days.ai/4-dagarsvecka-sverige) – Vad studien och de svenska piloterna faktiskt visar.
+
+[4-dagarsvecka och lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet) – Så räknar ni på kostnad, tid och resultat.
 
 [AI-verktyg som sparar tid](https://www.4days.ai/ai-verktyg-spara-tid) – Verktygen som kapar mest tid på kontoret.
 
-[Alla guider](https://www.4days.ai/guider) – Samlad kunskapsbank om 4-dagarsvecka och AI.
+## Vill ni kartlägga er bemanningsplanering?
 
-## Vill ni effektivisera er bemanningsplanering?
-
-Berätta om era scheman och volymer – vi visar var AI-schemaläggning gör störst nytta hos just er.
+Berätta hur schemat läggs idag. Vi kartlägger var superintelligens kan ta det regelstyrda räknandet – utan att lova en siffra i förväg.
 
 [Prenumerera på nyhetsbrevet](https://www.4days.ai/#guide) [Boka 30 min intro](https://calendly.com/hello-4days/30min)

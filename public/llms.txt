@@ -27,7 +27,7 @@ Viktiga fakta:
 
 ## Guider och artiklar
 
-- [Alla guider](https://www.4days.ai/guider): Samlingssida med alla guider om 4-dagarsvecka, AI-agenter, AI-automatisering och AI-schemaläggning.
+- [Alla guider](https://www.4days.ai/guider): Samlingssida med guider om 4-dagarsvecka, AI-agenter och AI-automatisering.
 - [Bevispaketet](https://www.4days.ai/bevispaketet): Fem veckors mätning av vad AI ger i arbetstimmar hos er, med era egna siffror. Garanti: minst fyra sparade timmar per person och vecka, annars pengarna tillbaka.
 - [Fyra dagar, full lön, samma resultat?](https://www.4days.ai/boken): Bok av Joseph Tran. Vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet.
 - [Gratis guide: Hermes Agents](https://www.4days.ai/gratis-guide-hermes-agenter): Lead-magnet – kom igång med Hermes Agents för svenska bolag (e-post krävs).
@@ -36,7 +36,7 @@ Viktiga fakta:
 - [AI-verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid): Vilka AI-verktyg sparar mest tid – mejl, rapporter, möten, dataanalys, kundsupport och admin.
 - [4-dagarsvecka för IT- och konsultbolag](https://www.4days.ai/4-dagarsvecka-it-konsultbolag): Varför 4-dagarsvecka passar IT- och konsultbolag särskilt bra, och hur AI frigör fakturerbar tid.
 - [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper): Hur ledningsgrupper bör tänka kring AI-införande, steg för steg, och vanliga misstag att undvika.
-- [AI-schemaläggning och bemanningsplanering med AI](https://www.4days.ai/bemanningsplanering-ai): Komplett guide till automatisk schemaläggning och bemanningsplanering med AI – hur det fungerar, branschexempel, checklista och hur det gör en 4-dagarsvecka möjlig även i bemanningsstyrda verksamheter.
+- [Bemanningsplanering och automatisk schemaläggning med AI](https://www.4days.ai/bemanningsplanering-ai): Oberoende guide: så fungerar det, vilka typer av verktyg som finns, vad det kostar och hur ni väljer rätt.
 
 ## Juridik
 
