@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { HermesGuideForm } from "@/components/sections/hermes-guide-form";
 import { PageAiActions } from "@/components/page-ai-actions";
 import {
   BOOK_AMAZON_REL,
@@ -121,6 +120,9 @@ export function ArticlePage({ article }: { article: Article }) {
                     ) : (
                       article.author.name
                     )}
+                    {article.author.bylineDetail
+                      ? `, ${article.author.bylineDetail}`
+                      : null}
                   </span>
                 )}
                 {article.author && (publishedLabel || modifiedLabel) && (
@@ -236,40 +238,6 @@ export function ArticlePage({ article }: { article: Article }) {
             dangerouslySetInnerHTML={{ __html: article.body }}
           />
 
-          {agentLead && (
-            <section
-              id="agent-tips"
-              className="mt-14 scroll-mt-24"
-              aria-labelledby="agent-tips-heading"
-            >
-              <div className="mb-6">
-                <p className="text-sm font-semibold uppercase tracking-wide text-accent">
-                  Nästa steg
-                </p>
-                <h2
-                  id="agent-tips-heading"
-                  className="mt-2 text-2xl font-bold text-brand"
-                >
-                  Få agent-tips + Hermes one-click
-                </h2>
-                <p className="mt-3 text-slate-600 leading-relaxed">
-                  Lämna mejl så skickar vi korta tips om AI-agenter för svenska
-                  bolag – och hur du startar din första agent samma dag.
-                </p>
-              </div>
-              <HermesGuideForm
-                source="vad-ar-en-ai-agent"
-                tags="vad-ar-en-ai-agent,hermes-start,ai-agenter,article-lead"
-                idPrefix="agent-article"
-                analyticsPlacement="article"
-                submitLabel="Skicka tips till mig"
-                successCtaHref="/gratis-guide-hermes-agenter#starta"
-                successCtaLabel="Starta Hermes nu"
-                successNote="Bekräfta e-posten (dubbel opt-in). Sen skickar vi tips — du kan också starta Hermes direkt."
-              />
-            </section>
-          )}
-
           {article.related.length > 0 && (
             <aside className="mt-14" aria-label="Relaterade guider">
               <h2 className="mb-4 text-xl font-bold text-brand">
@@ -296,14 +264,16 @@ export function ArticlePage({ article }: { article: Article }) {
 
           {!article.isLegal && (
             <div
-              id={bookPage ? "kop" : proofPackage ? "kontakt" : undefined}
+              id={
+                bookPage ? "kop" : proofPackage ? "kontakt" : agentLead ? "kom-igang" : undefined
+              }
               className="mt-14 scroll-mt-24 rounded-3xl bg-brand p-8 text-white shadow-[var(--shadow-premium)]"
             >
               <h2 className="text-2xl font-bold">
                 {bookPage
                   ? "Köp boken"
                   : agentLead
-                    ? "Redo att testa en riktig AI-agent?"
+                    ? "Vill ni komma igång med en första testagent?"
                     : proofPackage
                       ? "Vill du veta vad AI ger er?"
                       : article.slug === "bemanningsplanering-ai"
@@ -314,7 +284,7 @@ export function ArticlePage({ article }: { article: Article }) {
                 {bookPage ? (
                   "Pris och format visas på Amazon."
                 ) : agentLead ? (
-                  "Starta Hermes one-click – eller boka 30 min så tittar vi på var en agent sparar mest tid hos er."
+                  "Boka 30 minuter så tittar vi på ett avgränsat flöde hos er. Eller läs hur vi arbetar med automatisering för företag."
                 ) : proofPackage ? (
                   <>
                     Hör av dig via 4days.ai. Boka 30 minuter, eller mejla{" "}
@@ -338,11 +308,17 @@ export function ArticlePage({ article }: { article: Article }) {
                 ) : agentLead ? (
                   <>
                     <Button asChild size="lg">
-                      <a href="#agent-tips">Få tips i mejlen</a>
+                      <a
+                        href={getBookingUrl()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Boka 30 min
+                      </a>
                     </Button>
                     <Button asChild size="lg" variant="secondary">
-                      <Link href="/gratis-guide-hermes-agenter#starta">
-                        Starta Hermes
+                      <Link href="/ai-automatisering-foretag">
+                        Läs om automatisering
                       </Link>
                     </Button>
                   </>
@@ -382,26 +358,17 @@ export function ArticlePage({ article }: { article: Article }) {
                   </>
                 )}
               </div>
-              {agentLead && (
-                <p className="mt-4 text-sm text-slate-400">
-                  Vill ni hellre prata?{" "}
-                  <a
-                    href={getBookingUrl()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-white underline-offset-2 hover:underline"
-                  >
-                    Boka 30 min intro
-                  </a>
-                </p>
-              )}
             </div>
           )}
         </article>
       </main>
       <Footer
         omitHrefs={
-          proofPackage || bookPage ? ["/100-80-100-modellen"] : undefined
+          proofPackage || bookPage
+            ? ["/100-80-100-modellen"]
+            : agentLead
+              ? ["/gratis-guide-hermes-agenter"]
+              : undefined
         }
       />
     </>

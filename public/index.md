@@ -32,7 +32,7 @@ Hur det fungerar
 
 ## Fyra steg till mätbar effekt
 
-Från kartläggning till 4-dagarsvecka – vanligtvis inom 6–12 månader.
+Från kartläggning till 4-dagarsvecka – vanligtvis inom 6–12 månader. En del av tiden kan SI ta i moment där systemet agerar, inte bara svarar. Läs [vad en AI-agent är](https://www.4days.ai/vad-ar-en-ai-agent).
 
 01 2–3 veckor
 

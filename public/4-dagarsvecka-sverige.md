@@ -29,6 +29,8 @@ Forskning från bland annat Karlstads universitet och internationella studier pe
 
 Tidigare krävde kortare arbetsvecka oftast fler anställda eller hårdare tempo. Med modern AI ser ekvationen annorlunda ut. AI tar över repetitiva uppgifter som e-posthantering, rapportgenerering, mötesbokning, dataanalys och delar av kundsupporten. Många företag ser tidsbesparingar på **15–30 % redan efter några veckor**, och 30–50 % på de mest repetitiva processerna.
 
+Det mesta av den tid SI kan frigöra kommer från verktyg som gör arbete, inte bara svarar. Läs [vad en AI-agent är och hur den skiljer sig från en chatbot](https://www.4days.ai/vad-ar-en-ai-agent).
+
 ## Vilka företag passar bäst?
 
 4-dagarsvecka fungerar bäst för **kunskapsintensiva företag med 10–200 anställda** inom IT, konsultverksamhet, kreativa branscher och vissa delar av offentlig sektor. Inom tillverkning eller kundtjänst med strikta öppettider krävs mer anpassning, men AI kan ändå frigöra betydande tid. Vi gör alltid en skräddarsydd analys först.

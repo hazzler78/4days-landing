@@ -51,6 +51,8 @@ Den vanligaste fällan är att vänta på den perfekta, heltäckande lösningen.
 
 Det här är samma metodik vi använder i större införanden. Läs mer om hur arbetet går till i praktiken under [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag).
 
+Ett verktyg som bara svarar är något annat än en SI-agent som utför uppgiften. Läs [när en AI-agent passar](https://www.4days.ai/vad-ar-en-ai-agent).
+
 ## Ett illustrativt räkneexempel
 
 Säg att ett team på tio personer lägger ungefär 20 % av arbetstiden på mejl, rapporter och admin. Om AI kapar hälften av den tiden frigörs runt 10 % av kapaciteten – motsvarande ungefär en heltidstjänst i återvunnen tid.

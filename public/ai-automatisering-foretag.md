@@ -12,6 +12,8 @@ Repetitivt arbete äter upp era timmar. Med rätt AI-automatisering frigör vi 3
 
 AI-automatisering innebär att låta AI och smarta arbetsflöden ta hand om repetitiva, regelstyrda uppgifter som annars stjäl tid från era medarbetare. Det handlar inte om att ersätta människor, utan om att ta bort tråkigt rutinarbete så att kompetensen läggs där den gör mest nytta.
 
+När SI ska välja nästa steg, inte bara följa en fast regel, läs [hur en AI-agent arbetar](https://www.4days.ai/vad-ar-en-ai-agent).
+
 ## Vad kan automatiseras?
 
 - E-posthantering, sortering och svarsförslag

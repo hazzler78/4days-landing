@@ -70,7 +70,9 @@ export function Footer({ omitHrefs = [] }: { omitHrefs?: string[] } = {}) {
               Företag
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {companyLinks.map((link) => (
+              {companyLinks
+                .filter((link) => !omitHrefs.includes(link.href))
+                .map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

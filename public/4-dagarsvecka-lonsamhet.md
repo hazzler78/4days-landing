@@ -21,6 +21,8 @@ Modellen vi arbetar med är [100-80-100](https://www.4days.ai/100-80-100-modelle
 - **Starkare rekrytering:** en 4-dagarsvecka är ett kraftfullt argument i jakten på kompetens – lägre rekryterings- och personalomsättningskostnader.
 - **Högre engagemang:** mer fokuserade medarbetare som producerar mer per timme.
 
+En del av den tid SI kan frigöra kan till exempel komma från att lämna repetitiva flöden till [en AI-agent](https://www.4days.ai/vad-ar-en-ai-agent).
+
 ## Ett enkelt räkneexempel
 
 Säg att ni är 20 personer och att repetitivt arbete (mejl, rapporter, admin) upptar ungefär 20 % av arbetstiden. Om AI-automatisering kapar hälften av den tiden frigörs runt 10 % av den totala kapaciteten – motsvarande ungefär två heltidstjänster i återvunnen tid.

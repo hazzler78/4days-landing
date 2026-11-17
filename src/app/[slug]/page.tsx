@@ -193,14 +193,16 @@ function ArticleJsonLd({
               url: `${siteConfig.url}/bilder/logo-light.png`,
             },
           },
-          ...(article.about?.length
-            ? {
-                about: article.about.map((name) => ({
-                  "@type": "Thing",
-                  name,
-                })),
-              }
-            : {}),
+          ...(article.definedTerm
+            ? { about: { "@id": `${url}#term` } }
+            : article.about?.length
+              ? {
+                  about: article.about.map((name) => ({
+                    "@type": "Thing",
+                    name,
+                  })),
+                }
+              : {}),
           ...(article.citations?.length
             ? { citation: article.citations }
             : {}),
@@ -244,6 +246,21 @@ function ArticleJsonLd({
           ],
     },
   ];
+
+  if (!isBook && article.definedTerm) {
+    graph.splice(1, 0, {
+      "@type": "DefinedTerm",
+      "@id": `${url}#term`,
+      name: article.definedTerm.name,
+      ...(article.definedTerm.alternateName?.length
+        ? { alternateName: article.definedTerm.alternateName }
+        : {}),
+      description: article.definedTerm.description,
+      ...(article.definedTerm.inDefinedTermSet
+        ? { inDefinedTermSet: article.definedTerm.inDefinedTermSet }
+        : {}),
+    });
+  }
 
   if (article.faq?.length) {
     graph.push({

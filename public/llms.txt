@@ -21,7 +21,7 @@ Viktiga fakta:
 - [4-dagarsvecka i Sverige](https://www.4days.ai/4-dagarsvecka-sverige): Vad en 4-dagarsvecka är, svenska piloter och forskning, och hur AI gör den möjlig.
 - [100-80-100-modellen](https://www.4days.ai/100-80-100-modellen): Modellen bakom en hållbar 4-dagarsvecka – 100 % lön, 80 % tid, 100 % output – och hur den mäts.
 - [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag): Vad som kan automatiseras, hur arbetet går till och vad det kostar.
-- [Vad är en AI-agent?](https://www.4days.ai/vad-ar-en-ai-agent): Skillnaden mot chatbot – digital kollega som planerar och agerar, med roll, mandat och ofta eget namn.
+- [Vad är en AI-agent?](https://www.4days.ai/vad-ar-en-ai-agent): En AI-agent är ett AI-system som får ett mål och själv tar flera steg för att nå det: den planerar, använder verktyg som mejl, kalender eller affärssystem, kontrollerar resultatet och lämnar över till en människa när det behövs.
 - [Bevispaketet](https://www.4days.ai/bevispaketet): Fem veckors mätning av vad AI ger i arbetstimmar, med era egna siffror. Minst fyra sparade timmar per person och vecka – annars pengarna tillbaka. Pris 45 000–85 000 kr exkl. moms.
 - [Fyra dagar, full lön, samma resultat?](https://www.4days.ai/boken): Bok av Joseph Tran, 4 Days AI AB. Vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet. 129 sidor, svenska. Kindle och pocket.
 

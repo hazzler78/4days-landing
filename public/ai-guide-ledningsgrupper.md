@@ -14,6 +14,8 @@ AI har gått från framtidssnack till en fråga på varje ledningsgrupps agenda.
 
 Det vanligaste felet är att börja i tekniken: "vilket AI-verktyg ska vi köpa?" Den fråga som ger bäst resultat är istället: "var lägger vi mest tid på repetitivt arbete, och vad skulle vi göra med tiden om den frigjordes?" AI är ett medel, inte ett mål. Ledningsgruppens jobb är att sätta riktningen, prioritera processerna och säkra att förändringen mäts och förankras – inte att välja teknik i detalj.
 
+Innan ni ger SI mandat att agera i era system, läs [vad en AI-agent är](https://www.4days.ai/vad-ar-en-ai-agent).
+
 ## Steg för steg – fyra faser
 
 ### 1. Kartläggning
