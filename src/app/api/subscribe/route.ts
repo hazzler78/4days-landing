@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { subscriberGroupIds } from "@/lib/server/subscriber-groups";
 
 const MAILERLITE_API = "https://connect.mailerlite.com/api/subscribers";
 
@@ -107,33 +108,9 @@ export async function POST(request: Request) {
     resubscribe: true,
   };
 
-  const groupIds = new Set<string>();
-  const defaultGroupId = process.env.MAILERLITE_GROUP_ID;
-  const hermesGroupId = process.env.MAILERLITE_HERMES_GROUP_ID;
-
-  const isHermesLead =
-    source === "hermes-start" ||
-    source === "hermes-guide" ||
-    source === "vad-ar-en-ai-agent" ||
-    source.startsWith("article-agent-");
-
-  if (isHermesLead && hermesGroupId) {
-    // Hermes one-click / tips-mejl: endast Hermes-gruppen (separat automation)
-    hermesGroupId
-      .split(",")
-      .map((id) => id.trim())
-      .filter(Boolean)
-      .forEach((id) => groupIds.add(id));
-  } else if (defaultGroupId) {
-    defaultGroupId
-      .split(",")
-      .map((id) => id.trim())
-      .filter(Boolean)
-      .forEach((id) => groupIds.add(id));
-  }
-
-  if (groupIds.size > 0) {
-    payload.groups = Array.from(groupIds);
+  const groupIds = subscriberGroupIds(source);
+  if (groupIds.length > 0) {
+    payload.groups = groupIds;
   }
 
   try {
