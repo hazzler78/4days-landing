@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 
@@ -50,6 +51,15 @@ export function HowItWorksSection() {
           </h2>
           <p className="mt-4 text-slate-600">
             Från kartläggning till 4-dagarsvecka – vanligtvis inom 6–12 månader.
+            En del av tiden kan SI ta i moment där systemet agerar, inte bara
+            svarar. Läs{" "}
+            <Link
+              href="/vad-ar-en-ai-agent"
+              className="font-medium text-accent-dim underline-offset-2 hover:underline"
+            >
+              vad en AI-agent är
+            </Link>
+            .
           </p>
         </Reveal>
 

@@ -16,6 +16,8 @@ Tvärtom. I svenska piloter 2024–2026 bibehölls eller ökade produktiviteten,
 
 Nej. Idén är *smartare, inte hårdare*. Det handlar om färre och bättre möten, mindre administration och AI som tar repetitivt arbete – inte om att pressa in fem dagar på fyra.
 
+En del av det som inte hinns med kan SI ta, när systemet gör arbetet och inte bara svarar. Se [så fungerar AI-agenter i praktiken](https://www.4days.ai/vad-ar-en-ai-agent).
+
 ## Myt 3: "Det funkar bara för stora bolag"
 
 Det fungerar särskilt bra för kunskapsintensiva företag med **10–200 anställda**. Mindre organisationer kan ofta förändra arbetssätt snabbare än stora.

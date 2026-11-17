@@ -8,8 +8,17 @@ export type ArticleFaq = {
 export type ArticleAuthor = {
   name: string;
   jobTitle?: string;
+  /** Visible text after the name, for example a role. Schema still uses jobTitle. */
+  bylineDetail?: string;
   url?: string;
   sameAs?: string[];
+};
+
+export type ArticleDefinedTerm = {
+  name: string;
+  alternateName?: string[];
+  description: string;
+  inDefinedTermSet?: string;
 };
 
 export type Article = {
@@ -30,6 +39,7 @@ export type Article = {
   section?: { name: string; href: string };
   breadcrumbName?: string;
   about?: string[];
+  definedTerm?: ArticleDefinedTerm;
   citations?: string[];
   body: string;
   faq?: ArticleFaq[];
