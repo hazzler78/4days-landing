@@ -6,7 +6,7 @@ Oberoende guide
 
 # Bemanningsplanering och AI-schemaläggning – så fungerar det och så väljer ni verktyg
 
-Av [Mikael Söderberg](https://www.4days.ai/om-oss) · Publicerad 8 juli 2026 · Uppdaterad 16 november 2026
+Av [Mikael Söderberg](https://www.4days.ai/om-oss) · Publicerad 8 juli 2026 · Uppdaterad 23 november 2026
 
 Bemanningsplanering med AI betyder att ett system räknar fram hur många medarbetare med vilken kompetens som behövs och sedan lägger schemaförslag automatiskt, inom arbetstidslagen, kollektivavtal och medarbetarnas önskemål. Planeraren granskar och beslutar. Det ger mest där behovet varierar och schemat är ett pussel, till exempel i vård, handel och logistik.
 
@@ -27,6 +27,10 @@ Bemanningsplanering med superintelligens (SI) betyder att ett system först räk
 Samma arbete kallas också automatisk schemaläggning eller schemaläggning med SI. Grundidén är densamma: systemet tar det regelstyrda räknandet, människan tar prioriteringarna och undantagen. Målet är rätt person på rätt plats vid rätt tid, utan att schemat byggs rad för rad i ett kalkylark.
 
 SI är 4days.ai:s ord för tekniken bakom förslagen. Vi påstår inte att ett schemaverktyg i sig är superintelligens. Det är ett system som kan räkna på regler, behov och önskemål, om ni har lagt in dem.
+
+## Kan AI lägga schema?
+
+Ja. Superintelligens (SI) kan lägga ett schemaförslag: den räknar fram vem som kan arbeta vilket pass, utifrån behov, kompetens, viloregler, avtal och önskemål. Att göra schemat med SI betyder samma sak: ett förslag, inte ett beslut. Planeraren granskar, justerar och publicerar. Utan inlagda regler, och utan en människa som godkänner, finns inget schema som kan användas.
 
 ## Bemanningsplanering eller schemaläggning – vad är skillnaden?
 
@@ -154,6 +158,8 @@ Ett hypotetiskt räkneexempel, inte en utlovad besparing: ta era planeringstimma
 
 Gratismallar, gratisnivåer och provperioder finns. De duger för ett litet team eller för privat bruk, till exempel ett enkelt veckoschema hemma eller i en förening. För personalscheman saknar de oftast avtalsregler, löneunderlag och en koppling till lön och tid.
 
+Vad som brukar gå att göra gratis beror på typen av verktyg. En egen lösning, till exempel en gratismall eller ett kalkylark, kan rita ett enkelt veckoschema men räknar inte avtal. En gratisnivå i ett fristående schemaverktyg kan visa pass och önskemål, men saknar oftast löneunderlag och en koppling till lön och tid. En schemamodul i löne- eller tidsystemet brukar inte ingå gratis, utöver en eventuell provperiod. SI-optimering och prognos kan under en provperiod räkna fram ett förslag utifrån de regler ni har lagt in, och brukar inte finnas som en bestående gratisnivå.
+
 SI kan hjälpa er att fylla en mall. Det är inte samma sak som ett system som känner era vilotider och ert kollektivavtal. Vill ni prova, gör det på en avgränsad period med era egna scheman, och jämför förslaget mot reglerna innan ni publicerar det. I skolan är skillnaden extra tydlig, se avsnittet om skola nedan: en gratismall kan rita ett lektionsrutnät utan att lägga ett personalschema.
 
 ## Schemaläggning med SI per bransch
@@ -212,6 +218,10 @@ Grundtanken är densamma som i [modellen med full lön, 80 % tid och full output
 ### Vad är bemanningsplanering med AI?
 
 Bemanningsplanering med superintelligens (SI) betyder att ett system räknar fram hur många medarbetare med vilken kompetens som behövs, och sedan lägger schemaförslag inom arbetstidslagen, kollektivavtal och medarbetarnas önskemål. Planeraren granskar och beslutar. Samma arbete kallas också automatisk schemaläggning eller schemaläggning med SI. Det ger mest där behovet varierar och schemat är ett pussel.
+
+### Kan AI lägga schema?
+
+Ja. Superintelligens (SI) kan lägga ett schemaförslag: den räknar fram vem som kan arbeta vilket pass, utifrån behov, kompetens, viloregler, avtal och önskemål. Att göra schemat med SI betyder samma sak: ett förslag, inte ett beslut. Planeraren granskar, justerar och publicerar. Utan inlagda regler, och utan en människa som godkänner, finns inget schema som kan användas.
 
 ### Vad är skillnaden mellan bemanningsplanering och schemaläggning?
 

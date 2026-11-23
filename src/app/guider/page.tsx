@@ -89,7 +89,7 @@ const aiGuides = [
   {
     href: "/bemanningsplanering-ai",
     tag: "Guide",
-    title: "Automatisk schemaläggning med AI",
+    title: "Bemanningsplanering med AI",
     description:
       "Oberoende guide: verktygstyper, urval och checklista.",
   },
