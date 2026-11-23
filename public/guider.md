@@ -34,7 +34,7 @@ Grunderna – [AI-automatisering för företag](https://www.4days.ai/ai-automati
 
 Verktyg – [AI-verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid) – Verktygen som kapar mest tid – mejl, rapporter, möten, dataanalys, kundsupport och admin.
 
-Guide – [Automatisk schemaläggning med AI](https://www.4days.ai/bemanningsplanering-ai) – Oberoende guide: verktygstyper, urval och checklista.
+Guide – [Bemanningsplanering med AI](https://www.4days.ai/bemanningsplanering-ai) – Oberoende guide: verktygstyper, urval och checklista.
 
 Ledning – [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper) – Hur ledningen bör tänka kring AI-införande, steg för steg – och vanliga misstag att undvika.
 
