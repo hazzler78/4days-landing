@@ -10,9 +10,13 @@ Två gånger i månaden visar vi hur du får agenter att jobba för dig, steg f�
 
 4days.ai · En dag mer frihet. Med AI.
 
-Datum för nästa tillfälle kommer snart
+Nästa tillfälle: Onsdag 2 december 2026, kl. 15:00–15:45
 
-[Påminn mig](https://www.4days.ai/webbinar#paminnelse) [Gå med i webbinaret (öppnas i ny flik)](https://us06web.zoom.us/j/6621000255?pwd=d8zXlw74UEbp62B1Nz0v7zdx1hxKEY.1)
+Svensk tid (Europe/Stockholm).
+
+[Påminn mig](https://www.4days.ai/webbinar#paminnelse) [Lägg till i kalendern](https://www.4days.ai/webbinar/nasta.ics) [Gå med i webbinaret (öppnas i ny flik)](https://us06web.zoom.us/j/6621000255?pwd=d8zXlw74UEbp62B1Nz0v7zdx1hxKEY.1)
+
+[Lägg till i Google Kalender (öppnas i ny flik)](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Webbinar%3A+Kom+ig%C3%A5ng+med+SI-agenter+%284days.ai%29&dates=20261202T140000Z%2F20261202T144500Z&details=Kom+ig%C3%A5ng+med+SI-agenter+%28superintelligens%29%2C+live+med+4days.ai.%0A%0AG%C3%A5+med+i+webbinaret%3A+https%3A%2F%2Fus06web.zoom.us%2Fj%2F6621000255%3Fpwd%3Dd8zXlw74UEbp62B1Nz0v7zdx1hxKEY.1%0A%0AEn+dag+mer+frihet.+Med+AI.&location=https%3A%2F%2Fus06web.zoom.us%2Fj%2F6621000255%3Fpwd%3Dd8zXlw74UEbp62B1Nz0v7zdx1hxKEY.1&ctz=Europe%2FStockholm)
 
 ## Få en påminnelse
 
