@@ -21,6 +21,7 @@ function newsletterGroupIds(): string[] {
  */
 export function subscriberGroupIds(source: string): string[] {
   const groupIds = new Set<string>();
+  const isWebinarLead = source === "webbinar";
   const isHermesLead =
     source === "hermes-start" ||
     source === "hermes-guide" ||
@@ -28,7 +29,13 @@ export function subscriberGroupIds(source: string): string[] {
     source.startsWith("article-agent-");
 
   const hermesGroupId = process.env.MAILERLITE_HERMES_GROUP_ID;
-  if (isHermesLead && hermesGroupId) {
+  if (isWebinarLead) {
+    // Own group when Mikael has created "Webbinar" and set the env var.
+    // Empty means the signup still lands in Nyhetsbrev below, with tags=webbinar.
+    groupIdsFrom(process.env.MAILERLITE_WEBINAR_GROUP_ID).forEach((id) =>
+      groupIds.add(id)
+    );
+  } else if (isHermesLead && hermesGroupId) {
     groupIdsFrom(hermesGroupId).forEach((id) => groupIds.add(id));
   } else {
     groupIdsFrom(process.env.MAILERLITE_GROUP_ID).forEach((id) =>

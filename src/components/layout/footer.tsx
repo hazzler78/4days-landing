@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 
 const companyLinks = [
   { href: "/om-oss", label: "Om oss" },
+  { href: "/webbinar", label: "Webbinar" },
   { href: "/faq", label: "FAQ" },
   { href: "/guider", label: "Alla guider" },
   {
