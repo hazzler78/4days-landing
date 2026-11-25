@@ -10,7 +10,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { hermesGuideMeta } from "@/content/hermes-guide";
 import { plausibleEvents, trackPlausible } from "@/lib/plausible";
 import { cn } from "@/lib/utils";
-import { trackHermesGuideSignup } from "@/lib/vercelEvents";
+import {
+  trackHermesGuideSignup,
+  trackWebinarSignup,
+} from "@/lib/vercelEvents";
 
 type FormState = {
   firstName: string;
@@ -38,8 +41,15 @@ export type HermesGuideFormProps = {
   submitLabel?: string;
   successCtaHref?: string;
   successCtaLabel?: string;
+  /** Use a normal anchor (new tab) when the success link leaves the site. */
+  successCtaExternal?: boolean;
   successNote?: string;
   analyticsPlacement?: string;
+  /** Sent as MailerLite `employees`. Empty string omits the field. */
+  employees?: string;
+  /** Sentence before the privacy-policy link. */
+  consentLead?: string;
+  signupEvent?: "hermes" | "webinar";
 };
 
 export function HermesGuideForm({
@@ -50,8 +60,12 @@ export function HermesGuideForm({
   submitLabel = "Skicka mig tips",
   successCtaHref = "/gratis-guide-hermes-agenter#starta",
   successCtaLabel = "Till Starta här",
+  successCtaExternal = false,
   successNote = "Bekräfta e-posten (dubbel opt-in). Sen skickar vi korta tips — men du kan redan klicka Starta här och installera Hermes direkt.",
   analyticsPlacement = "hermes-guide-form",
+  employees = "10–200",
+  consentLead = "Jag vill ha korta tips om Hermes-start och AI-agenter för svenska bolag.",
+  signupEvent = "hermes",
 }: HermesGuideFormProps) {
   const reactId = useId().replace(/:/g, "");
   const prefix = idPrefix || `hermes-${reactId}`;
@@ -75,7 +89,7 @@ export function HermesGuideForm({
           email: form.email,
           company: form.company,
           role: form.role,
-          employees: "10–200",
+          ...(employees ? { employees } : {}),
           consent: form.consent,
           source,
           tags,
@@ -87,7 +101,8 @@ export function HermesGuideForm({
         throw new Error(data.error || "Kunde inte skicka formuläret.");
       }
 
-      trackHermesGuideSignup(analyticsPlacement);
+      if (signupEvent === "webinar") trackWebinarSignup(analyticsPlacement);
+      else trackHermesGuideSignup(analyticsPlacement);
       trackPlausible(plausibleEvents.leadSubmit, {
         source,
         path:
@@ -125,7 +140,17 @@ export function HermesGuideForm({
             </p>
             <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-center">
               <Button asChild>
-                <Link href={successCtaHref}>{successCtaLabel}</Link>
+                {successCtaExternal ? (
+                  <a
+                    href={successCtaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {successCtaLabel}
+                  </a>
+                ) : (
+                  <Link href={successCtaHref}>{successCtaLabel}</Link>
+                )}
               </Button>
               <Button variant="outline" onClick={() => setSubmitted(false)}>
                 Skicka igen
@@ -224,8 +249,7 @@ export function HermesGuideForm({
                 required
               />
               <span>
-                Jag vill ha korta tips om Hermes-start och AI-agenter för svenska
-                bolag. Läs mer i vår{" "}
+                {consentLead} Läs mer i vår{" "}
                 <Link
                   href="/integritetspolicy"
                   className="font-medium text-accent-dim underline-offset-2 hover:underline"

@@ -41,6 +41,14 @@ export function trackHermesGuideSignup(placement = "hermes-guide-form"): void {
   });
 }
 
+export function trackWebinarSignup(placement = "webinar"): void {
+  vercelTrack("webinar_signup", {
+    placement,
+    page:
+      typeof window !== "undefined" ? window.location.pathname : undefined,
+  });
+}
+
 export function trackBookCallClick(placement: string): void {
   vercelTrack("book_call_click", { placement });
 }
