@@ -27,7 +27,24 @@ export type WebinarSession = {
   end: string;
 };
 
-export const webinarSessions: WebinarSession[] = [];
+export const webinarSessions: WebinarSession[] = [
+  {
+    start: "2026-12-02T15:00:00+01:00",
+    end: "2026-12-02T15:45:00+01:00",
+  },
+  {
+    start: "2026-12-16T15:00:00+01:00",
+    end: "2026-12-16T15:45:00+01:00",
+  },
+  {
+    start: "2027-01-13T15:00:00+01:00",
+    end: "2027-01-13T15:45:00+01:00",
+  },
+  {
+    start: "2027-01-27T15:00:00+01:00",
+    end: "2027-01-27T15:45:00+01:00",
+  },
+];
 
 export const webinarTimeZone = "Europe/Stockholm";
 
