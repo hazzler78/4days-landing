@@ -22,6 +22,8 @@ Ekonomi – [4-dagarsvecka och lönsamhet](https://www.4days.ai/4-dagarsvecka-lo
 
 Invändningar – [Kortare arbetsvecka: 7 vanliga myter](https://www.4days.ai/kortare-arbetsvecka-myter) – Sju vanliga invändningar mot 4-dagarsvecka – och vad forskning och piloter faktiskt visar.
 
+Nackdelar – [4 dagars arbetsvecka: nackdelarna och hur ni undviker dem](https://www.4days.ai/4-dagars-arbetsvecka-nackdelar) – Vilka är nackdelarna med 4 dagars arbetsvecka? Tätare arbete, mer kontroll, trötthet och ojämn fritid. Här är vad forskningen visar och hur ni undviker fällorna.
+
 Bransch – [4-dagarsvecka för IT- och konsultbolag](https://www.4days.ai/4-dagarsvecka-it-konsultbolag) – Varför branschen passar särskilt bra – och hur AI frigör debiterbar tid.
 
 ## AI & automatisering
