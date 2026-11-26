@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: article.titleAbsolute ? { absolute: article.title } : article.title,
     description: article.description,
+    ...(article.keywords?.length ? { keywords: article.keywords } : {}),
     ...(article.author
       ? {
           authors: [

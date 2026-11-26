@@ -32,6 +32,8 @@ export type Article = {
   modified?: string;
   /** When true, the document title is used as-is, without the site title template. */
   titleAbsolute?: boolean;
+  /** Page keywords, for example a target search query from the article brief. */
+  keywords?: string[];
   ogTitle?: string;
   twitterTitle?: string;
   twitterDescription?: string;
