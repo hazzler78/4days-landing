@@ -49,6 +49,13 @@ const weekGuides = [
       "Sju vanliga invändningar mot 4-dagarsvecka – och vad forskning och piloter faktiskt visar.",
   },
   {
+    href: "/4-dagars-arbetsvecka-nackdelar",
+    tag: "Nackdelar",
+    title: "4 dagars arbetsvecka: nackdelarna och hur ni undviker dem",
+    description:
+      "Vilka är nackdelarna med 4 dagars arbetsvecka? Tätare arbete, mer kontroll, trötthet och ojämn fritid. Här är vad forskningen visar och hur ni undviker fällorna.",
+  },
+  {
     href: "/4-dagarsvecka-it-konsultbolag",
     tag: "Bransch",
     title: "4-dagarsvecka för IT- och konsultbolag",
