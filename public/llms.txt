@@ -1,49 +1,59 @@
 # 4days.ai
 
-> 4 Days AI AB hjälper kunskapsintensiva svenska företag (10–200 anställda) att gå från 5 till 4 dagars arbetsvecka med full lön, genom AI-automatisering av repetitivt arbete. Slogan: "En dag mer frihet. Med AI."
+> 4 Days AI AB hjälper kunskapsintensiva svenska företag (10–200 anställda) att gå från 5 till 4 dagars arbetsvecka med full lön. Det gör vi med superintelligens (SI) som tar det repetitiva arbetet, så att människorna får mer tid till det som kräver dem. Smartare, inte hårdare. Slogan: "En dag mer frihet. Med AI."
+
+SI förstärker människor, den ersätter dem inte. Vi kartlägger var SI gör störst nytta, automatiserar prioriterade processer, utbildar teamet och mäter effekten vecka för vecka. Vi visar både möjligheter och gränser: resultatet beror på era processer, och därför mäter vi före och efter i stället för att lova i förväg.
 
 Viktiga fakta:
-- Metod: 100-80-100-modellen – 100 % lön, 80 % arbetstid, 100 % output.
+- Metod: 100-80-100-modellen – 100 % lön, 80 % arbetstid (oftast 32 timmar), 100 % output.
 - Typisk tidsbesparing: 15–30 % totalt, 30–50 % på de mest repetitiva processerna.
-- Tidsplan: vanligtvis 6–12 månader från kartläggning till mätbar effekt.
-- Evidens: i svenska piloter 2024–2026 fortsatte 10 av 11 organisationer efter testperioden.
+- Tidsplan: vanligtvis 6–12 månader från kartläggning till mätbar effekt. Kartläggningen tar 2–3 veckor.
+- Evidens: i svenska piloter 2024–2026 fortsatte 10 av 11 organisationer efter testperioden (stress −19 %, livskvalitet +25 %, bibehållen eller ökad produktivitet).
+- Uppföljning: tydliga KPI:er för tid, stress och output, med före/efter-mätning.
 - Priser: konsulttimme 2 500 kr/tim (volymrabatter); AI Kickstart 20 h = 45 000 kr, 40 h = 90 000 kr; fastpris och delbetalning möjligt.
-- Erbjuds även som ren AI- och automationskonsultation, med eller utan 4-dagarsvecka.
-- Kontakt: hello@4days.ai · strategi-call via https://calendly.com/hello-4days/30min
+- Bevispaketet: fem veckors mätning med era egna siffror, 45 000–85 000 kr exkl. moms. Garanti: minst fyra sparade timmar per person och vecka, annars pengarna tillbaka. Villkoren avtalas skriftligt innan start.
+- Erbjuds även som ren SI- och automationskonsultation, med eller utan 4-dagarsvecka.
+- Passar bäst för IT- och techbolag, konsultbolag, kreativa byråer, professionella tjänster och andra kunskapsintensiva SME:er.
+- Kontakt: hello@4days.ai · boka 30 min kartläggning via https://calendly.com/hello-4days/30min
 - Grundare: Joseph Tran (försäljning & affärsutveckling) och Mikael Söderberg (teknisk grundare, AI).
 - Org.nr 559587-6888, Vasavägen 29, 177 52 Järfälla, Sverige.
 
+## Kom igång
+
+- [Boka 30 min kartläggning](https://calendly.com/hello-4days/30min): Kort samtal om era processer och var SI kan frigöra tid.
+- [Webbinar: Kom igång med SI-agenter](https://www.4days.ai/webbinar): Gratis och live via Zoom två gånger i månaden. Vi visar steg för steg med Grok Bot hur agenter kan jobba för dig. Nästa tillfälle står på sidan.
+- [Nyhetsbrevet En dag mer](https://www.4days.ai/#guide): Tips om 4-dagarsvecka, SI och nästa webbinar. Du bekräftar anmälan via mejl.
+- [Gratis guide: Hermes Agents](https://www.4days.ai/gratis-guide-hermes-agenter): Kom igång med Hermes Agents för svenska bolag (e-post krävs).
+
 ## Huvudsidor
 
-- [Startsida](https://www.4days.ai/): Översikt av erbjudandet – 4-dagarsvecka med full lön via AI, fördelar, så fungerar det, bevis/100-80-100 och nyhetsbrev.
-- [FAQ](https://www.4days.ai/faq): Vanliga frågor om 4-dagarsvecka, 100-80-100-modellen och AI-konsultation.
+- [Startsida](https://www.4days.ai/): Översikt – 4-dagarsvecka med full lön, så fungerar det i fyra steg, bevis och 100-80-100, för vem och nyhetsbrev.
+- [FAQ](https://www.4days.ai/faq): Vanliga frågor om 4-dagarsvecka, lön, branscher, kostnad, mätning och hur ni kommer igång.
 - [Om oss](https://www.4days.ai/om-oss): Teamet bakom 4days.ai – Joseph Tran och Mikael Söderberg.
-- [Webbinar](https://www.4days.ai/webbinar): Kom igång med SI-agenter (superintelligens). Två gånger i månaden, steg för steg med Grok Bot. Gratis och live via Zoom.
-- [4-dagarsvecka i Sverige](https://www.4days.ai/4-dagarsvecka-sverige): Vad en 4-dagarsvecka är, svenska piloter och forskning, och hur AI gör den möjlig.
+- [Bevispaketet](https://www.4days.ai/bevispaketet): Fem veckors mätning av vad SI ger i arbetstimmar, med era egna siffror. Minst fyra sparade timmar per person och vecka – annars pengarna tillbaka. 45 000–85 000 kr exkl. moms.
 - [100-80-100-modellen](https://www.4days.ai/100-80-100-modellen): Modellen bakom en hållbar 4-dagarsvecka – 100 % lön, 80 % tid, 100 % output – och hur den mäts.
-- [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag): Vad som kan automatiseras, hur arbetet går till och vad det kostar.
-- [Vad är en AI-agent?](https://www.4days.ai/vad-ar-en-ai-agent): En AI-agent är ett AI-system som får ett mål och själv tar flera steg för att nå det: den planerar, använder verktyg som mejl, kalender eller affärssystem, kontrollerar resultatet och lämnar över till en människa när det behövs.
-- [Bevispaketet](https://www.4days.ai/bevispaketet): Fem veckors mätning av vad AI ger i arbetstimmar, med era egna siffror. Minst fyra sparade timmar per person och vecka – annars pengarna tillbaka. Pris 45 000–85 000 kr exkl. moms.
-- [Fyra dagar, full lön, samma resultat?](https://www.4days.ai/boken): Bok av Joseph Tran, 4 Days AI AB. Vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet. 129 sidor, svenska. Kindle och pocket.
+- [AI-automatisering för företag](https://www.4days.ai/ai-automatisering-foretag): Vad som kan automatiseras, hur arbetet går till i praktiken och vad det kostar.
+- [Vad är en AI-agent?](https://www.4days.ai/vad-ar-en-ai-agent): En agent får ett mål och tar själv flera steg för att nå det: planerar, använder verktyg som mejl, kalender eller affärssystem, kontrollerar resultatet och lämnar över till en människa när det behövs.
+- [Fyra dagar, full lön, samma resultat?](https://www.4days.ai/boken): Bok av Joseph Tran (4 Days AI AB). Vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet. 129 sidor, svenska. Kindle och pocket.
+- [Fullmaktsagenten](https://www.fullmaktsagent.se): Digital fullmakt för SI-agenter.
 
-## Guider och artiklar
+## Guider
 
-- [Alla guider](https://www.4days.ai/guider): Samlingssida med guider om 4-dagarsvecka, AI-agenter och AI-automatisering.
-- [Bevispaketet](https://www.4days.ai/bevispaketet): Fem veckors mätning av vad AI ger i arbetstimmar hos er, med era egna siffror. Garanti: minst fyra sparade timmar per person och vecka, annars pengarna tillbaka.
-- [Fyra dagar, full lön, samma resultat?](https://www.4days.ai/boken): Bok av Joseph Tran. Vad forskningen vet om AI, arbetstid och produktivitet – och vad den inte vet.
-- [Gratis guide: Hermes Agents](https://www.4days.ai/gratis-guide-hermes-agenter): Lead-magnet – kom igång med Hermes Agents för svenska bolag (e-post krävs).
-- [4-dagarsvecka och lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet): Så räknar du på kostnad, tidsbesparing och ROI för en 4-dagarsvecka.
-- [Kortare arbetsvecka: 7 vanliga myter](https://www.4days.ai/kortare-arbetsvecka-myter): Sju vanliga invändningar mot 4-dagarsvecka och vad forskning och piloter visar.
-- [AI-verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid): Vilka AI-verktyg sparar mest tid – mejl, rapporter, möten, dataanalys, kundsupport och admin.
-- [4-dagarsvecka för IT- och konsultbolag](https://www.4days.ai/4-dagarsvecka-it-konsultbolag): Varför 4-dagarsvecka passar IT- och konsultbolag särskilt bra, och hur AI frigör fakturerbar tid.
-- [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper): Hur ledningsgrupper bör tänka kring AI-införande, steg för steg, och vanliga misstag att undvika.
-- [Bemanningsplanering och automatisk schemaläggning med AI](https://www.4days.ai/bemanningsplanering-ai): Oberoende guide: så fungerar det, vilka typer av verktyg som finns, vad det kostar och hur ni väljer rätt.
+- [Alla guider](https://www.4days.ai/guider): Samlingssida med guider om 4-dagarsvecka, agenter och automatisering.
+- [4-dagarsvecka i Sverige](https://www.4days.ai/4-dagarsvecka-sverige): Vad en 4-dagarsvecka är, vad svenska piloter och forskning visar och hur SI gör den möjlig.
+- [4-dagarsvecka och lönsamhet](https://www.4days.ai/4-dagarsvecka-lonsamhet): Så räknar du på kostnad, tidsbesparing och ROI.
+- [Kortare arbetsvecka: 7 vanliga myter](https://www.4days.ai/kortare-arbetsvecka-myter): Sju vanliga invändningar och vad forskning och piloter visar.
+- [4-dagarsvecka för IT- och konsultbolag](https://www.4days.ai/4-dagarsvecka-it-konsultbolag): Varför branschen passar särskilt bra och hur SI frigör debiterbar tid.
+- [AI-verktyg som sparar tid på kontoret](https://www.4days.ai/ai-verktyg-spara-tid): Verktygen som sparar mest tid – mejl, rapporter, möten, dataanalys, kundsupport och admin.
+- [AI-guide för ledningsgrupper](https://www.4days.ai/ai-guide-ledningsgrupper): Hur ledningsgrupper kan tänka kring införande, steg för steg, och vanliga misstag att undvika.
+- [Bemanningsplanering med AI](https://www.4days.ai/bemanningsplanering-ai): Oberoende guide: verktygstyper, urval och checklista.
 
 ## Juridik
 
 - [Integritetspolicy](https://www.4days.ai/integritetspolicy): Hur personuppgifter behandlas enligt GDPR.
 - [Cookies](https://www.4days.ai/cookies): Cookiepolicy.
 
-## Fullständigt innehåll
+## Optional
 
-- [Allt innehåll i en fil](https://www.4days.ai/llms-full.txt): All text från sajtens 20 sidor samlad för AI-agenter.
+- [Allt innehåll i en fil](https://www.4days.ai/llms-full.txt): All text från sajtens sidor samlad för AI-agenter.
+- [Startsidan som Markdown](https://www.4days.ai/index.md): Ren textversion av startsidan.
